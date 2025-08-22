@@ -6,16 +6,16 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 const HeroNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [businessDropdown, setBusinessDropdown] = useState(false);
-  const [industrialDropdown, setIndustrialDropdown] = useState(false);
   const navigate = useNavigate();
 
   const leftNavItems = [
-    { name: 'Our Products', path: '/our-businesses', hasDropdown: true },
+    { name: 'Our Businesses', path: '/our-businesses', hasDropdown: true },
     { name: 'Our Impact', path: '/our-impact' },
   ];
 
   const rightNavItems = [
     { name: 'Our Story', path: '/our-story' },
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -93,14 +93,12 @@ const HeroNavigation = () => {
           {/* Center Logo */}
           <div className="flex items-center justify-center">
             <Link to="/" className="flex-shrink-0 group">
-              <div className="relative w-16 h-16 lg:w-20 lg:h-20 overflow-hidden rounded-full bg-white p-1 group-hover:scale-105 transition-transform duration-300 shadow-xl">
-                <div className="w-full h-full bg-gradient-to-br from-pg-red to-red-700 rounded-full flex items-center justify-center p-2">
-                  <img 
-                    className="w-8 h-8 lg:w-10 lg:h-10 object-contain filter brightness-0 invert" 
-                    src="/lovable-uploads/1c5a00cb-213c-4eec-b315-6945b015ad5c.png" 
-                    alt="Progressive Group"
-                  />
-                </div>
+              <div className="relative w-20 h-20 lg:w-24 lg:h-24 overflow-hidden rounded-full bg-white p-2 group-hover:scale-105 transition-transform duration-300 shadow-xl">
+                <img 
+                  className="w-full h-full object-contain" 
+                  src="/lovable-uploads/1c5a00cb-213c-4eec-b315-6945b015ad5c.png" 
+                  alt="Progressive Group"
+                />
               </div>
             </Link>
           </div>
