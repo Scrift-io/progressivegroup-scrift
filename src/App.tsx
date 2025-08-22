@@ -12,7 +12,6 @@ import Chatbot from "./components/Chatbot";
 import Index from "./pages/Index";
 import OurStory from "./pages/OurStory";
 import OurBusinesses from "./pages/OurBusinesses";
-import Awards from "./pages/Awards";
 import OurImpact from "./pages/OurImpact";
 import Careers from "./pages/Careers";
 import BuildingMaterial from "./pages/BuildingMaterial";
@@ -50,7 +49,6 @@ const App = () => {
                 <Route path="/" element={<Index />} />
                 <Route path="/our-story" element={<OurStory />} />
                 <Route path="/our-businesses" element={<OurBusinesses />} />
-                <Route path="/awards" element={<Awards />} />
                 <Route path="/our-impact" element={<OurImpact />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/building-material" element={<BuildingMaterial />} />
