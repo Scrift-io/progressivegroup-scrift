@@ -43,22 +43,28 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <div className="min-h-screen flex flex-col">
-            <Navigation />
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/our-story" element={<OurStory />} />
-                <Route path="/our-businesses" element={<OurBusinesses />} />
-                <Route path="/our-impact" element={<OurImpact />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/building-material" element={<BuildingMaterial />} />
-                <Route path="/industrial-chemicals" element={<IndustrialChemicals />} />
-                <Route path="/machineries" element={<Machineries />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </main>
-            <Footer />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="*" element={
+                <>
+                  <Navigation />
+                  <main className="flex-1">
+                    <Routes>
+                      <Route path="/our-story" element={<OurStory />} />
+                      <Route path="/our-businesses" element={<OurBusinesses />} />
+                      <Route path="/our-impact" element={<OurImpact />} />
+                      <Route path="/careers" element={<Careers />} />
+                      <Route path="/building-material" element={<BuildingMaterial />} />
+                      <Route path="/industrial-chemicals" element={<IndustrialChemicals />} />
+                      <Route path="/machineries" element={<Machineries />} />
+                      <Route path="/contact" element={<Contact />} />
+                      <Route path="*" element={<NotFound />} />
+                    </Routes>
+                  </main>
+                  <Footer />
+                </>
+              } />
+            </Routes>
             <Chatbot />
           </div>
         </BrowserRouter>

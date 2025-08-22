@@ -1,0 +1,181 @@
+
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
+
+const HeroNavigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [businessDropdown, setBusinessDropdown] = useState(false);
+  const [industrialDropdown, setIndustrialDropdown] = useState(false);
+  const navigate = useNavigate();
+
+  const leftNavItems = [
+    { name: 'Our Products', path: '/our-businesses', hasDropdown: true },
+    { name: 'Our Impact', path: '/our-impact' },
+  ];
+
+  const rightNavItems = [
+    { name: 'Our Story', path: '/our-story' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
+  const businessItems = [
+    { name: 'PowerPlus', path: 'https://powerplus.com', external: true },
+    { name: 'PakGhiza', path: 'https://pakghiza.com', external: true },
+  ];
+
+  const industrialItems = [
+    { name: 'Building Material', path: '/building-material' },
+    { name: 'Industrial Chemicals', path: '/industrial-chemicals' },
+    { name: 'Machineries', path: '/machineries' },
+  ];
+
+  return (
+    <nav className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/30 to-transparent backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Left Navigation */}
+          <div className="hidden lg:flex items-center space-x-8 flex-1">
+            {leftNavItems.map((item) => (
+              item.hasDropdown ? (
+                <div 
+                  key={item.name}
+                  className="relative group"
+                  onMouseEnter={() => setBusinessDropdown(true)}
+                  onMouseLeave={() => setBusinessDropdown(false)}
+                >
+                  <button className="flex items-center text-white font-medium text-lg hover:text-pg-red transition-all duration-300 px-4 py-2">
+                    {item.name}
+                    <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-300 ${businessDropdown ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  <div className={`absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl border border-gray-100 py-2 z-50 transition-all duration-300 ${
+                    businessDropdown ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
+                  }`}>
+                    <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">Our Businesses</div>
+                    {businessItems.map((subItem) => (
+                      <a
+                        key={subItem.name}
+                        href={subItem.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-pg-red transition-all duration-300"
+                      >
+                        {subItem.name}
+                      </a>
+                    ))}
+                    <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100 mt-2">Industrial</div>
+                    {industrialItems.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        to={subItem.path}
+                        className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-pg-red transition-all duration-300"
+                        onClick={() => setBusinessDropdown(false)}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="text-white font-medium text-lg hover:text-pg-red transition-all duration-300 px-4 py-2 relative group"
+                >
+                  {item.name}
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pg-red transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                </Link>
+              )
+            ))}
+          </div>
+          
+          {/* Center Logo */}
+          <div className="flex items-center justify-center">
+            <Link to="/" className="flex-shrink-0 group">
+              <div className="relative w-16 h-16 lg:w-20 lg:h-20 overflow-hidden rounded-full bg-white p-1 group-hover:scale-105 transition-transform duration-300 shadow-xl">
+                <div className="w-full h-full bg-gradient-to-br from-pg-red to-red-700 rounded-full flex items-center justify-center p-2">
+                  <img 
+                    className="w-8 h-8 lg:w-10 lg:h-10 object-contain filter brightness-0 invert" 
+                    src="/lovable-uploads/1c5a00cb-213c-4eec-b315-6945b015ad5c.png" 
+                    alt="Progressive Group"
+                  />
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Right Navigation */}
+          <div className="hidden lg:flex items-center space-x-8 flex-1 justify-end">
+            {rightNavItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className="text-white font-medium text-lg hover:text-pg-red transition-all duration-300 px-4 py-2 relative group"
+              >
+                {item.name}
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pg-red transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white hover:text-pg-red transition-colors duration-300 p-2"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="lg:hidden bg-black/90 backdrop-blur-sm border-t border-white/20 animate-fade-in">
+          <div className="px-4 pt-2 pb-3 space-y-1 max-h-96 overflow-y-auto">
+            {leftNavItems.concat(rightNavItems).map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className="block px-3 py-2 text-base font-medium rounded-lg transition-all duration-300 text-white hover:text-pg-red hover:bg-white/10"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            
+            <div className="px-3 py-2 text-sm font-semibold text-gray-400 uppercase tracking-wide">Our Businesses</div>
+            {businessItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-6 py-2 text-sm text-gray-300 hover:text-pg-red hover:bg-white/10 transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
+            
+            <div className="px-3 py-2 text-sm font-semibold text-gray-400 uppercase tracking-wide">Industrial</div>
+            {industrialItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className="block px-6 py-2 text-sm text-gray-300 hover:text-pg-red hover:bg-white/10 transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default HeroNavigation;

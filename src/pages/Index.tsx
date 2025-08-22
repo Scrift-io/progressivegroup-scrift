@@ -3,6 +3,8 @@ import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, CheckCircle,
 import { Link } from 'react-router-dom';
 import { Timeline } from '@/components/ui/timeline';
 import ContactForm from '@/components/ContactForm';
+import HeroNavigation from '@/components/HeroNavigation';
+
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentFoundation, setCurrentFoundation] = useState(0);
@@ -174,9 +176,11 @@ const Index = () => {
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
-  return <div className="mt-16">
-      {/* Hero Section with Image Slider - Enhanced Mobile Responsiveness */}
+  return <div className="mt-0">
+      {/* Hero Section with Image Slider and Integrated Navigation */}
       <section className="relative h-screen overflow-hidden">
+        <HeroNavigation />
+        
         {slides.map((slide, index) => <div key={index} className={`absolute inset-0 transition-all duration-1000 ${index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}>
             <div className="absolute inset-0 bg-cover bg-center transform transition-transform duration-1000" style={{
           backgroundImage: `url(${slide.image})`
@@ -211,8 +215,18 @@ const Index = () => {
         </div>
 
         {/* Navigation Arrows */}
-        
-        
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
 
         {/* Slide Indicators */}
         <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
@@ -314,4 +328,5 @@ const Index = () => {
       <ContactForm />
     </div>;
 };
+
 export default Index;
