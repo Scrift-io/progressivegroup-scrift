@@ -59,7 +59,7 @@ const Footer = () => {
               <li><Link to="/our-story" className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform inline-block">Our Story</Link></li>
               <li><Link to="/our-businesses" className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform inline-block">Our Businesses</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform inline-block">Careers</Link></li>
-              <li><Link to="/awards" className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform inline-block">Awards</Link></li>
+              <li><Link to="/our-impact" className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform inline-block">Our Impact</Link></li>
             </ul>
           </div>
 
@@ -85,9 +85,23 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 Progressive Group. All rights reserved.
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <p className="text-gray-400 text-sm">
+                © 2024 Progressive Group. All rights reserved.
+              </p>
+              
+              {/* Powered by Scrift Badge */}
+              <div className="inline-flex items-center bg-gradient-to-r from-slate-800 to-slate-700 px-3 py-1.5 rounded-md border border-slate-600 hover:border-slate-500 transition-colors duration-300 group">
+                <span className="text-gray-300 text-xs font-medium mr-2">Powered by</span>
+                <div className="flex items-center">
+                  <div className="w-4 h-4 bg-gradient-to-br from-blue-400 to-blue-600 rounded mr-1.5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-1.5 h-1.5 bg-white rounded-full opacity-80"></div>
+                  </div>
+                  <span className="text-white text-xs font-semibold">Scrift</span>
+                </div>
+              </div>
+            </div>
+            
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">Terms of Use</Link>
               <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">Privacy Policy</Link>
