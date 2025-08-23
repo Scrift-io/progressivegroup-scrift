@@ -35,14 +35,14 @@ const HeroNavigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-black/20 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 lg:h-24">
+        <div className="grid grid-cols-3 items-center h-20 lg:h-24">
           {/* Left Navigation */}
-          <div className="hidden lg:flex items-center space-x-8 flex-1">
+          <div className="hidden lg:flex items-center justify-start space-x-12">
             {leftNavItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-white font-semibold text-base hover:text-pg-red transition-all duration-300 px-3 py-2 relative group"
+                className="text-white font-semibold text-base hover:text-pg-red transition-all duration-300 px-3 py-2 relative group whitespace-nowrap"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pg-red transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
@@ -50,8 +50,8 @@ const HeroNavigation = () => {
             ))}
           </div>
           
-          {/* Center Logo - Now serves as Home button */}
-          <div className="flex items-center justify-center px-6">
+          {/* Center Logo - Serves as Home button */}
+          <div className="flex items-center justify-center">
             <Link to="/" className="flex-shrink-0 group">
               <div className="relative w-16 h-16 lg:w-20 lg:h-20 overflow-hidden rounded-full bg-white p-2 group-hover:scale-105 transition-transform duration-300 shadow-xl">
                 <img 
@@ -64,7 +64,7 @@ const HeroNavigation = () => {
           </div>
 
           {/* Right Navigation */}
-          <div className="hidden lg:flex items-center space-x-8 flex-1 justify-end">
+          <div className="hidden lg:flex items-center justify-end space-x-12">
             {rightNavItems.map((item) => (
               item.hasDropdown ? (
                 <div 
@@ -73,7 +73,7 @@ const HeroNavigation = () => {
                   onMouseEnter={() => item.isIndustrial ? setIndustrialDropdown(true) : setBusinessDropdown(true)}
                   onMouseLeave={() => item.isIndustrial ? setIndustrialDropdown(false) : setBusinessDropdown(false)}
                 >
-                  <button className="flex items-center text-white font-semibold text-base hover:text-pg-red transition-all duration-300 px-3 py-2">
+                  <button className="flex items-center text-white font-semibold text-base hover:text-pg-red transition-all duration-300 px-3 py-2 whitespace-nowrap">
                     {item.name}
                     <ChevronDown className={`ml-2 w-4 h-4 transition-transform duration-300 ${
                       (item.isIndustrial && industrialDropdown) || (!item.isIndustrial && businessDropdown) ? 'rotate-180' : ''
@@ -117,7 +117,7 @@ const HeroNavigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-white font-semibold text-base hover:text-pg-red transition-all duration-300 px-3 py-2 relative group"
+                  className="text-white font-semibold text-base hover:text-pg-red transition-all duration-300 px-3 py-2 relative group whitespace-nowrap"
                 >
                   {item.name}
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pg-red transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
@@ -127,7 +127,7 @@ const HeroNavigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
+          <div className="lg:hidden flex items-center justify-end">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white hover:text-pg-red transition-colors duration-300 p-3"
