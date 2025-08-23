@@ -1,4 +1,3 @@
-
 import { Facebook, Linkedin, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -96,8 +95,8 @@ const Footer = () => {
                 <div className="flex items-center">
                   <div className="w-4 h-4 bg-white rounded mr-1.5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 p-0.5">
                     <img 
-                      src="/lovable-uploads/1c5a00cb-213c-4eec-b315-6945b015ad5c.png" 
-                      alt="Progressive Group" 
+                      src="/lovable-uploads/bceb39d3-c659-41a1-bfed-1dfb06dafab5.png" 
+                      alt="Scrift" 
                       className="w-full h-full object-contain"
                     />
                   </div>
