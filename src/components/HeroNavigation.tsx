@@ -20,10 +20,10 @@ const HeroNavigation = () => {
   const leftNavItems: NavItem[] = [
     { name: 'Our Story', path: '/our-story' },
     { name: 'Our Impact', path: '/our-impact' },
+    { name: 'Careers', path: '/careers' },
   ];
 
   const rightNavItems: NavItem[] = [
-    { name: 'Careers', path: '/careers' },
     { name: 'Our Businesses', path: '/our-businesses', hasDropdown: true },
     { name: 'Industrial', path: '#', hasDropdown: true, isIndustrial: true },
     { name: 'Contact', path: '/contact' },
