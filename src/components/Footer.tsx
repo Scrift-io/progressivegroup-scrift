@@ -94,8 +94,12 @@ const Footer = () => {
               <div className="inline-flex items-center bg-gradient-to-r from-slate-800 to-slate-700 px-3 py-1.5 rounded-md border border-slate-600 hover:border-slate-500 transition-colors duration-300 group">
                 <span className="text-gray-300 text-xs font-medium mr-2">Powered by</span>
                 <div className="flex items-center">
-                  <div className="w-4 h-4 bg-gradient-to-br from-blue-400 to-blue-600 rounded mr-1.5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full opacity-80"></div>
+                  <div className="w-4 h-4 bg-white rounded mr-1.5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 p-0.5">
+                    <img 
+                      src="/lovable-uploads/1c5a00cb-213c-4eec-b315-6945b015ad5c.png" 
+                      alt="Progressive Group" 
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <span className="text-white text-xs font-semibold">Scrift</span>
                 </div>
