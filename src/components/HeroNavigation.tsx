@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
 interface NavItem {
   name: string;
@@ -15,6 +16,8 @@ const HeroNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [businessDropdown, setBusinessDropdown] = useState(false);
   const [industrialDropdown, setIndustrialDropdown] = useState(false);
+  const [mobileBusinessOpen, setMobileBusinessOpen] = useState(false);
+  const [mobileIndustrialOpen, setMobileIndustrialOpen] = useState(false);
   const navigate = useNavigate();
 
   const leftNavItems: NavItem[] = [
@@ -39,6 +42,12 @@ const HeroNavigation = () => {
     { name: 'Industrial Chemicals', path: '/industrial-chemicals' },
     { name: 'Machineries', path: '/machineries' },
   ];
+
+  const handleMobileNavClick = () => {
+    setIsOpen(false);
+    setMobileBusinessOpen(false);
+    setMobileIndustrialOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-black/20 backdrop-blur-md">
@@ -150,42 +159,72 @@ const HeroNavigation = () => {
       {isOpen && (
         <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-white/20 animate-fade-in">
           <div className="px-6 pt-4 pb-6 space-y-2 max-h-96 overflow-y-auto">
-            {leftNavItems.concat(rightNavItems).map((item) => (
+            {/* Regular navigation items (excluding dropdown items) */}
+            {leftNavItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
                 className="block px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 text-white hover:text-pg-red hover:bg-white/10"
-                onClick={() => setIsOpen(false)}
+                onClick={handleMobileNavClick}
               >
                 {item.name}
               </Link>
             ))}
             
-            <div className="px-4 py-3 text-sm font-bold text-gray-400 uppercase tracking-wider border-t border-white/20 mt-4">Our Businesses</div>
-            {businessItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.path}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block px-8 py-2 text-gray-300 hover:text-pg-red hover:bg-white/10 transition-all duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
+            {/* Our Businesses Collapsible */}
+            <Collapsible open={mobileBusinessOpen} onOpenChange={setMobileBusinessOpen}>
+              <CollapsibleTrigger className="flex items-center justify-between w-full px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 text-white hover:text-pg-red hover:bg-white/10">
+                Our Businesses
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileBusinessOpen ? 'rotate-180' : ''}`} />
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <div className="ml-4 space-y-1">
+                  {businessItems.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-2 text-sm text-gray-300 hover:text-pg-red hover:bg-white/10 transition-all duration-300 rounded-lg"
+                      onClick={handleMobileNavClick}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
             
-            <div className="px-4 py-3 text-sm font-bold text-gray-400 uppercase tracking-wider border-t border-white/20">Industrial</div>
-            {industrialItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="block px-8 py-2 text-gray-300 hover:text-pg-red hover:bg-white/10 transition-all duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {/* Industrial Collapsible */}
+            <Collapsible open={mobileIndustrialOpen} onOpenChange={setMobileIndustrialOpen}>
+              <CollapsibleTrigger className="flex items-center justify-between w-full px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 text-white hover:text-pg-red hover:bg-white/10">
+                Industrial
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileIndustrialOpen ? 'rotate-180' : ''}`} />
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <div className="ml-4 space-y-1">
+                  {industrialItems.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      className="block px-4 py-2 text-sm text-gray-300 hover:text-pg-red hover:bg-white/10 transition-all duration-300 rounded-lg"
+                      onClick={handleMobileNavClick}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
+
+            {/* Contact */}
+            <Link
+              to="/contact"
+              className="block px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 text-white hover:text-pg-red hover:bg-white/10"
+              onClick={handleMobileNavClick}
+            >
+              Contact
+            </Link>
           </div>
         </div>
       )}
