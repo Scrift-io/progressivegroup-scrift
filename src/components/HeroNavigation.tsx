@@ -97,7 +97,7 @@ const HeroNavigation = () => {
                     }`} />
                   </button>
                   
-                  <div className={`absolute top-full right-0 mt-2 w-56 bg-white/96 backdrop-blur-sm rounded-xl shadow-2xl border border-gray-100 py-3 z-50 transition-all duration-300 ${
+                  <div className={`absolute top-full right-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-200 py-3 z-50 transition-all duration-300 ${
                     (item.isIndustrial && industrialDropdown) || (!item.isIndustrial && businessDropdown) ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-4'
                   }`}>
                     <div className="px-5 py-3 text-sm font-bold text-gray-600 uppercase tracking-wider border-b border-gray-100">
