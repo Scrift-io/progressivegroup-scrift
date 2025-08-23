@@ -1,3 +1,4 @@
+
 import { Facebook, Linkedin, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -93,9 +94,9 @@ const Footer = () => {
               <div className="inline-flex items-center bg-gradient-to-r from-slate-800 to-slate-700 px-3 py-1.5 rounded-md border border-slate-600 hover:border-slate-500 transition-colors duration-300 group">
                 <span className="text-gray-300 text-xs font-medium mr-2">Powered by</span>
                 <div className="flex items-center">
-                  <div className="w-4 h-4 bg-white rounded mr-1.5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 p-0.5">
+                  <div className="w-4 h-4 mr-1.5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <img 
-                      src="/lovable-uploads/bceb39d3-c659-41a1-bfed-1dfb06dafab5.png" 
+                      src="/lovable-uploads/efe7484f-5766-4526-83eb-d58ed6aa2d1e.png" 
                       alt="Scrift" 
                       className="w-full h-full object-contain"
                     />
