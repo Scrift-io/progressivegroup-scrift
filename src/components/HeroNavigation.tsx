@@ -6,17 +6,20 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 const HeroNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [businessDropdown, setBusinessDropdown] = useState(false);
+  const [industrialDropdown, setIndustrialDropdown] = useState(false);
   const navigate = useNavigate();
 
   const leftNavItems = [
-    { name: 'Our Businesses', path: '/our-businesses', hasDropdown: true },
+    { name: 'Home', path: '/' },
+    { name: 'Our Story', path: '/our-story' },
     { name: 'Our Impact', path: '/our-impact' },
   ];
 
   const rightNavItems = [
-    { name: 'Our Story', path: '/our-story' },
     { name: 'Careers', path: '/careers' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Our Businesses', path: '/our-businesses', hasDropdown: true },
+    { name: 'Industrial', path: '#', hasDropdown: true, isIndustrial: true },
+    { name: 'Contact', path: '/contact', isButton: true },
   ];
 
   const businessItems = [
@@ -37,56 +40,14 @@ const HeroNavigation = () => {
           {/* Left Navigation */}
           <div className="hidden lg:flex items-center space-x-8 flex-1">
             {leftNavItems.map((item) => (
-              item.hasDropdown ? (
-                <div 
-                  key={item.name}
-                  className="relative group"
-                  onMouseEnter={() => setBusinessDropdown(true)}
-                  onMouseLeave={() => setBusinessDropdown(false)}
-                >
-                  <button className="flex items-center text-white font-medium text-lg hover:text-pg-red transition-all duration-300 px-4 py-2">
-                    {item.name}
-                    <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-300 ${businessDropdown ? 'rotate-180' : ''}`} />
-                  </button>
-                  
-                  <div className={`absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl border border-gray-100 py-2 z-50 transition-all duration-300 ${
-                    businessDropdown ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
-                  }`}>
-                    <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">Our Businesses</div>
-                    {businessItems.map((subItem) => (
-                      <a
-                        key={subItem.name}
-                        href={subItem.path}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-pg-red transition-all duration-300"
-                      >
-                        {subItem.name}
-                      </a>
-                    ))}
-                    <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100 mt-2">Industrial</div>
-                    {industrialItems.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.path}
-                        className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-pg-red transition-all duration-300"
-                        onClick={() => setBusinessDropdown(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="text-white font-medium text-lg hover:text-pg-red transition-all duration-300 px-4 py-2 relative group"
-                >
-                  {item.name}
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pg-red transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
-                </Link>
-              )
+              <Link
+                key={item.name}
+                to={item.path}
+                className="text-white font-medium text-lg hover:text-pg-red transition-all duration-300 px-4 py-2 relative group"
+              >
+                {item.name}
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pg-red transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+              </Link>
             ))}
           </div>
           
@@ -106,14 +67,71 @@ const HeroNavigation = () => {
           {/* Right Navigation */}
           <div className="hidden lg:flex items-center space-x-8 flex-1 justify-end">
             {rightNavItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="text-white font-medium text-lg hover:text-pg-red transition-all duration-300 px-4 py-2 relative group"
-              >
-                {item.name}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pg-red transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
-              </Link>
+              item.hasDropdown ? (
+                <div 
+                  key={item.name}
+                  className="relative group"
+                  onMouseEnter={() => item.isIndustrial ? setIndustrialDropdown(true) : setBusinessDropdown(true)}
+                  onMouseLeave={() => item.isIndustrial ? setIndustrialDropdown(false) : setBusinessDropdown(false)}
+                >
+                  <button className="flex items-center text-white font-medium text-lg hover:text-pg-red transition-all duration-300 px-4 py-2">
+                    {item.name}
+                    <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-300 ${
+                      (item.isIndustrial && industrialDropdown) || (!item.isIndustrial && businessDropdown) ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+                  
+                  <div className={`absolute top-full right-0 mt-2 w-56 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl border border-gray-100 py-2 z-50 transition-all duration-300 ${
+                    (item.isIndustrial && industrialDropdown) || (!item.isIndustrial && businessDropdown) ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
+                  }`}>
+                    <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">
+                      {item.name}
+                    </div>
+                    {(item.isIndustrial ? industrialItems : businessItems).map((subItem) => (
+                      subItem.external ? (
+                        <a
+                          key={subItem.name}
+                          href={subItem.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-pg-red transition-all duration-300"
+                        >
+                          {subItem.name}
+                        </a>
+                      ) : (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.path}
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-pg-red transition-all duration-300"
+                          onClick={() => {
+                            setBusinessDropdown(false);
+                            setIndustrialDropdown(false);
+                          }}
+                        >
+                          {subItem.name}
+                        </Link>
+                      )
+                    ))}
+                  </div>
+                </div>
+              ) : item.isButton ? (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="bg-pg-red text-white px-6 py-2 rounded-full font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="text-white font-medium text-lg hover:text-pg-red transition-all duration-300 px-4 py-2 relative group"
+                >
+                  {item.name}
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pg-red transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                </Link>
+              )
             ))}
           </div>
 
@@ -133,7 +151,7 @@ const HeroNavigation = () => {
       {isOpen && (
         <div className="lg:hidden bg-black/90 backdrop-blur-sm border-t border-white/20 animate-fade-in">
           <div className="px-4 pt-2 pb-3 space-y-1 max-h-96 overflow-y-auto">
-            {leftNavItems.concat(rightNavItems).map((item) => (
+            {leftNavItems.concat(rightNavItems.filter(item => !item.isButton)).map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
@@ -169,6 +187,14 @@ const HeroNavigation = () => {
                 {item.name}
               </Link>
             ))}
+            
+            <Link
+              to="/contact"
+              className="block mx-3 mt-4 bg-pg-red text-white px-4 py-2 rounded-full text-center font-semibold hover:bg-red-700 transition-all duration-300"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </Link>
           </div>
         </div>
       )}

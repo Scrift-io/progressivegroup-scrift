@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import LoadingScreen from "./components/LoadingScreen";
-import Navigation from "./components/Navigation";
+import HeroNavigation from "./components/HeroNavigation";
 import Footer from "./components/Footer";
 import Chatbot from "./components/Chatbot";
 import Index from "./pages/Index";
@@ -43,28 +43,22 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <div className="min-h-screen flex flex-col">
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="*" element={
-                <>
-                  <Navigation />
-                  <main className="flex-1">
-                    <Routes>
-                      <Route path="/our-story" element={<OurStory />} />
-                      <Route path="/our-businesses" element={<OurBusinesses />} />
-                      <Route path="/our-impact" element={<OurImpact />} />
-                      <Route path="/careers" element={<Careers />} />
-                      <Route path="/building-material" element={<BuildingMaterial />} />
-                      <Route path="/industrial-chemicals" element={<IndustrialChemicals />} />
-                      <Route path="/machineries" element={<Machineries />} />
-                      <Route path="/contact" element={<Contact />} />
-                      <Route path="*" element={<NotFound />} />
-                    </Routes>
-                  </main>
-                  <Footer />
-                </>
-              } />
-            </Routes>
+            <HeroNavigation />
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/our-story" element={<OurStory />} />
+                <Route path="/our-businesses" element={<OurBusinesses />} />
+                <Route path="/our-impact" element={<OurImpact />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/building-material" element={<BuildingMaterial />} />
+                <Route path="/industrial-chemicals" element={<IndustrialChemicals />} />
+                <Route path="/machineries" element={<Machineries />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
             <Chatbot />
           </div>
         </BrowserRouter>

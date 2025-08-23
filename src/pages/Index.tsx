@@ -3,7 +3,6 @@ import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, CheckCircle,
 import { Link } from 'react-router-dom';
 import { Timeline } from '@/components/ui/timeline';
 import ContactForm from '@/components/ContactForm';
-import HeroNavigation from '@/components/HeroNavigation';
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -177,10 +176,8 @@ const Index = () => {
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
   return <div className="mt-0">
-      {/* Hero Section with Image Slider and Integrated Navigation */}
+      {/* Hero Section with Image Slider */}
       <section className="relative h-screen overflow-hidden">
-        <HeroNavigation />
-        
         {slides.map((slide, index) => <div key={index} className={`absolute inset-0 transition-all duration-1000 ${index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}>
             <div className="absolute inset-0 bg-cover bg-center transform transition-transform duration-1000" style={{
           backgroundImage: `url(${slide.image})`
