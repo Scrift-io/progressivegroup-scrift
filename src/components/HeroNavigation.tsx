@@ -10,17 +10,15 @@ const HeroNavigation = () => {
   const navigate = useNavigate();
 
   const leftNavItems = [
-    { name: 'Home', path: '/' },
     { name: 'Our Story', path: '/our-story' },
     { name: 'Our Impact', path: '/our-impact' },
   ];
 
   const rightNavItems = [
-    { name: 'Awards & Recognition', path: '/awards' },
     { name: 'Careers', path: '/careers' },
     { name: 'Our Businesses', path: '/our-businesses', hasDropdown: true },
     { name: 'Industrial', path: '#', hasDropdown: true, isIndustrial: true },
-    { name: 'Contact', path: '/contact', isButton: true },
+    { name: 'Contact', path: '/contact' },
   ];
 
   const businessItems = [
@@ -52,14 +50,14 @@ const HeroNavigation = () => {
             ))}
           </div>
           
-          {/* Center Logo */}
+          {/* Center Logo - Now serves as Home button */}
           <div className="flex items-center justify-center px-6">
             <Link to="/" className="flex-shrink-0 group">
               <div className="relative w-16 h-16 lg:w-20 lg:h-20 overflow-hidden rounded-full bg-white p-2 group-hover:scale-105 transition-transform duration-300 shadow-xl">
                 <img 
                   className="w-full h-full object-contain" 
                   src="/lovable-uploads/1c5a00cb-213c-4eec-b315-6945b015ad5c.png" 
-                  alt="Progressive Group"
+                  alt="Progressive Group - Home"
                 />
               </div>
             </Link>
@@ -115,14 +113,6 @@ const HeroNavigation = () => {
                     ))}
                   </div>
                 </div>
-              ) : item.isButton ? (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="bg-pg-red text-white px-6 py-2 rounded-full font-bold text-base hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                >
-                  {item.name}
-                </Link>
               ) : (
                 <Link
                   key={item.name}
@@ -152,7 +142,7 @@ const HeroNavigation = () => {
       {isOpen && (
         <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-white/20 animate-fade-in">
           <div className="px-6 pt-4 pb-6 space-y-2 max-h-96 overflow-y-auto">
-            {leftNavItems.concat(rightNavItems.filter(item => !item.isButton)).map((item) => (
+            {leftNavItems.concat(rightNavItems).map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
@@ -188,14 +178,6 @@ const HeroNavigation = () => {
                 {item.name}
               </Link>
             ))}
-            
-            <Link
-              to="/contact"
-              className="block mx-4 mt-6 bg-pg-red text-white px-6 py-3 rounded-full text-center font-bold hover:bg-red-700 transition-all duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
           </div>
         </div>
       )}
