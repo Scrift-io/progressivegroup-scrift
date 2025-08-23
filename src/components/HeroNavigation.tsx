@@ -3,30 +3,38 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
+interface NavItem {
+  name: string;
+  path: string;
+  hasDropdown?: boolean;
+  isIndustrial?: boolean;
+  isExternal?: boolean;
+}
+
 const HeroNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [businessDropdown, setBusinessDropdown] = useState(false);
   const [industrialDropdown, setIndustrialDropdown] = useState(false);
   const navigate = useNavigate();
 
-  const leftNavItems = [
+  const leftNavItems: NavItem[] = [
     { name: 'Our Story', path: '/our-story' },
     { name: 'Our Impact', path: '/our-impact' },
   ];
 
-  const rightNavItems = [
+  const rightNavItems: NavItem[] = [
     { name: 'Careers', path: '/careers' },
     { name: 'Our Businesses', path: '/our-businesses', hasDropdown: true },
     { name: 'Industrial', path: '#', hasDropdown: true, isIndustrial: true },
     { name: 'Contact', path: '/contact' },
   ];
 
-  const businessItems = [
+  const businessItems: NavItem[] = [
     { name: 'PowerPlus', path: 'https://powerplus.com', isExternal: true },
     { name: 'PakGhiza', path: 'https://pakghiza.com', isExternal: true },
   ];
 
-  const industrialItems = [
+  const industrialItems: NavItem[] = [
     { name: 'Building Material', path: '/building-material' },
     { name: 'Industrial Chemicals', path: '/industrial-chemicals' },
     { name: 'Machineries', path: '/machineries' },
@@ -35,9 +43,9 @@ const HeroNavigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-black/20 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center h-20 lg:h-24">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Left Navigation */}
-          <div className="hidden lg:flex items-center justify-start space-x-12">
+          <div className="hidden lg:flex items-center space-x-8 xl:space-x-12 flex-1">
             {leftNavItems.map((item) => (
               <Link
                 key={item.name}
@@ -51,8 +59,8 @@ const HeroNavigation = () => {
           </div>
           
           {/* Center Logo - Serves as Home button */}
-          <div className="flex items-center justify-center">
-            <Link to="/" className="flex-shrink-0 group">
+          <div className="flex items-center justify-center flex-shrink-0 px-4">
+            <Link to="/" className="group">
               <div className="relative w-16 h-16 lg:w-20 lg:h-20 overflow-hidden rounded-full bg-white p-2 group-hover:scale-105 transition-transform duration-300 shadow-xl">
                 <img 
                   className="w-full h-full object-contain" 
@@ -64,7 +72,7 @@ const HeroNavigation = () => {
           </div>
 
           {/* Right Navigation */}
-          <div className="hidden lg:flex items-center justify-end space-x-12">
+          <div className="hidden lg:flex items-center justify-end space-x-8 xl:space-x-12 flex-1">
             {rightNavItems.map((item) => (
               item.hasDropdown ? (
                 <div 
