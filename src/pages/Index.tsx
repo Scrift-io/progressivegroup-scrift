@@ -3,7 +3,6 @@ import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, CheckCircle,
 import { Link } from 'react-router-dom';
 import { Timeline } from '@/components/ui/timeline';
 import ContactForm from '@/components/ContactForm';
-
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentFoundation, setCurrentFoundation] = useState(0);
@@ -212,18 +211,8 @@ const Index = () => {
         </div>
 
         {/* Navigation Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
+        
+        
 
         {/* Slide Indicators */}
         <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
@@ -325,5 +314,4 @@ const Index = () => {
       <ContactForm />
     </div>;
 };
-
 export default Index;
