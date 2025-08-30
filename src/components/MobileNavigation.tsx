@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -32,11 +33,11 @@ const MobileNavigation = ({
   }];
   const businessItems: NavItem[] = [{
     name: 'PowerPlus',
-    path: 'https://powerplus.com',
+    path: 'https://preview--powerplus-scrift.lovable.app/',
     isExternal: true
   }, {
     name: 'PakGhiza',
-    path: 'https://pakghiza.com',
+    path: 'https://preview--pakghiza-scrift.lovable.app/',
     isExternal: true
   }];
   const industrialItems: NavItem[] = [{
