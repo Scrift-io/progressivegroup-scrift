@@ -134,7 +134,7 @@ const HeroNavigation = () => {
             ))}
           </div>
 
-          {/* Mobile Navigation - visible on tablet and mobile */}
+          {/* Mobile Navigation Component - Always render */}
           <MobileNavigation isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
