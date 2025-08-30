@@ -47,19 +47,19 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
-            {/* Fixed spacing for desktop - increased gap and better positioning */}
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+            {/* Fixed positioning for desktop with proper spacing */}
+            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-md md:w-full md:min-w-[400px]">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:bg-neutral-700 p-2" />
               </div>
-              {/* Improved title positioning and spacing */}
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl lg:text-5xl font-bold text-neutral-500 dark:text-neutral-500 whitespace-nowrap pr-8 lg:pr-12">
+              {/* Enhanced title positioning with better spacing and width control */}
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl lg:text-4xl xl:text-5xl font-bold text-neutral-500 dark:text-neutral-500 md:pr-8 lg:pr-16 xl:pr-20 leading-tight">
                 {item.title}
               </h3>
             </div>
 
-            {/* Content section with proper left margin for desktop */}
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
+            {/* Content section with proper left margin and spacing for desktop */}
+            <div className="relative pl-20 pr-4 md:pl-8 lg:pl-12 xl:pl-16 w-full md:max-w-3xl lg:max-w-4xl">
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
