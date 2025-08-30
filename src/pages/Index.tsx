@@ -3,22 +3,25 @@ import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, CheckCircle,
 import { Link } from 'react-router-dom';
 import { Timeline } from '@/components/ui/timeline';
 import ContactForm from '@/components/ContactForm';
+
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentFoundation, setCurrentFoundation] = useState(0);
+  
   const slides = [{
-    image: "https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?w=1200&h=600&fit=crop",
+    image: "/lovable-uploads/3b3ab5a9-8914-49e3-b310-691d92fb2e83.png",
     title: "Building Tomorrow",
     subtitle: "Progressive Group - 70 Years of Excellence"
   }, {
-    image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=1200&h=600&fit=crop",
-    title: "Innovation Driven",
+    image: "/lovable-uploads/ebbfb0ba-7168-43b5-8c0a-4ad44e683ed6.png",
+    title: "Innovation Driven", 
     subtitle: "Leading Pakistan's Industrial Growth"
   }, {
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&h=600&fit=crop",
+    image: "/lovable-uploads/de8c88aa-48b5-495c-b451-1608ce29a6a2.png",
     title: "Value Creation",
     subtitle: "Mission-Oriented Business Solutions"
   }];
+
   const foundationItems = [{
     id: 'vision',
     title: 'VISION',
@@ -44,6 +47,7 @@ const Index = () => {
     titleColor: 'text-gray-300',
     content: ['Speak the Truth', 'Keep Promises', 'Respect Others', 'Avoid Back Biting', 'Do Justice & Deliverance', 'Uphold Morality & Professionalism']
   }];
+
   const timelineData = [{
     title: "Industrial Chemical Manufacturing",
     content: <div>
@@ -156,24 +160,29 @@ const Index = () => {
           </div>
         </div>
   }];
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
+
   useEffect(() => {
     const foundationTimer = setInterval(() => {
       setCurrentFoundation(prev => (prev + 1) % foundationItems.length);
     }, 4000);
     return () => clearInterval(foundationTimer);
   }, [foundationItems.length]);
+
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % slides.length);
   };
+
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
+
   return <div className="mt-0">
       {/* Hero Section with Image Slider */}
       <section className="relative h-screen overflow-hidden">
@@ -314,4 +323,5 @@ const Index = () => {
       <ContactForm />
     </div>;
 };
+
 export default Index;
