@@ -3,37 +3,22 @@ import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, CheckCircle,
 import { Link } from 'react-router-dom';
 import { Timeline } from '@/components/ui/timeline';
 import ContactForm from '@/components/ContactForm';
-
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentFoundation, setCurrentFoundation] = useState(0);
-  
   const slides = [{
-    image: "/lovable-uploads/143b80d2-6d93-4587-9f30-5c72e09315fc.png",
+    image: "https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?w=1200&h=600&fit=crop",
     title: "Building Tomorrow",
     subtitle: "Progressive Group - 70 Years of Excellence"
   }, {
-    image: "/lovable-uploads/2f284504-8f25-483d-845c-91f5f598c0e3.png",
-    title: "Innovation Driven", 
+    image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=1200&h=600&fit=crop",
+    title: "Innovation Driven",
     subtitle: "Leading Pakistan's Industrial Growth"
   }, {
-    image: "/lovable-uploads/b16f8622-afbc-40ee-b32f-4afc78415412.png",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&h=600&fit=crop",
     title: "Value Creation",
     subtitle: "Mission-Oriented Business Solutions"
-  }, {
-    image: "/lovable-uploads/9352f4ae-108e-4b85-8728-afb8bdd5960a.png",
-    title: "Quality Excellence",
-    subtitle: "Premium Products for Every Need"
-  }, {
-    image: "/lovable-uploads/320c91c9-6ff1-4fed-aacb-8afa4c620ec5.png",
-    title: "Trusted Solutions",
-    subtitle: "Powering Growth Across Industries"
-  }, {
-    image: "/lovable-uploads/37e5891b-706e-46b0-ab9d-8f36a7e01bb0.png",
-    title: "Global Standards",
-    subtitle: "Delivering Excellence Worldwide"
   }];
-
   const foundationItems = [{
     id: 'vision',
     title: 'VISION',
@@ -59,7 +44,6 @@ const Index = () => {
     titleColor: 'text-gray-300',
     content: ['Speak the Truth', 'Keep Promises', 'Respect Others', 'Avoid Back Biting', 'Do Justice & Deliverance', 'Uphold Morality & Professionalism']
   }];
-
   const timelineData = [{
     title: "Industrial Chemical Manufacturing",
     content: <div>
@@ -108,7 +92,7 @@ const Index = () => {
               <div className="w-6 h-6 bg-gradient-to-r from-pg-red to-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-3 h-3 text-white" />
               </div>
-              <span>Professional Agricultural Tillers & Farm Equipment</span>
+              
             </div>
             <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
               <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -145,7 +129,7 @@ const Index = () => {
               <div className="w-6 h-6 bg-gradient-to-r from-pg-red to-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-3 h-3 text-white" />
               </div>
-              <span>Glass Blocks & Advanced Glazing Solutions</span>
+              
             </div>
             <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
               <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -172,29 +156,24 @@ const Index = () => {
           </div>
         </div>
   }];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   useEffect(() => {
     const foundationTimer = setInterval(() => {
       setCurrentFoundation(prev => (prev + 1) % foundationItems.length);
     }, 4000);
     return () => clearInterval(foundationTimer);
   }, [foundationItems.length]);
-
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
-
   return <div className="mt-0">
       {/* Hero Section with Image Slider */}
       <section className="relative h-screen overflow-hidden">
@@ -335,5 +314,4 @@ const Index = () => {
       <ContactForm />
     </div>;
 };
-
 export default Index;
