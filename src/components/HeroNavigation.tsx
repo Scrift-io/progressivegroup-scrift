@@ -59,7 +59,7 @@ const HeroNavigation = () => {
           </div>
           
           {/* Center Logo - Responsive sizing */}
-          <div className="flex items-center justify-center flex-shrink-0 px-2 sm:px-4">
+          <div className="flex items-center justify-center flex-shrink-0 px-2 sm:px-4 lg:flex-1">
             <Link to="/" className="group">
               <div className="relative w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 overflow-hidden rounded-full bg-white p-1.5 sm:p-2 group-hover:scale-105 transition-transform duration-300 shadow-xl">
                 <img 
@@ -134,7 +134,7 @@ const HeroNavigation = () => {
             ))}
           </div>
 
-          {/* Mobile Navigation Component - Always render */}
+          {/* Mobile Navigation Component - Visible on mobile and tablet only */}
           <MobileNavigation isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>

@@ -53,11 +53,11 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
 
   return (
     <>
-      {/* Mobile menu button - visible on mobile and tablet (below lg) */}
-      <div className="lg:hidden flex items-center">
+      {/* Mobile menu button - visible on mobile and tablet (below lg) with enhanced visibility */}
+      <div className="lg:hidden flex items-center ml-auto">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-white hover:text-red-500 transition-colors duration-300 p-3 z-50 relative touch-manipulation"
+          className="relative bg-black/70 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-white hover:text-red-500 hover:bg-black/90 transition-all duration-300 z-50 shadow-lg touch-manipulation"
           type="button"
           aria-label="Toggle mobile menu"
           aria-expanded={isOpen}
