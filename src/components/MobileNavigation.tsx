@@ -73,11 +73,11 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
       {/* Mobile Navigation Overlay */}
       {isOpen && (
         <div 
-          className="lg:hidden fixed inset-0 bg-black/95 backdrop-blur-md z-40"
+          className="lg:hidden fixed inset-0 bg-black z-40"
           onClick={handleBackdropClick}
         >
           {/* Full height container with proper spacing */}
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen bg-black">
             {/* Header spacer to account for fixed navigation */}
             <div className="h-20 flex-shrink-0"></div>
             
@@ -89,7 +89,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className="block px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 text-center border border-white/20 hover:border-white/40 min-h-[56px] flex items-center justify-center touch-manipulation bg-white/5"
+                    className="block px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 text-center border border-white/20 hover:border-white/40 min-h-[56px] flex items-center justify-center touch-manipulation bg-gray-900"
                     onClick={handleMobileNavClick}
                   >
                     {item.name}
@@ -98,7 +98,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                 
                 {/* Our Businesses Collapsible */}
                 <Collapsible open={mobileBusinessOpen} onOpenChange={setMobileBusinessOpen}>
-                  <CollapsibleTrigger className="flex items-center justify-between w-full px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 border border-white/20 hover:border-white/40 min-h-[56px] touch-manipulation bg-white/5">
+                  <CollapsibleTrigger className="flex items-center justify-between w-full px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 border border-white/20 hover:border-white/40 min-h-[56px] touch-manipulation bg-gray-900">
                     Our Businesses
                     <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileBusinessOpen ? 'rotate-180' : ''}`} />
                   </CollapsibleTrigger>
@@ -110,7 +110,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                           href={item.path}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-white/5"
+                          className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-gray-800"
                           onClick={handleMobileNavClick}
                         >
                           {item.name}
@@ -122,7 +122,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                 
                 {/* Industrial Collapsible */}
                 <Collapsible open={mobileIndustrialOpen} onOpenChange={setMobileIndustrialOpen}>
-                  <CollapsibleTrigger className="flex items-center justify-between w-full px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 border border-white/20 hover:border-white/40 min-h-[56px] touch-manipulation bg-white/5">
+                  <CollapsibleTrigger className="flex items-center justify-between w-full px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 border border-white/20 hover:border-white/40 min-h-[56px] touch-manipulation bg-gray-900">
                     Industrial
                     <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileIndustrialOpen ? 'rotate-180' : ''}`} />
                   </CollapsibleTrigger>
@@ -132,7 +132,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                         <Link
                           key={item.name}
                           to={item.path}
-                          className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-white/5"
+                          className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-gray-800"
                           onClick={handleMobileNavClick}
                         >
                           {item.name}
@@ -145,7 +145,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                 {/* Awards & Recognition */}
                 <Link
                   to="/awards-recognition"
-                  className="block px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 text-center border border-white/20 hover:border-white/40 min-h-[56px] flex items-center justify-center touch-manipulation bg-white/5"
+                  className="block px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 text-center border border-white/20 hover:border-white/40 min-h-[56px] flex items-center justify-center touch-manipulation bg-gray-900"
                   onClick={handleMobileNavClick}
                 >
                   Awards & Recognition
