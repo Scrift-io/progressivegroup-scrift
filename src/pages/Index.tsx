@@ -9,29 +9,29 @@ const Index = () => {
   const [currentFoundation, setCurrentFoundation] = useState(0);
   
   const slides = [{
-    image: "/lovable-uploads/75cde505-c547-48af-8bb2-a7bbae1cf44b.png",
-    title: "PowerPlus Toys",
-    subtitle: "Quality Toys & Batteries for Children"
+    image: "/lovable-uploads/143b80d2-6d93-4587-9f30-5c72e09315fc.png",
+    title: "Building Tomorrow",
+    subtitle: "Progressive Group - 70 Years of Excellence"
   }, {
-    image: "/lovable-uploads/1301792d-88c0-4411-a592-bc7acd522de5.png",
-    title: "PowerPlus Products",
-    subtitle: "Complete Range of Consumer Care Products"
+    image: "/lovable-uploads/2f284504-8f25-483d-845c-91f5f598c0e3.png",
+    title: "Innovation Driven", 
+    subtitle: "Leading Pakistan's Industrial Growth"
   }, {
-    image: "/lovable-uploads/acb16a56-9a6e-4ba1-a71c-13f60e43be27.png",
-    title: "PowerPlus Shoe Care",
-    subtitle: "Premium Shoe Care & Polish Solutions"
+    image: "/lovable-uploads/b16f8622-afbc-40ee-b32f-4afc78415412.png",
+    title: "Value Creation",
+    subtitle: "Mission-Oriented Business Solutions"
   }, {
-    image: "/lovable-uploads/f12218f8-89f0-4be1-8bf2-e60c8afab350.png",
-    title: "PakGhiza Chocolino",
-    subtitle: "Premium Chocolate & Baking Products"
+    image: "/lovable-uploads/9352f4ae-108e-4b85-8728-afb8bdd5960a.png",
+    title: "Quality Excellence",
+    subtitle: "Premium Products for Every Need"
   }, {
-    image: "/lovable-uploads/f12f1bcf-4402-4bf4-835f-e07751e03e50.png",
-    title: "PakGhiza Eka-300",
-    subtitle: "Professional Bread Improver Solutions"
+    image: "/lovable-uploads/320c91c9-6ff1-4fed-aacb-8afa4c620ec5.png",
+    title: "Trusted Solutions",
+    subtitle: "Powering Growth Across Industries"
   }, {
-    image: "/lovable-uploads/b9fcdcad-e3c2-4d54-9398-10f36d352b7b.png",
-    title: "PakGhiza Sun Drips",
-    subtitle: "Delicious Decorative Sauce Collection"
+    image: "/lovable-uploads/37e5891b-706e-46b0-ab9d-8f36a7e01bb0.png",
+    title: "Global Standards",
+    subtitle: "Delivering Excellence Worldwide"
   }];
 
   const foundationItems = [{
@@ -108,7 +108,7 @@ const Index = () => {
               <div className="w-6 h-6 bg-gradient-to-r from-pg-red to-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-3 h-3 text-white" />
               </div>
-              
+              <span>Professional Agricultural Tillers & Farm Equipment</span>
             </div>
             <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
               <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -145,7 +145,7 @@ const Index = () => {
               <div className="w-6 h-6 bg-gradient-to-r from-pg-red to-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-3 h-3 text-white" />
               </div>
-              
+              <span>Glass Blocks & Advanced Glazing Solutions</span>
             </div>
             <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
               <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">

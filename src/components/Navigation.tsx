@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -18,8 +17,8 @@ const Navigation = () => {
   ];
 
   const businessItems = [
-    { name: 'PowerPlus', path: 'https://preview--powerplus-scrift.lovable.app/', external: true },
-    { name: 'PakGhiza', path: 'https://preview--pakghiza-scrift.lovable.app/', external: true },
+    { name: 'PowerPlus', path: 'https://powerplus.com', external: true },
+    { name: 'PakGhiza', path: 'https://pakghiza.com', external: true },
   ];
 
   const industrialItems = [
