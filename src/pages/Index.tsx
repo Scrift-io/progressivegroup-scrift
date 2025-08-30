@@ -93,8 +93,8 @@ const Index = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?w=400&h=300&fit=crop" alt="Chemical Manufacturing Facility" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
-            <img src="https://images.unsplash.com/photo-1628260412297-a3377e45006f?w=400&h=300&fit=crop" alt="Quality Control Laboratory" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
+            <img src="/lovable-uploads/c1b417f2-5a7d-408e-93a5-6743e87d1988.png" alt="Premium Phosphorus Compounds" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
+            <img src="/lovable-uploads/a72c0325-362e-41e4-a03e-776a6ac23552.png" alt="Industrial Grade Sulphur" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
           </div>
         </div>
   }, {
@@ -130,8 +130,8 @@ const Index = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop" alt="Agricultural Machinery" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" alt="Industrial Equipment" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
+            <img src="/lovable-uploads/0262cb78-5a75-4428-9b76-270d2b23382b.png" alt="Professional Agricultural Tillers" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
+            <img src="/lovable-uploads/05de19cf-99be-4689-b1f4-bfbe8de8b03b.png" alt="Advanced Dairy Equipment" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
           </div>
         </div>
   }, {
@@ -167,8 +167,8 @@ const Index = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop" alt="Construction Materials" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
-            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop" alt="Building Materials" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
+            <img src="/lovable-uploads/1221495a-3a55-4cc2-bb90-5e9e4b3e01dc.png" alt="Glass Blocks & Glazing Solutions" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
+            <img src="/lovable-uploads/0a74d2ce-682c-4f0e-ba89-478f2048e1e8.png" alt="UPVC Roofing Systems" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
           </div>
         </div>
   }];
