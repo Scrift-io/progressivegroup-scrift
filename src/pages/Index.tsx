@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, CheckCircle, Award, Zap, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -130,8 +131,8 @@ const Index = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img src="/lovable-uploads/0262cb78-5a75-4428-9b76-270d2b23382b.png" alt="Professional Agricultural Tillers" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
-            <img src="/lovable-uploads/05de19cf-99be-4689-b1f4-bfbe8de8b03b.png" alt="Advanced Dairy Equipment" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
+            <img src="/lovable-uploads/55902ae3-9e31-43d6-a623-503ff574931a.png" alt="Professional Agricultural Tillers" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
+            <img src="/lovable-uploads/afb940ca-fde6-4445-ba52-af589496fbff.png" alt="Advanced Dairy Equipment" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
           </div>
         </div>
   }, {
