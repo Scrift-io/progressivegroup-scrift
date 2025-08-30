@@ -44,16 +44,16 @@ const HeroNavigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-black/20 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
-          {/* Left Navigation - Hidden on mobile */}
+          {/* Left Navigation - Hidden on mobile and tablet */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-12 flex-1">
             {leftNavItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-white font-semibold text-sm xl:text-base hover:text-pg-red transition-all duration-300 px-3 py-2 relative group whitespace-nowrap"
+                className="text-white font-semibold text-sm xl:text-base hover:text-red-500 transition-all duration-300 px-3 py-2 relative group whitespace-nowrap"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pg-red transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
               </Link>
             ))}
           </div>
@@ -71,7 +71,7 @@ const HeroNavigation = () => {
             </Link>
           </div>
 
-          {/* Right Navigation - Hidden on mobile */}
+          {/* Right Navigation - Hidden on mobile and tablet */}
           <div className="hidden lg:flex items-center justify-end space-x-6 xl:space-x-12 flex-1">
             {rightNavItems.map((item) => (
               item.hasDropdown ? (
@@ -81,7 +81,7 @@ const HeroNavigation = () => {
                   onMouseEnter={() => item.isIndustrial ? setIndustrialDropdown(true) : setBusinessDropdown(true)}
                   onMouseLeave={() => item.isIndustrial ? setIndustrialDropdown(false) : setBusinessDropdown(false)}
                 >
-                  <button className="flex items-center text-white font-semibold text-sm xl:text-base hover:text-pg-red transition-all duration-300 px-3 py-2 whitespace-nowrap">
+                  <button className="flex items-center text-white font-semibold text-sm xl:text-base hover:text-red-500 transition-all duration-300 px-3 py-2 whitespace-nowrap">
                     {item.name}
                     <ChevronDown className={`ml-2 w-4 h-4 transition-transform duration-300 ${
                       (item.isIndustrial && industrialDropdown) || (!item.isIndustrial && businessDropdown) ? 'rotate-180' : ''
@@ -101,7 +101,7 @@ const HeroNavigation = () => {
                           href={subItem.path}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-5 py-3 text-gray-700 hover:bg-red-50 hover:text-pg-red transition-all duration-300 font-medium"
+                          className="block px-5 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all duration-300 font-medium"
                         >
                           {subItem.name}
                         </a>
@@ -109,7 +109,7 @@ const HeroNavigation = () => {
                         <Link
                           key={subItem.name}
                           to={subItem.path}
-                          className="block px-5 py-3 text-gray-700 hover:bg-red-50 hover:text-pg-red transition-all duration-300 font-medium"
+                          className="block px-5 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all duration-300 font-medium"
                           onClick={() => {
                             setBusinessDropdown(false);
                             setIndustrialDropdown(false);
@@ -125,16 +125,16 @@ const HeroNavigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-white font-semibold text-sm xl:text-base hover:text-pg-red transition-all duration-300 px-3 py-2 relative group whitespace-nowrap"
+                  className="text-white font-semibold text-sm xl:text-base hover:text-red-500 transition-all duration-300 px-3 py-2 relative group whitespace-nowrap"
                 >
                   {item.name}
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pg-red transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                 </Link>
               )
             ))}
           </div>
 
-          {/* Mobile Navigation */}
+          {/* Mobile Navigation - visible on tablet and mobile */}
           <MobileNavigation isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>

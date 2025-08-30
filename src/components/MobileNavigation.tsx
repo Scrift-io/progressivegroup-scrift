@@ -45,13 +45,20 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
     setMobileIndustrialOpen(false);
   };
 
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      handleMobileNavClick();
+    }
+  };
+
   return (
     <>
-      {/* Mobile menu button */}
+      {/* Mobile menu button - visible on lg and below */}
       <div className="lg:hidden flex items-center justify-end">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-white hover:text-pg-red transition-colors duration-300 p-3 z-50 relative"
+          className="text-white hover:text-red-500 transition-colors duration-300 p-3 z-50 relative"
+          aria-label="Toggle mobile menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -59,16 +66,19 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
 
       {/* Mobile Navigation Overlay */}
       {isOpen && (
-        <div className="lg:hidden fixed inset-0 bg-black/95 backdrop-blur-md z-40 animate-fade-in">
-          <div className="flex flex-col h-full pt-24 pb-6">
+        <div 
+          className="lg:hidden fixed inset-0 bg-black/95 backdrop-blur-md z-40 animate-fade-in"
+          onClick={handleBackdropClick}
+        >
+          <div className="flex flex-col h-full pt-20 pb-6">
             <div className="flex-1 overflow-y-auto px-6">
-              <div className="space-y-2 max-w-sm mx-auto">
+              <div className="space-y-3 max-w-sm mx-auto">
                 {/* Regular navigation items */}
                 {leftNavItems.map((item) => (
                   <Link
                     key={item.name}
                     to={item.path}
-                    className="block px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-pg-red hover:bg-white/10 text-center border border-transparent hover:border-white/20"
+                    className="block px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 text-center border border-transparent hover:border-white/20 min-h-[56px] flex items-center justify-center"
                     onClick={handleMobileNavClick}
                   >
                     {item.name}
@@ -77,7 +87,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                 
                 {/* Our Businesses Collapsible */}
                 <Collapsible open={mobileBusinessOpen} onOpenChange={setMobileBusinessOpen}>
-                  <CollapsibleTrigger className="flex items-center justify-between w-full px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-pg-red hover:bg-white/10 border border-transparent hover:border-white/20">
+                  <CollapsibleTrigger className="flex items-center justify-between w-full px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 border border-transparent hover:border-white/20 min-h-[56px]">
                     Our Businesses
                     <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileBusinessOpen ? 'rotate-180' : ''}`} />
                   </CollapsibleTrigger>
@@ -89,7 +99,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                           href={item.path}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-8 py-3 text-base text-gray-300 hover:text-pg-red hover:bg-white/10 transition-all duration-300 rounded-lg mx-4 text-center border border-transparent hover:border-white/20"
+                          className="block px-8 py-3 text-base text-gray-300 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-4 text-center border border-transparent hover:border-white/20 min-h-[48px] flex items-center justify-center"
                           onClick={handleMobileNavClick}
                         >
                           {item.name}
@@ -101,7 +111,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                 
                 {/* Industrial Collapsible */}
                 <Collapsible open={mobileIndustrialOpen} onOpenChange={setMobileIndustrialOpen}>
-                  <CollapsibleTrigger className="flex items-center justify-between w-full px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-pg-red hover:bg-white/10 border border-transparent hover:border-white/20">
+                  <CollapsibleTrigger className="flex items-center justify-between w-full px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 border border-transparent hover:border-white/20 min-h-[56px]">
                     Industrial
                     <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileIndustrialOpen ? 'rotate-180' : ''}`} />
                   </CollapsibleTrigger>
@@ -111,7 +121,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                         <Link
                           key={item.name}
                           to={item.path}
-                          className="block px-8 py-3 text-base text-gray-300 hover:text-pg-red hover:bg-white/10 transition-all duration-300 rounded-lg mx-4 text-center border border-transparent hover:border-white/20"
+                          className="block px-8 py-3 text-base text-gray-300 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-4 text-center border border-transparent hover:border-white/20 min-h-[48px] flex items-center justify-center"
                           onClick={handleMobileNavClick}
                         >
                           {item.name}
@@ -127,7 +137,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                     handleMobileNavClick();
                     navigate('/contact');
                   }}
-                  className="w-full mt-6 bg-gradient-to-r from-pg-red to-red-600 text-white px-6 py-4 rounded-xl text-lg font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="w-full mt-6 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-4 rounded-xl text-lg font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg min-h-[56px] flex items-center justify-center"
                 >
                   Contact
                 </button>
