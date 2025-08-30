@@ -1,9 +1,7 @@
-
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-
 interface NavItem {
   name: string;
   path: string;
@@ -11,71 +9,66 @@ interface NavItem {
   isIndustrial?: boolean;
   isExternal?: boolean;
 }
-
 interface MobileNavigationProps {
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
 }
-
-const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
+const MobileNavigation = ({
+  isOpen,
+  setIsOpen
+}: MobileNavigationProps) => {
   const [mobileBusinessOpen, setMobileBusinessOpen] = useState(false);
   const [mobileIndustrialOpen, setMobileIndustrialOpen] = useState(false);
   const navigate = useNavigate();
-
-  const leftNavItems: NavItem[] = [
-    { name: 'Our Story', path: '/our-story' },
-    { name: 'Our Impact', path: '/our-impact' },
-    { name: 'Careers', path: '/careers' },
-  ];
-
-  const businessItems: NavItem[] = [
-    { name: 'PowerPlus', path: 'https://powerplus.com', isExternal: true },
-    { name: 'PakGhiza', path: 'https://pakghiza.com', isExternal: true },
-  ];
-
-  const industrialItems: NavItem[] = [
-    { name: 'Building Material', path: '/building-material' },
-    { name: 'Industrial Chemicals', path: '/industrial-chemicals' },
-    { name: 'Machineries', path: '/machineries' },
-  ];
-
+  const leftNavItems: NavItem[] = [{
+    name: 'Our Story',
+    path: '/our-story'
+  }, {
+    name: 'Our Impact',
+    path: '/our-impact'
+  }, {
+    name: 'Careers',
+    path: '/careers'
+  }];
+  const businessItems: NavItem[] = [{
+    name: 'PowerPlus',
+    path: 'https://powerplus.com',
+    isExternal: true
+  }, {
+    name: 'PakGhiza',
+    path: 'https://pakghiza.com',
+    isExternal: true
+  }];
+  const industrialItems: NavItem[] = [{
+    name: 'Building Material',
+    path: '/building-material'
+  }, {
+    name: 'Industrial Chemicals',
+    path: '/industrial-chemicals'
+  }, {
+    name: 'Machineries',
+    path: '/machineries'
+  }];
   const handleMobileNavClick = () => {
     setIsOpen(false);
     setMobileBusinessOpen(false);
     setMobileIndustrialOpen(false);
   };
-
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       handleMobileNavClick();
     }
   };
-
-  return (
-    <>
+  return <>
       {/* Mobile menu button - visible on mobile and tablet (below lg) with enhanced visibility */}
       <div className="lg:hidden flex items-center ml-auto">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="relative bg-black/70 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-white hover:text-red-500 hover:bg-black/90 transition-all duration-300 z-50 shadow-lg touch-manipulation"
-          type="button"
-          aria-label="Toggle mobile menu"
-          aria-expanded={isOpen}
-        >
-          {isOpen ? (
-            <X size={24} className="drop-shadow-lg" />
-          ) : (
-            <Menu size={24} className="drop-shadow-lg" />
-          )}
+        <button onClick={() => setIsOpen(!isOpen)} className="relative bg-black/70 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-white hover:text-red-500 hover:bg-black/90 transition-all duration-300 z-50 shadow-lg touch-manipulation" type="button" aria-label="Toggle mobile menu" aria-expanded={isOpen}>
+          {isOpen ? <X size={24} className="drop-shadow-lg" /> : <Menu size={24} className="drop-shadow-lg" />}
         </button>
       </div>
 
       {/* Mobile Navigation Overlay */}
-      {isOpen && (
-        <div 
-          className="lg:hidden fixed inset-0 bg-black z-40"
-          onClick={handleBackdropClick}
-        >
+      {isOpen && <div className="lg:hidden fixed inset-0 bg-black z-40" onClick={handleBackdropClick}>
           {/* Full height container with proper spacing */}
           <div className="flex flex-col min-h-screen bg-black">
             {/* Header spacer to account for fixed navigation */}
@@ -85,16 +78,9 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
             <div className="flex-1 overflow-y-auto px-6 py-6">
               <div className="space-y-3 max-w-sm mx-auto">
                 {/* Regular navigation items */}
-                {leftNavItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    className="block px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 text-center border border-white/20 hover:border-white/40 min-h-[56px] flex items-center justify-center touch-manipulation bg-gray-900"
-                    onClick={handleMobileNavClick}
-                  >
+                {leftNavItems.map(item => <Link key={item.name} to={item.path} className="block px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 text-center border border-white/20 hover:border-white/40 min-h-[56px] flex items-center justify-center touch-manipulation bg-gray-900" onClick={handleMobileNavClick}>
                     {item.name}
-                  </Link>
-                ))}
+                  </Link>)}
                 
                 {/* Our Businesses Collapsible */}
                 <Collapsible open={mobileBusinessOpen} onOpenChange={setMobileBusinessOpen}>
@@ -104,18 +90,9 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                   </CollapsibleTrigger>
                   <CollapsibleContent>
                     <div className="mt-3 space-y-2">
-                      {businessItems.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.path}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-gray-800"
-                          onClick={handleMobileNavClick}
-                        >
+                      {businessItems.map(item => <a key={item.name} href={item.path} target="_blank" rel="noopener noreferrer" className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-gray-800" onClick={handleMobileNavClick}>
                           {item.name}
-                        </a>
-                      ))}
+                        </a>)}
                     </div>
                   </CollapsibleContent>
                 </Collapsible>
@@ -128,37 +105,21 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
                   </CollapsibleTrigger>
                   <CollapsibleContent>
                     <div className="mt-3 space-y-2">
-                      {industrialItems.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.path}
-                          className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-gray-800"
-                          onClick={handleMobileNavClick}
-                        >
+                      {industrialItems.map(item => <Link key={item.name} to={item.path} className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-gray-800" onClick={handleMobileNavClick}>
                           {item.name}
-                        </Link>
-                      ))}
+                        </Link>)}
                     </div>
                   </CollapsibleContent>
                 </Collapsible>
 
                 {/* Awards & Recognition */}
-                <Link
-                  to="/awards-recognition"
-                  className="block px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 text-center border border-white/20 hover:border-white/40 min-h-[56px] flex items-center justify-center touch-manipulation bg-gray-900"
-                  onClick={handleMobileNavClick}
-                >
-                  Awards & Recognition
-                </Link>
+                
 
                 {/* Contact Button */}
-                <button
-                  onClick={() => {
-                    handleMobileNavClick();
-                    navigate('/contact');
-                  }}
-                  className="w-full mt-4 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-4 rounded-xl text-lg font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg min-h-[56px] flex items-center justify-center touch-manipulation"
-                >
+                <button onClick={() => {
+              handleMobileNavClick();
+              navigate('/contact');
+            }} className="w-full mt-4 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-4 rounded-xl text-lg font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg min-h-[56px] flex items-center justify-center touch-manipulation">
                   Contact
                 </button>
               </div>
@@ -167,10 +128,7 @@ const MobileNavigation = ({ isOpen, setIsOpen }: MobileNavigationProps) => {
             {/* Bottom padding for safe area */}
             <div className="h-6 flex-shrink-0"></div>
           </div>
-        </div>
-      )}
-    </>
-  );
+        </div>}
+    </>;
 };
-
 export default MobileNavigation;
