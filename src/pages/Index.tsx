@@ -9,17 +9,29 @@ const Index = () => {
   const [currentFoundation, setCurrentFoundation] = useState(0);
   
   const slides = [{
-    image: "/lovable-uploads/3b3ab5a9-8914-49e3-b310-691d92fb2e83.png",
+    image: "/lovable-uploads/143b80d2-6d93-4587-9f30-5c72e09315fc.png",
     title: "Building Tomorrow",
     subtitle: "Progressive Group - 70 Years of Excellence"
   }, {
-    image: "/lovable-uploads/ebbfb0ba-7168-43b5-8c0a-4ad44e683ed6.png",
+    image: "/lovable-uploads/2f284504-8f25-483d-845c-91f5f598c0e3.png",
     title: "Innovation Driven", 
     subtitle: "Leading Pakistan's Industrial Growth"
   }, {
-    image: "/lovable-uploads/de8c88aa-48b5-495c-b451-1608ce29a6a2.png",
+    image: "/lovable-uploads/b16f8622-afbc-40ee-b32f-4afc78415412.png",
     title: "Value Creation",
     subtitle: "Mission-Oriented Business Solutions"
+  }, {
+    image: "/lovable-uploads/9352f4ae-108e-4b85-8728-afb8bdd5960a.png",
+    title: "Quality Excellence",
+    subtitle: "Premium Products for Every Need"
+  }, {
+    image: "/lovable-uploads/320c91c9-6ff1-4fed-aacb-8afa4c620ec5.png",
+    title: "Trusted Solutions",
+    subtitle: "Powering Growth Across Industries"
+  }, {
+    image: "/lovable-uploads/37e5891b-706e-46b0-ab9d-8f36a7e01bb0.png",
+    title: "Global Standards",
+    subtitle: "Delivering Excellence Worldwide"
   }];
 
   const foundationItems = [{
