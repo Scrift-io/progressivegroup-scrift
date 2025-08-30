@@ -41,8 +41,8 @@ const HeroNavigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-black/20 backdrop-blur-md mobile-safe-area">
-      <div className="max-w-7xl mx-auto mobile-container">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-black/20 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Left Navigation - Hidden on mobile */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-12 flex-1">
@@ -58,15 +58,14 @@ const HeroNavigation = () => {
             ))}
           </div>
           
-          {/* Center Logo - Enhanced mobile responsiveness */}
+          {/* Center Logo - Responsive sizing */}
           <div className="flex items-center justify-center flex-shrink-0 px-2 sm:px-4">
-            <Link to="/" className="group mobile-touch-manipulation">
-              <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 overflow-hidden rounded-full bg-white p-1 sm:p-1.5 md:p-2 group-hover:scale-105 transition-transform duration-300 shadow-xl mobile-optimized">
+            <Link to="/" className="group">
+              <div className="relative w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 overflow-hidden rounded-full bg-white p-1.5 sm:p-2 group-hover:scale-105 transition-transform duration-300 shadow-xl">
                 <img 
-                  className="w-full h-full object-contain mobile-image-contain" 
+                  className="w-full h-full object-contain" 
                   src="/lovable-uploads/1c5a00cb-213c-4eec-b315-6945b015ad5c.png" 
                   alt="Progressive Group - Home"
-                  loading="eager"
                 />
               </div>
             </Link>
@@ -89,7 +88,7 @@ const HeroNavigation = () => {
                     }`} />
                   </button>
                   
-                  <div className={`absolute top-full right-0 mt-2 w-56 bg-white/98 backdrop-blur-sm rounded-xl shadow-2xl border border-gray-200 py-3 z-50 transition-all duration-300 ${
+                  <div className={`absolute top-full right-0 mt-2 w-56 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-gray-200 py-3 z-50 transition-all duration-300 ${
                     (item.isIndustrial && industrialDropdown) || (!item.isIndustrial && businessDropdown) ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-4'
                   }`}>
                     <div className="px-5 py-3 text-sm font-bold text-gray-600 uppercase tracking-wider border-b border-gray-100">
@@ -135,7 +134,7 @@ const HeroNavigation = () => {
             ))}
           </div>
 
-          {/* Mobile Navigation - Enhanced component */}
+          {/* Mobile Navigation */}
           <MobileNavigation isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
