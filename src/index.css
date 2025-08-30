@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -80,11 +79,15 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border font-montserrat;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-montserrat font-light;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium;
   }
 
   /* Mobile-first responsive design improvements */
@@ -137,16 +140,16 @@
     @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
   }
 
-  /* Responsive text scaling */
+  /* Responsive text scaling with Montserrat */
   .responsive-heading {
-    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium;
   }
 
   .responsive-subheading {
-    @apply text-lg sm:text-xl lg:text-2xl;
+    @apply text-lg sm:text-xl lg:text-2xl font-medium;
   }
 
   .responsive-body {
-    @apply text-sm sm:text-base lg:text-lg;
+    @apply text-sm sm:text-base lg:text-lg font-light;
   }
 }

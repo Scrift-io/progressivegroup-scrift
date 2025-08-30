@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +18,14 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'sans': ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+      },
+      fontWeight: {
+        'light': '300',
+        'medium': '500',
+      },
       colors: {
         'pg-red': '#DC2626',
         'pg-blue': '#1E40AF',
