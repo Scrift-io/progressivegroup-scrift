@@ -41,10 +41,40 @@ const Footer = () => {
                 </div>
                 <span className="text-sm text-gray-300">021-35026618</span>
               </div>
-              <Link to="/contact" className="inline-flex items-center text-sm text-pg-red hover:text-red-400 transition-colors mt-2">
-                <MapPin size={12} className="mr-1" />
-                View All Locations
-              </Link>
+              
+              {/* Office Addresses */}
+              <div className="mt-3 space-y-2">
+                <h4 className="text-sm font-medium text-white mb-2">Our Offices</h4>
+                <div className="space-y-1.5">
+                  <div className="flex items-start">
+                    <div className="w-5 h-5 bg-pg-red rounded flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">
+                      <MapPin size={10} className="text-white" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-300 font-medium">Head Office</p>
+                      <p className="text-xs text-gray-400 leading-tight">L-66, LDA Industrial Area, Lahore, Pakistan</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-5 h-5 bg-pg-red rounded flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">
+                      <MapPin size={10} className="text-white" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-300 font-medium">Karachi Office</p>
+                      <p className="text-xs text-gray-400 leading-tight">Plot 123, Industrial Area, Karachi, Pakistan</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-5 h-5 bg-pg-red rounded flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">
+                      <MapPin size={10} className="text-white" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-300 font-medium">Islamabad Office</p>
+                      <p className="text-xs text-gray-400 leading-tight">Block A, Business District, Islamabad, Pakistan</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
