@@ -269,7 +269,7 @@ const Index = () => {
             animationDelay: '0.3s'
           }}>
               <div className="relative">
-                <img alt="Progressive Group Industrial Facility" className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500" src="/lovable-uploads/16ce3280-aef2-48c0-8ead-7c852c365504.png" />
+                <img alt="Progressive Group Corporate Building" className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500" src="/lovable-uploads/progressive-group-corporate.png" />
                 <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-pg-red text-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-xl">
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold">70+</div>
                   <div className="text-xs sm:text-sm opacity-90">Years of Excellence</div>
