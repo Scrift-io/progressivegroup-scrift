@@ -277,7 +277,7 @@ const OurStory = () => {
                   <h3 className="text-3xl font-bold text-gray-900 mb-8">Our Commitment</h3>
                   <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                     <p className="border-l-4 border-pg-red pl-6 italic">
-                      Our Quality Policy is crystal clear: We aspire to build standards, beneficial with money, back assurance.
+                      Our Quality Policy is crystal clear: We are committed to establishing excellence in standards, delivering measurable value, and ensuring unwavering reliability in all our operations.
                     </p>
                     <p>
                       We maintain strict quality control standards across all our business divisions and offer money-back guarantees for our products.
