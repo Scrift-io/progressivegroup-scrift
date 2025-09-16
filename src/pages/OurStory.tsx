@@ -100,7 +100,7 @@ const OurStory = () => {
               {/* Vice Chairman */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="animate-fade-in">
-                  <img src="/lovable-uploads/25ed6148-9fea-490c-a452-28fb859469a1.png" alt="Waqas Muhammad Sheikh - Vice Chairman" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
+                  <img src="/lovable-uploads/25ed6148-9fea-490c-a452-28fb859469a1.png" alt="Waqas Muhammad Sheikh - Vice Chairman" className="w-full object-contain rounded-2xl shadow-xl" />
                 </div>
                 <div className="animate-fade-in" style={{
               animationDelay: '0.2s'
