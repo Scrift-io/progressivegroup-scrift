@@ -15,35 +15,35 @@ const Media = () => {
   const videos = [
     {
       id: 1,
-      title: 'Progressive Group - Company Overview',
-      description: 'Discover our 70-year journey of excellence and innovation in Pakistan\'s industrial landscape.',
+      title: 'PowerPlus TVC - Brand Excellence',
+      description: 'PowerPlus television commercial showcasing our commitment to quality and innovation in FMCG products.',
       thumbnail: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=300&fit=crop',
       duration: '3:45',
-      category: 'Corporate'
+      category: 'TVC'
     },
     {
       id: 2,
-      title: 'PowerPlus Brand Story',
-      description: 'Learn about our FMCG division and how PowerPlus became a household name in Pakistan.',
+      title: 'PowerPlus TVC - Family Values',
+      description: 'PowerPlus TV commercial highlighting how our products bring families together with trust and quality.',
       thumbnail: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&h=300&fit=crop',
       duration: '2:30',
-      category: 'Brand'
+      category: 'TVC'
     },
     {
       id: 3,
-      title: 'PakGhiza Manufacturing Excellence',
-      description: 'Behind the scenes look at our food ingredients manufacturing and quality standards.',
+      title: 'PowerPlus TVC - Product Innovation',
+      description: 'PowerPlus television commercial featuring our latest product innovations and manufacturing excellence.',
       thumbnail: 'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600&h=300&fit=crop',
       duration: '4:15',
-      category: 'Manufacturing'
+      category: 'TVC'
     },
     {
       id: 4,
-      title: 'Industrial Solutions Showcase',
-      description: 'Explore our industrial chemicals and building materials division capabilities.',
+      title: 'PowerPlus TVC - Brand Legacy',
+      description: 'PowerPlus TV commercial celebrating our brand heritage and commitment to Pakistani households.',
       thumbnail: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=300&fit=crop',
       duration: '5:20',
-      category: 'Industrial'
+      category: 'TVC'
     }
   ];
 
