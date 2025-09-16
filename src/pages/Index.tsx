@@ -270,9 +270,9 @@ const Index = () => {
           }}>
               <div className="relative">
                 <img alt="Progressive Group Corporate Building" className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500" src="/lovable-uploads/progressive-group-corporate.png" />
-                <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-pg-red text-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-xl">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold">70+</div>
-                  <div className="text-xs sm:text-sm opacity-90">Years of Excellence</div>
+                <div className="absolute -top-3 sm:-top-4 -right-3 sm:-right-4 bg-pg-red text-white p-3 sm:p-4 rounded-xl shadow-xl">
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold">70+</div>
+                  <div className="text-xs opacity-90">Years of Excellence</div>
                 </div>
               </div>
             </div>
