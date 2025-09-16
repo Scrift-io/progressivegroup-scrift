@@ -19,7 +19,6 @@ const MobileNavigation = ({
   setIsOpen
 }: MobileNavigationProps) => {
   const [mobileBusinessOpen, setMobileBusinessOpen] = useState(false);
-  const [mobileIndustrialOpen, setMobileIndustrialOpen] = useState(false);
   const navigate = useNavigate();
   const leftNavItems: NavItem[] = [{
     name: 'Our Story',
@@ -30,6 +29,9 @@ const MobileNavigation = ({
   }, {
     name: 'Careers',
     path: '/careers'
+  }, {
+    name: 'Media',
+    path: '/media'
   }];
   const businessItems: NavItem[] = [{
     name: 'PowerPlus',
@@ -40,20 +42,9 @@ const MobileNavigation = ({
     path: 'https://preview--pakghiza-scrift.lovable.app/',
     isExternal: true
   }];
-  const industrialItems: NavItem[] = [{
-    name: 'Building Material',
-    path: '/building-material'
-  }, {
-    name: 'Industrial Chemicals',
-    path: '/industrial-chemicals'
-  }, {
-    name: 'Machineries',
-    path: '/machineries'
-  }];
   const handleMobileNavClick = () => {
     setIsOpen(false);
     setMobileBusinessOpen(false);
-    setMobileIndustrialOpen(false);
   };
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -98,21 +89,6 @@ const MobileNavigation = ({
                   </CollapsibleContent>
                 </Collapsible>
                 
-                {/* Industrial Collapsible */}
-                <Collapsible open={mobileIndustrialOpen} onOpenChange={setMobileIndustrialOpen}>
-                  <CollapsibleTrigger className="flex items-center justify-between w-full px-6 py-4 text-lg font-semibold rounded-xl transition-all duration-300 text-white hover:text-red-500 hover:bg-white/10 border border-white/20 hover:border-white/40 min-h-[56px] touch-manipulation bg-gray-900">
-                    Industrial
-                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileIndustrialOpen ? 'rotate-180' : ''}`} />
-                  </CollapsibleTrigger>
-                  <CollapsibleContent>
-                    <div className="mt-3 space-y-2">
-                      {industrialItems.map(item => <Link key={item.name} to={item.path} className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-gray-800" onClick={handleMobileNavClick}>
-                          {item.name}
-                        </Link>)}
-                    </div>
-                  </CollapsibleContent>
-                </Collapsible>
-
                 {/* Awards & Recognition */}
                 
 
