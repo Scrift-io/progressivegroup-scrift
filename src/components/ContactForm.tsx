@@ -131,8 +131,12 @@ const ContactForm = () => {
                   <MapPin size={20} className="text-white sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1 text-base sm:text-lg">Visit Our Facility</h4>
-                  <p className="text-sm sm:text-base text-gray-600">L-66, LDA Industrial Area<br />Lahore, Pakistan</p>
+                  <h4 className="font-semibold text-gray-900 mb-1 text-base sm:text-lg">Visit Our Offices</h4>
+                  <p className="text-sm sm:text-base text-gray-600">
+                    <strong>Karachi Head Office:</strong> LC-40, Landhi Industrial Area<br />
+                    <strong>Lahore:</strong> 60th Mall Road, Shahrah-e-Quaid-e-Azam<br />
+                    <strong>Rawalpindi:</strong> House No. 51, Street #5, Khan Avenue
+                  </p>
                 </div>
               </div>
 

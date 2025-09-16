@@ -32,13 +32,13 @@ const Footer = () => {
                 <div className="w-10 h-10 bg-pg-red rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 transition-colors duration-300">
                   <MapPin size={16} className="text-white" />
                 </div>
-                <span className="text-sm text-gray-300">L-66, LDA Industrial Area, Lahore, Pakistan</span>
+                <span className="text-sm text-gray-300">LC-40, Landhi Industrial Area, Karachi, Pakistan</span>
               </div>
               <div className="flex items-center group">
                 <div className="w-10 h-10 bg-pg-red rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 transition-colors duration-300">
                   <Phone size={16} className="text-white" />
                 </div>
-                <span className="text-sm text-gray-300">+92-123-4567890</span>
+                <span className="text-sm text-gray-300">021-35026618-20</span>
               </div>
               <div className="flex items-center group">
                 <div className="w-10 h-10 bg-pg-red rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 transition-colors duration-300">
@@ -57,7 +57,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li><Link to="/our-story" className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform inline-block">Our Story</Link></li>
-              <li><Link to="/our-businesses" className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform inline-block">Our Businesses</Link></li>
+              <li><Link to="/media" className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform inline-block">Media</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform inline-block">Careers</Link></li>
               <li><Link to="/our-impact" className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 transform inline-block">Our Impact</Link></li>
             </ul>
