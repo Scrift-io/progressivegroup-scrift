@@ -194,31 +194,55 @@ const Media = () => {
                           {video.category}
                         </div>
                       </div>
-                    ) : index === 1 ? (
-                      <div className="relative">
-                        <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
-                          <iframe 
-                            allow="fullscreen" 
-                            allowFullScreen 
-                            height="100%" 
-                            src="https://streamable.com/e/vn9pjv?" 
-                            width="100%" 
-                            style={{ 
-                              border: 'none', 
-                              width: '100%', 
-                              height: '100%', 
-                              position: 'absolute', 
-                              left: 0, 
-                              top: 0, 
-                              overflow: 'hidden' 
-                            }}
-                          />
-                        </div>
-                        <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
-                          {video.category}
-                        </div>
-                      </div>
-                    ) : (
+                     ) : index === 1 ? (
+                       <div className="relative">
+                         <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
+                           <iframe 
+                             allow="fullscreen" 
+                             allowFullScreen 
+                             height="100%" 
+                             src="https://streamable.com/e/vn9pjv?" 
+                             width="100%" 
+                             style={{ 
+                               border: 'none', 
+                               width: '100%', 
+                               height: '100%', 
+                               position: 'absolute', 
+                               left: 0, 
+                               top: 0, 
+                               overflow: 'hidden' 
+                             }}
+                           />
+                         </div>
+                         <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
+                           {video.category}
+                         </div>
+                       </div>
+                     ) : index === 2 ? (
+                       <div className="relative">
+                         <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
+                           <iframe 
+                             allow="fullscreen" 
+                             allowFullScreen 
+                             height="100%" 
+                             src="https://streamable.com/e/dqexcr?" 
+                             width="100%" 
+                             style={{ 
+                               border: 'none', 
+                               width: '100%', 
+                               height: '100%', 
+                               position: 'absolute', 
+                               left: 0, 
+                               top: 0, 
+                               overflow: 'hidden' 
+                             }}
+                           />
+                         </div>
+                         <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
+                           {video.category}
+                         </div>
+                       </div>
+                     ) : (
                       /* Other videos with thumbnail and play button */
                       <div className="relative group">
                         <img
