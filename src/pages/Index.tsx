@@ -1,8 +1,7 @@
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, CheckCircle, Award, Zap, Shield } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, Users, Globe, Leaf, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Timeline } from '@/components/ui/timeline';
 import ContactForm from '@/components/ContactForm';
 
 const Index = () => {
@@ -59,119 +58,6 @@ const Index = () => {
     iconBg: 'bg-gray-700',
     titleColor: 'text-gray-300',
     content: ['Speak the Truth', 'Keep Promises', 'Respect Others', 'Avoid Back Biting', 'Do Justice & Deliverance', 'Uphold Morality & Professionalism']
-  }];
-
-  const timelineData = [{
-    title: "Industrial Chemical Manufacturing",
-    content: <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal mb-6">
-            Leading manufacturer of premium industrial chemicals, providing high-purity compounds and specialty solutions for diverse manufacturing sectors across Pakistan and international markets.
-          </p>
-          <div className="mb-6 space-y-3">
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-pg-red to-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Award className="w-3 h-3 text-white" />
-              </div>
-              <span>Premium Phosphorus Compounds & Specialty Chemicals</span>
-            </div>
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Shield className="w-3 h-3 text-white" />
-              </div>
-              <span>ISO-Certified Quality Control & Testing Laboratories</span>
-            </div>
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-3 h-3 text-white" />
-              </div>
-              <span>Custom Chemical Formulations & Technical Support</span>
-            </div>
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <CheckCircle className="w-3 h-3 text-white" />
-              </div>
-              <span>International Export Quality Standards & Compliance</span>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img src="/lovable-uploads/c1b417f2-5a7d-408e-93a5-6743e87d1988.png" alt="Premium Phosphorus Compounds" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
-            <img src="/lovable-uploads/a72c0325-362e-41e4-a03e-776a6ac23552.png" alt="Industrial Grade Sulphur" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
-          </div>
-        </div>
-  }, {
-    title: "Advanced Machinery Solutions",
-    content: <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal mb-6">
-            Cutting-edge agricultural and industrial machinery designed for enhanced productivity. Our precision-engineered solutions combine innovative technology with robust construction for superior performance.
-          </p>
-          <div className="mb-6 space-y-3">
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-pg-red to-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Award className="w-3 h-3 text-white" />
-              </div>
-              <span>Professional Agricultural Tillers & Farm Equipment</span>
-            </div>
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Shield className="w-3 h-3 text-white" />
-              </div>
-              <span>Advanced Dairy Equipment & Milking Systems</span>
-            </div>
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-3 h-3 text-white" />
-              </div>
-              <span>Technical Support & Maintenance Services</span>
-            </div>
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <CheckCircle className="w-3 h-3 text-white" />
-              </div>
-              <span>Precision Engineering & Quality Assurance</span>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img src="/lovable-uploads/55902ae3-9e31-43d6-a623-503ff574931a.png" alt="Professional Agricultural Tillers" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
-            <img src="/lovable-uploads/afb940ca-fde6-4445-ba52-af589496fbff.png" alt="Advanced Dairy Equipment" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
-          </div>
-        </div>
-  }, {
-    title: "Premium Building Materials",
-    content: <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal mb-6">
-            Comprehensive building materials and construction solutions for residential, commercial, and industrial projects. We deliver quality materials that meet international construction standards.
-          </p>
-          <div className="mb-6 space-y-3">
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-pg-red to-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Award className="w-3 h-3 text-white" />
-              </div>
-              <span>Glass Blocks & Advanced Glazing Solutions</span>
-            </div>
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Shield className="w-3 h-3 text-white" />
-              </div>
-              <span>UPVC Roofing & Polycarbonate Sheet Systems</span>
-            </div>
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-3 h-3 text-white" />
-              </div>
-              <span>Premium Wood Flooring & Mosaic Solutions</span>
-            </div>
-            <div className="flex gap-3 items-center text-neutral-700 dark:text-neutral-300 text-sm group">
-              <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <CheckCircle className="w-3 h-3 text-white" />
-              </div>
-              <span>Project Consultation & Technical Support</span>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img src="/lovable-uploads/1221495a-3a55-4cc2-bb90-5e9e4b3e01dc.png" alt="Glass Blocks & Glazing Solutions" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
-            <img src="/lovable-uploads/0a74d2ce-682c-4f0e-ba89-478f2048e1e8.png" alt="UPVC Roofing Systems" className="rounded-lg object-cover h-32 lg:h-40 w-full shadow-lg" />
-          </div>
-        </div>
   }];
 
   useEffect(() => {
@@ -329,8 +215,123 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Business Divisions Timeline */}
-      <Timeline data={timelineData} />
+      {/* Our Impact Section */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Impact Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Our <span className="text-pg-red">Impact</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Making a difference in communities and the environment through seven decades of excellence
+            </p>
+            <div className="w-24 h-1 bg-pg-red mx-auto mt-6"></div>
+          </div>
+
+          {/* Impact Statistics */}
+          <div className="bg-gradient-to-r from-pg-red to-red-700 text-white rounded-2xl p-8 mb-16">
+            <h3 className="text-3xl font-bold text-center mb-12">Our Impact in Numbers</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">70+</div>
+                <div className="text-lg opacity-90">Years of Service</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">500+</div>
+                <div className="text-lg opacity-90">Employees</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">130+</div>
+                <div className="text-lg opacity-90">Products</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">3</div>
+                <div className="text-lg opacity-90">Business Divisions</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Impact Areas */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* Individuals & Families */}
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-pg-red rounded-xl flex items-center justify-center mr-4">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Individuals & Families</h3>
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Employment Generation</h4>
+                  <p className="text-gray-600 text-sm">Providing direct employment to hundreds of families across Pakistan, contributing to economic stability and growth.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Quality Products</h4>
+                  <p className="text-gray-600 text-sm">Ensuring families have access to reliable, affordable products that improve their daily lives.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Skill Development</h4>
+                  <p className="text-gray-600 text-sm">Enhancing workforce capabilities through comprehensive training and development programs.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* For the Planet */}
+            <div className="bg-green-50 rounded-2xl p-8">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mr-4">
+                  <Globe className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">For the Planet</h3>
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Environmental Responsibility</h4>
+                  <p className="text-gray-600 text-sm">Committed to sustainable business practices that minimize our environmental footprint.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Sustainable Manufacturing</h4>
+                  <p className="text-gray-600 text-sm">Environmentally conscious processes that reduce waste and optimize resource utilization.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Green Innovation</h4>
+                  <p className="text-gray-600 text-sm">Continuous investment in R&D for sustainable products and processes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Our Commitment */}
+          <div className="text-center">
+            <h3 className="text-3xl font-bold text-gray-900 mb-12">Our Commitment to Society</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="p-6">
+                <div className="w-16 h-16 bg-pg-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Heart className="w-8 h-8 text-pg-red" />
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-4">Social Responsibility</h4>
+                <p className="text-gray-600">Giving back to communities through social initiatives and charitable activities.</p>
+              </div>
+              <div className="p-6">
+                <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Leaf className="w-8 h-8 text-green-600" />
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-4">Environmental Stewardship</h4>
+                <p className="text-gray-600">Operations guided by environmental protection and sustainable development principles.</p>
+              </div>
+              <div className="p-6">
+                <div className="w-16 h-16 bg-pg-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-8 h-8 text-pg-red" />
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-4">Community Development</h4>
+                <p className="text-gray-600">Active participation in community programs that create lasting positive impact.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Enhanced Contact Form */}
       <ContactForm />
