@@ -96,6 +96,51 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Office Locations - Horizontal Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-6 border-t border-gray-700">
+          {/* Karachi Head Office */}
+          <div className="text-center">
+            <h4 className="text-white font-semibold text-sm mb-2 flex items-center justify-center">
+              <MapPin size={14} className="mr-1 text-pg-red" />
+              Karachi Head Office
+            </h4>
+            <p className="text-gray-300 text-xs leading-relaxed mb-1">
+              LC-40, Landhi Industrial Area, Near Opal Laboratory, Karachi, Pakistan Post Code 71500
+            </p>
+            <p className="text-gray-300 text-xs">
+              Tel: 021-35026618-20, 35026622, 021-35026602
+            </p>
+          </div>
+
+          {/* Lahore Regional Office */}
+          <div className="text-center">
+            <h4 className="text-white font-semibold text-sm mb-2 flex items-center justify-center">
+              <MapPin size={14} className="mr-1 text-pg-red" />
+              Lahore Regional Office
+            </h4>
+            <p className="text-gray-300 text-xs leading-relaxed mb-1">
+              60th Mall Road, Shahrah-e-Quaid-e-Azam, Lahore Pakistan
+            </p>
+            <p className="text-gray-300 text-xs">
+              Tel: 042-36361067-9
+            </p>
+          </div>
+
+          {/* Rawalpindi Regional Office */}
+          <div className="text-center">
+            <h4 className="text-white font-semibold text-sm mb-2 flex items-center justify-center">
+              <MapPin size={14} className="mr-1 text-pg-red" />
+              Rawalpindi Regional Office
+            </h4>
+            <p className="text-gray-300 text-xs leading-relaxed mb-1">
+              House No. 51, Street #5, Khan Avenue Behind Shell Filling Station, Chaklala Scheme III
+            </p>
+            <p className="text-gray-300 text-xs">
+              Tel: 051-5145024
+            </p>
+          </div>
+        </div>
+
         <div className="border-t border-gray-700 mt-6 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
