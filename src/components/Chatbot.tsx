@@ -13,7 +13,7 @@ const Chatbot = () => {
     'hello': 'Hello! How can I assist you with Progressive Group today?',
     'hi': 'Hi there! What would you like to know about our company?',
     'about': 'Progressive Group has been serving Pakistan since 1954 with excellence in manufacturing, trading, and distribution across multiple industries.',
-    'contact': 'Head Office: LC-40, Landhi Industrial Area, Karachi. Lahore: 60th Mall Road. Rawalpindi: House No. 51, Street #5, Khan Avenue. Email: info@pgtraders.com',
+    'contact': 'Karachi Head office: LC-40, Landhi Indstrial  Area, Near Opal Laboratory, Karachi, Pakistan Post Code 71500. Tel 021-35026618-20 , 35026622, 021-35026602. Lahore Regional Office: Lahore”60th Mall Road. Shahrah-e-Quaid-e-Azam, Lahore Pakistan. Tel: 042-36361067-9. Rawalpindi Regional Office: Rawalpindi House No. 51,Street #5, Khan Avenue Behind Shell filling Station, Chaklala scheme III. Tel: 051-5145024. Email: info@pgtraders.com',
     'careers': 'We offer exciting career opportunities! Visit our Careers page or check our LinkedIn for current openings.',
     'products': 'We manufacture and distribute products through our divisions: Power Plus (FMCG), Pak Ghiza (Food Ingredients), and Industrial & Building Materials.',
     'help': 'I can help you with information about our company, products, careers, contact details, and more. What would you like to know?'

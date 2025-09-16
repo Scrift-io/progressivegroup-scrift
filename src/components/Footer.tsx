@@ -28,17 +28,36 @@ const Footer = () => {
               Established in 1954, Progressive Group is a mission-oriented & value-driven business organization committed to excellence and innovation.
             </p>
             <div className="space-y-3">
-              <div className="flex items-center group">
+              <div className="flex items-start group">
                 <div className="w-10 h-10 bg-pg-red rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 transition-colors duration-300">
                   <MapPin size={16} className="text-white" />
                 </div>
-                <span className="text-sm text-gray-300">LC-40, Landhi Industrial Area, Karachi, Pakistan</span>
+                <span className="text-sm text-gray-300">
+                  <strong>Karachi Head office:</strong><br />
+                  LC-40, Landhi Indstrial  Area, Near Opal Laboratory, Karachi, Pakistan Post Code 71500<br />
+                  Tel 021-35026618-20 , 35026622, 021-35026602
+                </span>
               </div>
-              <div className="flex items-center group">
+              <div className="flex items-start group">
                 <div className="w-10 h-10 bg-pg-red rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 transition-colors duration-300">
-                  <Phone size={16} className="text-white" />
+                  <MapPin size={16} className="text-white" />
                 </div>
-                <span className="text-sm text-gray-300">021-35026618-20</span>
+                <span className="text-sm text-gray-300">
+                  <strong>Lahore Regional Office:</strong><br />
+                  Lahore”60th Mall Road.<br />
+                  Shahrah-e-Quaid-e-Azam, Lahore Pakistan<br />
+                  Tel: 042-36361067-9
+                </span>
+              </div>
+              <div className="flex items-start group">
+                <div className="w-10 h-10 bg-pg-red rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 transition-colors duration-300">
+                  <MapPin size={16} className="text-white" />
+                </div>
+                <span className="text-sm text-gray-300">
+                  <strong>Rawalpindi Regional Office:</strong><br />
+                  Rawalpindi House No. 51,Street #5, Khan Avenue Behind Shell filling Station, Chaklala scheme III.<br />
+                  Tel: 051-5145024
+                </span>
               </div>
               <div className="flex items-center group">
                 <div className="w-10 h-10 bg-pg-red rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 transition-colors duration-300">

@@ -80,21 +80,19 @@ const Contact = () => {
                     <h3 className="font-semibold text-gray-900 mb-1">Our Offices</h3>
                     <div className="text-gray-600 space-y-2">
                       <div>
-                        <strong>Karachi Head Office:</strong><br />
-                        LC-40, Landhi Industrial Area, Near Opal Laboratory<br />
-                        Karachi, Pakistan Post Code 71500<br />
-                        Tel: 021-35026618-20, 35026622, 021-35026602
+                        <strong>Karachi Head office</strong><br />
+                        LC-40, Landhi Indstrial  Area, Near Opal Laboratory, Karachi, Pakistan Post Code 71500<br />
+                        Tel 021-35026618-20 , 35026622, 021-35026602
                       </div>
                       <div>
                         <strong>Lahore Regional Office:</strong><br />
-                        60th Mall Road, Shahrah-e-Quaid-e-Azam<br />
-                        Lahore, Pakistan<br />
+                        Lahore”60th Mall Road.<br />
+                        Shahrah-e-Quaid-e-Azam, Lahore Pakistan<br />
                         Tel: 042-36361067-9
                       </div>
                       <div>
                         <strong>Rawalpindi Regional Office:</strong><br />
-                        House No. 51, Street #5, Khan Avenue<br />
-                        Behind Shell filling Station, Chaklala scheme III<br />
+                        Rawalpindi House No. 51,Street #5, Khan Avenue Behind Shell filling Station, Chaklala scheme III.<br />
                         Tel: 051-5145024
                       </div>
                     </div>

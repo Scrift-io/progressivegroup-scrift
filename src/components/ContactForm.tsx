@@ -133,9 +133,9 @@ const ContactForm = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1 text-base sm:text-lg">Visit Our Offices</h4>
                   <p className="text-sm sm:text-base text-gray-600">
-                    <strong>Karachi Head Office:</strong> LC-40, Landhi Industrial Area<br />
-                    <strong>Lahore:</strong> 60th Mall Road, Shahrah-e-Quaid-e-Azam<br />
-                    <strong>Rawalpindi:</strong> House No. 51, Street #5, Khan Avenue
+                    <strong>Karachi Head office:</strong> LC-40, Landhi Indstrial  Area, Near Opal Laboratory, Karachi, Pakistan Post Code 71500 — Tel 021-35026618-20 , 35026622, 021-35026602<br />
+                    <strong>Lahore Regional Office:</strong> Lahore”60th Mall Road. Shahrah-e-Quaid-e-Azam, Lahore Pakistan — Tel: 042-36361067-9<br />
+                    <strong>Rawalpindi Regional Office:</strong> Rawalpindi House No. 51,Street #5, Khan Avenue Behind Shell filling Station, Chaklala scheme III. — Tel: 051-5145024
                   </p>
                 </div>
               </div>
@@ -146,7 +146,11 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1 text-base sm:text-lg">Call Us</h4>
-                  <p className="text-sm sm:text-base text-gray-600">+92-123-4567890</p>
+                  <p className="text-sm sm:text-base text-gray-600">
+                    Karachi: 021-35026618-20 , 35026622, 021-35026602<br />
+                    Lahore: 042-36361067-9<br />
+                    Rawalpindi: 051-5145024
+                  </p>
                   <p className="text-xs sm:text-sm text-gray-500">Mon - Fri: 9:00 AM - 6:00 PM</p>
                 </div>
               </div>
