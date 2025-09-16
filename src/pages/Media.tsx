@@ -169,24 +169,52 @@ const Media = () => {
                     className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="relative group">
-                      <img
-                        src={video.thumbnail}
-                        alt={video.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cursor-pointer">
-                          <Play className="w-6 h-6 text-pg-red ml-1" fill="currentColor" />
+                    {/* First video with embedded iframe */}
+                    {index === 0 ? (
+                      <div className="relative">
+                        <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
+                          <iframe 
+                            allow="fullscreen" 
+                            allowFullScreen 
+                            height="100%" 
+                            src="https://streamable.com/e/5irbkb?" 
+                            width="100%" 
+                            style={{ 
+                              border: 'none', 
+                              width: '100%', 
+                              height: '100%', 
+                              position: 'absolute', 
+                              left: 0, 
+                              top: 0, 
+                              overflow: 'hidden' 
+                            }}
+                          />
+                        </div>
+                        <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
+                          {video.category}
                         </div>
                       </div>
-                      <div className="absolute bottom-2 right-2 bg-black/70 text-white text-sm px-2 py-1 rounded">
-                        {video.duration}
+                    ) : (
+                      /* Other videos with thumbnail and play button */
+                      <div className="relative group">
+                        <img
+                          src={video.thumbnail}
+                          alt={video.title}
+                          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cursor-pointer">
+                            <Play className="w-6 h-6 text-pg-red ml-1" fill="currentColor" />
+                          </div>
+                        </div>
+                        <div className="absolute bottom-2 right-2 bg-black/70 text-white text-sm px-2 py-1 rounded">
+                          {video.duration}
+                        </div>
+                        <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
+                          {video.category}
+                        </div>
                       </div>
-                      <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
-                        {video.category}
-                      </div>
-                    </div>
+                    )}
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{video.title}</h3>
                       <p className="text-gray-600 leading-relaxed">{video.description}</p>
