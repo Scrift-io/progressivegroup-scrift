@@ -169,7 +169,7 @@ const Media = () => {
                     className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    {/* First video with embedded iframe */}
+                    {/* First and second videos with embedded iframes */}
                     {index === 0 ? (
                       <div className="relative">
                         <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
@@ -178,6 +178,30 @@ const Media = () => {
                             allowFullScreen 
                             height="100%" 
                             src="https://streamable.com/e/5irbkb?" 
+                            width="100%" 
+                            style={{ 
+                              border: 'none', 
+                              width: '100%', 
+                              height: '100%', 
+                              position: 'absolute', 
+                              left: 0, 
+                              top: 0, 
+                              overflow: 'hidden' 
+                            }}
+                          />
+                        </div>
+                        <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
+                          {video.category}
+                        </div>
+                      </div>
+                    ) : index === 1 ? (
+                      <div className="relative">
+                        <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
+                          <iframe 
+                            allow="fullscreen" 
+                            allowFullScreen 
+                            height="100%" 
+                            src="https://streamable.com/e/vn9pjv?" 
                             width="100%" 
                             style={{ 
                               border: 'none', 
