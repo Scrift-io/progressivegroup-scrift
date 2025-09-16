@@ -93,7 +93,7 @@ const OurStory = () => {
                 <div className="order-1 lg:order-2 animate-fade-in" style={{
               animationDelay: '0.2s'
             }}>
-                  <img src="/lovable-uploads/b71c0b2f-9cf5-4b86-87cc-ff6efbdd3b67.png" alt="Haji Muhammad Safdar Sheikh - Chairman" className="w-full h-96 object-cover rounded-2xl shadow-xl" />
+                  <img src="/lovable-uploads/b71c0b2f-9cf5-4b86-87cc-ff6efbdd3b67.png" alt="Haji Muhammad Safdar Sheikh - Chairman" className="w-full object-contain rounded-2xl shadow-xl" />
                 </div>
               </div>
 
