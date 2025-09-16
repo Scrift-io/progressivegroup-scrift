@@ -54,7 +54,7 @@ const OurStory = () => {
               <div className="animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
-                <img alt="Company History" className="rounded-2xl shadow-2xl w-full mb-8 transform hover:scale-105 transition-transform duration-500" src="/lovable-uploads/18d1cb87-983f-4b1e-b3ad-56fc6e6da49f.png" />
+                <img alt="Progressive Group Corporate Buildings" className="rounded-2xl shadow-2xl w-full mb-8 transform hover:scale-105 transition-transform duration-500" src="/lovable-uploads/progressive-group-corporate-buildings.png" />
                 <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg">
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Growth Over Six Decades</h3>
                   <p className="text-gray-600 leading-relaxed">
