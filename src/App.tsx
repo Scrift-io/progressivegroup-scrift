@@ -11,12 +11,9 @@ import Footer from "./components/Footer";
 import Chatbot from "./components/Chatbot";
 import Index from "./pages/Index";
 import OurStory from "./pages/OurStory";
-import OurBusinesses from "./pages/OurBusinesses";
+import Media from "./pages/Media";
 import OurImpact from "./pages/OurImpact";
 import Careers from "./pages/Careers";
-import BuildingMaterial from "./pages/BuildingMaterial";
-import IndustrialChemicals from "./pages/IndustrialChemicals";
-import Machineries from "./pages/Machineries";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -60,12 +57,9 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/our-story" element={<OurStory />} />
-                <Route path="/our-businesses" element={<OurBusinesses />} />
+                <Route path="/media" element={<Media />} />
                 <Route path="/our-impact" element={<OurImpact />} />
                 <Route path="/careers" element={<Careers />} />
-                <Route path="/building-material" element={<BuildingMaterial />} />
-                <Route path="/industrial-chemicals" element={<IndustrialChemicals />} />
-                <Route path="/machineries" element={<Machineries />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
