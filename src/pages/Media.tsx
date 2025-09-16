@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Play, ExternalLink, Image, Video, FileText } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
+import mediaCenterBg from '../assets/media-center-bg.jpg';
 
 const Media = () => {
   const [activeTab, setActiveTab] = useState('videos');
@@ -122,7 +123,7 @@ const Media = () => {
       <PageHeader 
         title="Media Center"
         subtitle="Explore our brand story through videos, images, and press coverage"
-        backgroundImage="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=600&fit=crop"
+        backgroundImage={mediaCenterBg}
       />
 
       {/* Tab Navigation */}
