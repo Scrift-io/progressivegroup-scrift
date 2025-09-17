@@ -1,7 +1,35 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
+
 const OurStory = () => {
   const [activeTab, setActiveTab] = useState('who-we-are');
+  const [showLeftIndicator, setShowLeftIndicator] = useState(false);
+  const [showRightIndicator, setShowRightIndicator] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const checkScrollIndicators = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const { scrollLeft, scrollWidth, clientWidth } = container;
+      setShowLeftIndicator(scrollLeft > 0);
+      setShowRightIndicator(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  useEffect(() => {
+    checkScrollIndicators();
+    window.addEventListener('resize', checkScrollIndicators);
+    return () => window.removeEventListener('resize', checkScrollIndicators);
+  }, []);
+
+  const scrollLeft = () => {
+    scrollContainerRef.current?.scrollBy({ left: -200, behavior: 'smooth' });
+  };
+
+  const scrollRight = () => {
+    scrollContainerRef.current?.scrollBy({ left: 200, behavior: 'smooth' });
+  };
   const tabs = [{
     id: 'who-we-are',
     label: 'Who We Are'
@@ -22,25 +50,74 @@ const OurStory = () => {
       {/* Tab Navigation */}
       <section className="bg-white shadow-md sticky top-16 z-40">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="flex overflow-x-auto scrollbar-hide">
-            {tabs.map(tab => 
-              <button 
-                key={tab.id} 
-                onClick={() => setActiveTab(tab.id)} 
-                className={`
-                  flex-shrink-0 px-3 sm:px-4 lg:px-6 py-3 sm:py-4 
-                  text-sm sm:text-base font-semibold whitespace-nowrap 
-                  border-b-2 transition-all duration-300 
-                  min-h-[48px] flex items-center justify-center
-                  ${activeTab === tab.id 
-                    ? 'border-pg-red text-pg-red bg-red-50' 
-                    : 'border-transparent text-gray-600 hover:text-pg-red hover:bg-gray-50'
-                  }
-                `}
-              >
-                {tab.label}
-              </button>
+          <div className="relative">
+            {/* Left scroll indicator */}
+            {showLeftIndicator && (
+              <div className="absolute left-0 top-0 bottom-0 z-10 flex items-center lg:hidden">
+                <button
+                  onClick={scrollLeft}
+                  className="bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-2 ml-2 hover:bg-white transition-colors duration-200"
+                  aria-label="Scroll tabs left"
+                >
+                  <ChevronLeft className="w-4 h-4 text-gray-600" />
+                </button>
+              </div>
             )}
+            
+            {/* Right scroll indicator */}
+            {showRightIndicator && (
+              <div className="absolute right-0 top-0 bottom-0 z-10 flex items-center lg:hidden">
+                <button
+                  onClick={scrollRight}
+                  className="bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-2 mr-2 hover:bg-white transition-colors duration-200"
+                  aria-label="Scroll tabs right"
+                >
+                  <ChevronRight className="w-4 h-4 text-gray-600" />
+                </button>
+              </div>
+            )}
+
+            {/* Gradient fade indicators */}
+            {showLeftIndicator && (
+              <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-5 pointer-events-none lg:hidden" />
+            )}
+            {showRightIndicator && (
+              <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-5 pointer-events-none lg:hidden" />
+            )}
+
+            <div 
+              ref={scrollContainerRef}
+              className="flex overflow-x-auto scrollbar-hide scroll-smooth"
+              onScroll={checkScrollIndicators}
+            >
+              {tabs.map(tab => 
+                <button 
+                  key={tab.id} 
+                  onClick={() => setActiveTab(tab.id)} 
+                  className={`
+                    flex-shrink-0 px-3 sm:px-4 lg:px-6 py-3 sm:py-4 
+                    text-sm sm:text-base font-semibold whitespace-nowrap 
+                    border-b-2 transition-all duration-300 
+                    min-h-[48px] flex items-center justify-center
+                    ${activeTab === tab.id 
+                      ? 'border-pg-red text-pg-red bg-red-50' 
+                      : 'border-transparent text-gray-600 hover:text-pg-red hover:bg-gray-50'
+                    }
+                  `}
+                >
+                  {tab.label}
+                </button>
+              )}
+            </div>
+            
+            {/* Mobile swipe hint */}
+            <div className="text-center py-2 text-xs text-gray-500 lg:hidden">
+              <span className="inline-flex items-center gap-1">
+                <ChevronLeft className="w-3 h-3" />
+                Swipe to see more
+                <ChevronRight className="w-3 h-3" />
+              </span>
+            </div>
           </div>
         </div>
       </section>
