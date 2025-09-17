@@ -1,255 +1,373 @@
 
-import { useState } from 'react';
-import { Linkedin, Users, BookOpen, TrendingUp } from 'lucide-react';
+import { Linkedin, Users, BookOpen, TrendingUp, Target, Award, Heart, Lightbulb, Shield, Building, GraduationCap, Handshake } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 
 const Careers = () => {
-  const [activeTab, setActiveTab] = useState('join-us');
-
-  const tabs = [
-    { id: 'join-us', label: 'Join Us at PGOC' },
-    { id: 'life-at-pgoc', label: 'Life at PGOC' },
-    { id: 'career-faqs', label: 'Career FAQs' },
-    { id: 'training', label: 'Training & Development' },
-  ];
-
   return (
     <div className="mt-16">
       {/* Header */}
       <PageHeader 
-        title="Careers"
-        subtitle="Join our team and build your future with Progressive Group"
+        title="Careers at Progressive Group"
+        subtitle="Join our team and be part of a 70-year legacy of excellence, innovation, and professional growth"
         backgroundImage="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=1200&h=600&fit=crop"
       />
 
-      {/* Tab Navigation */}
-      <section className="bg-white shadow-md sticky top-16 z-40">
+      {/* Join Us Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto scrollbar-hide">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-4 font-semibold whitespace-nowrap border-b-2 transition-all duration-300 ${
-                  activeTab === tab.id
-                    ? 'border-pg-red text-pg-red bg-red-50'
-                    : 'border-transparent text-gray-600 hover:text-pg-red hover:bg-gray-50'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">Join Progressive Group</h2>
+              <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+                <p className="border-l-4 border-pg-red pl-6 italic text-xl">
+                  "Be part of something bigger. Join Progressive Group and contribute to Pakistan's industrial growth while building your career with us."
+                </p>
+                <p>
+                  Progressive Group offers exciting career opportunities across multiple divisions - from industrial chemicals and machinery to building materials. We're looking for passionate individuals who share our values and commitment to excellence.
+                </p>
+                <p>
+                  Whether you're a fresh graduate or an experienced professional, we provide a platform for growth, learning, and making a meaningful impact in the industry.
+                </p>
+                <div className="mt-8">
+                  <a 
+                    href="https://www.linkedin.com/company/progressive-group" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center bg-pg-red text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    <Linkedin className="mr-3 w-6 h-6" />
+                    View Open Positions on LinkedIn
+                    <svg className="ml-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <img 
+                src="/lovable-uploads/careers-office-environment.jpg" 
+                alt="Progressive Group Office Environment" 
+                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500" 
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="py-16">
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {activeTab === 'join-us' && (
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 animate-fade-in">Join Us at Progressive Group</h2>
-              <div className="max-w-3xl mx-auto mb-12">
-                <p className="text-lg text-gray-600 mb-6">
-                  We are always looking for talented individuals who share our values and passion for excellence. Join our dynamic team and be part of Pakistan's leading business group.
-                </p>
-                <p className="text-gray-600 mb-8">
-                  At Progressive Group, we believe in nurturing talent, fostering innovation, and creating opportunities for growth. Our diverse workforce is our greatest asset.
-                </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Progressive Group?</h2>
+            <div className="w-24 h-1 bg-pg-red mx-auto mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join a company that values your growth, celebrates your achievements, and invests in your future
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in">
+              <div className="w-16 h-16 bg-gradient-to-br from-pg-red to-red-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-white" />
               </div>
-              
-              <div className="bg-pg-red text-white rounded-lg p-8 mb-8">
-                <h3 className="text-2xl font-bold mb-4">Ready to Start Your Journey?</h3>
-                <p className="text-lg mb-6">
-                  Visit our LinkedIn page to explore current opportunities and submit your application.
-                </p>
-                <a
-                  href="https://linkedin.com/company/progressive-group"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-white text-pg-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
-                >
-                  <Linkedin className="w-6 h-6 mr-2" />
-                  View Opportunities on LinkedIn
-                </a>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center p-6">
-                  <Users className="w-12 h-12 text-pg-red mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Diverse Opportunities</h3>
-                  <p className="text-gray-600">
-                    From manufacturing to trading, we offer diverse career paths across multiple business divisions.
-                  </p>
-                </div>
-                <div className="text-center p-6">
-                  <BookOpen className="w-12 h-12 text-gray-800 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Continuous Learning</h3>
-                  <p className="text-gray-600">
-                    We invest in your professional development with comprehensive training and skill enhancement programs.
-                  </p>
-                </div>
-                <div className="text-center p-6">
-                  <TrendingUp className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Career Growth</h3>
-                  <p className="text-gray-600">
-                    Clear career progression paths and opportunities for advancement within our growing organization.
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Diverse Opportunities</h3>
+              <p className="text-gray-600">
+                From manufacturing to trading, we offer diverse career paths across multiple business divisions including Industrial Chemicals, Machinery Solutions, and Building Materials.
+              </p>
             </div>
-          )}
+            
+            <div className="text-center p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Career Growth</h3>
+              <p className="text-gray-600">
+                Clear career progression paths and opportunities for advancement within our growing organization. We believe in promoting from within.
+              </p>
+            </div>
+            
+            <div className="text-center p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <BookOpen className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Continuous Learning</h3>
+              <p className="text-gray-600">
+                We invest in your professional development with comprehensive training programs, skill enhancement workshops, and professional certification support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          {activeTab === 'life-at-pgoc' && (
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center animate-fade-in">Life at Progressive Group</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Work Culture</h3>
-                  <div className="space-y-4 text-gray-600">
-                    <p>
-                      At Progressive Group, we foster a culture of collaboration, innovation, and mutual respect. Our work environment encourages creativity and supports professional growth.
-                    </p>
-                    <p>
-                      We believe in work-life balance and provide our employees with the flexibility they need to excel both professionally and personally.
-                    </p>
-                    <p>
-                      Our values-driven approach ensures that every team member feels valued and contributes meaningfully to our shared success.
-                    </p>
+      {/* Life at PGOC Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1 animate-fade-in">
+              <img 
+                src="/lovable-uploads/careers-workspace.jpg" 
+                alt="Life at Progressive Group" 
+                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500" 
+              />
+            </div>
+            <div className="order-1 lg:order-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <h2 className="text-4xl font-bold mb-8">Life at Progressive Group</h2>
+              <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+                <p>
+                  At Progressive Group, we believe in creating an environment where our employees can thrive both professionally and personally. Our workplace culture is built on our core values of integrity, respect, and excellence.
+                </p>
+                <p>
+                  We foster a culture of collaboration, innovation, and mutual respect. Our work environment encourages creativity and supports professional growth while maintaining work-life balance.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                  <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                    <div className="flex items-center mb-3">
+                      <Handshake className="w-6 h-6 text-pg-red mr-3" />
+                      <h4 className="font-bold text-white">Collaborative Environment</h4>
+                    </div>
+                    <p className="text-sm text-gray-300">Work alongside experienced professionals in a supportive team atmosphere</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                    <div className="flex items-center mb-3">
+                      <Target className="w-6 h-6 text-blue-400 mr-3" />
+                      <h4 className="font-bold text-white">Growth Opportunities</h4>
+                    </div>
+                    <p className="text-sm text-gray-300">Clear career progression paths and skill development programs</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                    <div className="flex items-center mb-3">
+                      <Heart className="w-6 h-6 text-green-400 mr-3" />
+                      <h4 className="font-bold text-white">Work-Life Balance</h4>
+                    </div>
+                    <p className="text-sm text-gray-300">Flexible working arrangements and employee wellness programs</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                    <div className="flex items-center mb-3">
+                      <Lightbulb className="w-6 h-6 text-yellow-400 mr-3" />
+                      <h4 className="font-bold text-white">Innovation Focus</h4>
+                    </div>
+                    <p className="text-sm text-gray-300">Encourage creative thinking and innovative solutions</p>
                   </div>
                 </div>
-                <div>
-                  <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
-                    alt="Office Environment"
-                    className="rounded-lg shadow-lg w-full"
-                  />
-                </div>
-              </div>
-
-              <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Competitive Benefits</h4>
-                  <p className="text-gray-600 text-sm">Comprehensive healthcare, retirement plans, and performance bonuses</p>
-                </div>
-                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Flexible Schedule</h4>
-                  <p className="text-gray-600 text-sm">Work arrangements that support work-life balance</p>
-                </div>
-                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Team Events</h4>
-                  <p className="text-gray-600 text-sm">Regular team building activities and company celebrations</p>
-                </div>
-                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Professional Growth</h4>
-                  <p className="text-gray-600 text-sm">Mentorship programs and career development opportunities</p>
-                </div>
               </div>
             </div>
-          )}
+          </div>
+        </div>
+      </section>
 
-          {activeTab === 'career-faqs' && (
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center animate-fade-in">Career FAQs</h2>
-              <div className="max-w-4xl mx-auto space-y-6">
-                {[
-                  {
-                    question: "What is the recruitment process at Progressive Group?",
-                    answer: "Our recruitment process typically includes application review, initial screening, interviews with relevant departments, and final selection. We ensure a fair and transparent process for all candidates."
-                  },
-                  {
-                    question: "Do you offer internship programs?",
-                    answer: "Yes, we offer internship programs for students and recent graduates. These programs provide valuable industry experience and potential pathways to full-time employment."
-                  },
-                  {
-                    question: "What benefits do employees receive?",
-                    answer: "We offer competitive salaries, healthcare benefits, retirement plans, performance bonuses, professional development opportunities, and a positive work environment."
-                  },
-                  {
-                    question: "How does Progressive Group support career development?",
-                    answer: "We provide training programs, mentorship opportunities, skill development workshops, and clear career progression paths to help our employees grow professionally."
-                  },
-                  {
-                    question: "What is the work culture like?",
-                    answer: "Our work culture is built on our core values of integrity, excellence, and collaboration. We promote innovation, respect diversity, and maintain high ethical standards."
-                  }
-                ].map((faq, index) => (
-                  <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
-                    <p className="text-gray-600">{faq.answer}</p>
+      {/* Career FAQs Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <div className="w-24 h-1 bg-pg-red mx-auto mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about careers at Progressive Group
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <h4 className="font-bold text-gray-900 mb-4 text-lg">What divisions can I work in?</h4>
+                <p className="text-gray-600">Progressive Group has opportunities across Industrial Chemicals, Machinery Solutions, Building Materials, and corporate functions including HR, Finance, and Operations.</p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <h4 className="font-bold text-gray-900 mb-4 text-lg">Do you offer internship programs?</h4>
+                <p className="text-gray-600">Yes, we offer structured internship programs for students and fresh graduates to gain hands-on experience in their chosen field.</p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <h4 className="font-bold text-gray-900 mb-4 text-lg">What benefits do you provide?</h4>
+                <p className="text-gray-600">We offer competitive salaries, health insurance, professional development opportunities, and performance-based incentives.</p>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <h4 className="font-bold text-gray-900 mb-4 text-lg">How do I apply for a position?</h4>
+                <p className="text-gray-600">Visit our LinkedIn company page to view current openings and submit your application directly through the platform.</p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <h4 className="font-bold text-gray-900 mb-4 text-lg">What is the work culture like?</h4>
+                <p className="text-gray-600">Our culture is based on Islamic values, professionalism, mutual respect, and continuous learning. We maintain a collaborative and supportive environment.</p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <h4 className="font-bold text-gray-900 mb-4 text-lg">Are there remote work options?</h4>
+                <p className="text-gray-600">Depending on the role, we offer flexible working arrangements including hybrid options for suitable positions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Training and Development Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="animate-fade-in">
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">Training & Development</h2>
+              <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+                <p className="border-l-4 border-pg-red pl-6 italic text-xl">
+                  "We invest in our people because we believe that employee growth drives company success."
+                </p>
+                <p>
+                  Progressive Group is committed to the continuous development of our employees through comprehensive training programs, skill enhancement workshops, and professional certification support.
+                </p>
+                <p>
+                  We partner with leading training institutions and industry experts to deliver world-class learning experiences to our team members.
+                </p>
+                
+                <div className="space-y-4 mt-8">
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 bg-pg-red rounded-full mr-4"></div>
+                    <span className="font-semibold">Technical Skills Training</span>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'training' && (
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center animate-fade-in">Training & Development</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Commitment to Learning</h3>
-                  <div className="space-y-4 text-gray-600">
-                    <p>
-                      At Progressive Group, we believe that continuous learning is essential for both personal and organizational growth. We invest significantly in the development of our human capital.
-                    </p>
-                    <p>
-                      Our comprehensive training programs are designed to enhance technical skills, leadership capabilities, and professional competencies across all levels of the organization.
-                    </p>
-                    <p>
-                      We partner with leading training institutions and industry experts to deliver world-class learning experiences to our team members.
-                    </p>
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 bg-pg-red rounded-full mr-4"></div>
+                    <span className="font-semibold">Leadership Development Programs</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 bg-pg-red rounded-full mr-4"></div>
+                    <span className="font-semibold">Industry Certification Support</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 bg-pg-red rounded-full mr-4"></div>
+                    <span className="font-semibold">Mentorship and Coaching</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 bg-pg-red rounded-full mr-4"></div>
+                    <span className="font-semibold">Cross-functional Exposure</span>
                   </div>
                 </div>
-                <div>
-                  <img
-                    src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=600&h=400&fit=crop"
-                    alt="Training Session"
-                    className="rounded-lg shadow-lg w-full"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Technical Training</h4>
-                  <p className="text-gray-600 mb-4">
-                    Industry-specific skill development programs to keep our workforce updated with the latest technologies and best practices.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Manufacturing processes</li>
-                    <li>• Quality control systems</li>
-                    <li>• Safety protocols</li>
-                    <li>• Digital tools and systems</li>
-                  </ul>
-                </div>
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Leadership Development</h4>
-                  <p className="text-gray-600 mb-4">
-                    Comprehensive programs to develop the next generation of leaders within our organization.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Management skills</li>
-                    <li>• Strategic thinking</li>
-                    <li>• Team building</li>
-                    <li>• Communication excellence</li>
-                  </ul>
-                </div>
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Professional Certifications</h4>
-                  <p className="text-gray-600 mb-4">
-                    Support for professional certifications and continuing education to advance career prospects.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Industry certifications</li>
-                    <li>• Educational sponsorships</li>
-                    <li>• Professional workshops</li>
-                    <li>• Conference participation</li>
-                  </ul>
-                </div>
               </div>
             </div>
-          )}
+            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <img 
+                  src="/lovable-uploads/careers-training-room.jpg" 
+                  alt="Training Facilities" 
+                  className="rounded-xl shadow-lg w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300" 
+                />
+                <img 
+                  src="/lovable-uploads/careers-conference-room.jpg" 
+                  alt="Conference and Meeting Rooms" 
+                  className="rounded-xl shadow-lg w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300" 
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Training Programs */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 animate-fade-in">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Building className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Technical Training</h3>
+              <p className="text-gray-600 mb-6 text-center">
+                Industry-specific skill development programs to keep our workforce updated with the latest technologies and best practices.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li className="flex items-center">
+                  <Shield className="w-4 h-4 text-pg-red mr-2 flex-shrink-0" />
+                  Manufacturing processes & quality control
+                </li>
+                <li className="flex items-center">
+                  <Shield className="w-4 h-4 text-pg-red mr-2 flex-shrink-0" />
+                  Safety protocols & compliance
+                </li>
+                <li className="flex items-center">
+                  <Shield className="w-4 h-4 text-pg-red mr-2 flex-shrink-0" />
+                  Digital tools and systems
+                </li>
+                <li className="flex items-center">
+                  <Shield className="w-4 h-4 text-pg-red mr-2 flex-shrink-0" />
+                  Industry best practices
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Leadership Development</h3>
+              <p className="text-gray-600 mb-6 text-center">
+                Comprehensive programs to develop the next generation of leaders within our organization.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li className="flex items-center">
+                  <Target className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                  Management & strategic thinking
+                </li>
+                <li className="flex items-center">
+                  <Target className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                  Team building & communication
+                </li>
+                <li className="flex items-center">
+                  <Target className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                  Decision making skills
+                </li>
+                <li className="flex items-center">
+                  <Target className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                  Change management
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <GraduationCap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Professional Certifications</h3>
+              <p className="text-gray-600 mb-6 text-center">
+                Support for professional certifications and continuing education to advance career prospects.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li className="flex items-center">
+                  <Award className="w-4 h-4 text-purple-600 mr-2 flex-shrink-0" />
+                  Industry certifications
+                </li>
+                <li className="flex items-center">
+                  <Award className="w-4 h-4 text-purple-600 mr-2 flex-shrink-0" />
+                  Educational sponsorships
+                </li>
+                <li className="flex items-center">
+                  <Award className="w-4 h-4 text-purple-600 mr-2 flex-shrink-0" />
+                  Professional workshops
+                </li>
+                <li className="flex items-center">
+                  <Award className="w-4 h-4 text-purple-600 mr-2 flex-shrink-0" />
+                  Conference participation
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-20 bg-gradient-to-r from-pg-red to-red-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in">Ready to Start Your Journey?</h2>
+          <p className="text-xl text-red-100 mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            Join Progressive Group and become part of a team that's shaping Pakistan's industrial future
+          </p>
+          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <a
+              href="https://www.linkedin.com/company/progressive-group"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-white text-pg-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <Linkedin className="w-6 h-6 mr-3" />
+              Explore Career Opportunities
+              <svg className="ml-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
     </div>
