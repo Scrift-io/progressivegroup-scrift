@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Play, ExternalLink, Image, Video, FileText } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import mediaCenterBg from '../assets/media-center-bg.jpg';
+import YouTubeClean from '../components/YouTubeClean';
 
 const Media = () => {
   const [activeTab, setActiveTab] = useState('videos');
@@ -141,108 +142,28 @@ const Media = () => {
                     {/* First and second videos with embedded iframes */}
                     {index === 0 ? (
                         <div className="relative">
-                          <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
-                            <iframe 
-                              src="https://www.youtube.com/embed/GX0DJ4egJqQ?si=QI6skXf_zredOy-X&modestbranding=1&showinfo=0&rel=0&title=0&controls=1&enablejsapi=0"
-                              title="YouTube video player" 
-                              frameBorder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                              referrerPolicy="strict-origin-when-cross-origin" 
-                              allowFullScreen
-                              width="100%" 
-                              height="100%"
-                              style={{ 
-                                border: 'none', 
-                                width: '100%', 
-                                height: '100%', 
-                                position: 'absolute', 
-                                left: 0, 
-                                top: 0, 
-                                overflow: 'hidden' 
-                              }}
-                            />
-                          </div>
+                          <YouTubeClean videoId="GX0DJ4egJqQ" title={video.title} />
                         <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
                           {video.category}
                         </div>
                       </div>
                      ) : index === 1 ? (
                         <div className="relative">
-                          <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
-                            <iframe 
-                              src="https://www.youtube.com/embed/ajxrgbNEoeI?si=sfpYw7fpBNnx3ydw&modestbranding=1&showinfo=0&rel=0&title=0&controls=1&enablejsapi=0"
-                              title="YouTube video player" 
-                              frameBorder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                              referrerPolicy="strict-origin-when-cross-origin" 
-                              allowFullScreen
-                              width="100%" 
-                              height="100%"
-                              style={{ 
-                                border: 'none', 
-                                width: '100%', 
-                                height: '100%', 
-                                position: 'absolute', 
-                                left: 0, 
-                                top: 0, 
-                                overflow: 'hidden' 
-                              }}
-                            />
-                          </div>
+                          <YouTubeClean videoId="ajxrgbNEoeI" title={video.title} />
                          <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
                            {video.category}
                          </div>
                        </div>
                      ) : index === 2 ? (
                         <div className="relative">
-                          <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
-                            <iframe 
-                              src="https://www.youtube.com/embed/UTJDteTYNiM?si=mina_fpZZApgYmEo&modestbranding=1&showinfo=0&rel=0&title=0&controls=1&enablejsapi=0"
-                              title="YouTube video player" 
-                              frameBorder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                              referrerPolicy="strict-origin-when-cross-origin" 
-                              allowFullScreen
-                              width="100%" 
-                              height="100%"
-                              style={{ 
-                                border: 'none', 
-                                width: '100%', 
-                                height: '100%', 
-                                position: 'absolute', 
-                                left: 0, 
-                                top: 0, 
-                                overflow: 'hidden' 
-                              }}
-                            />
-                          </div>
+                          <YouTubeClean videoId="UTJDteTYNiM" title={video.title} />
                          <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
                            {video.category}
                          </div>
                        </div>
                      ) : index === 3 ? (
                         <div className="relative">
-                          <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
-                            <iframe 
-                              src="https://www.youtube.com/embed/4rUAH_l79Hs?si=xPKzqEOWSU6YrjEN&modestbranding=1&showinfo=0&rel=0&title=0&controls=1&enablejsapi=0"
-                              title="YouTube video player" 
-                              frameBorder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                              referrerPolicy="strict-origin-when-cross-origin" 
-                              allowFullScreen
-                              width="100%" 
-                              height="100%"
-                              style={{ 
-                                border: 'none', 
-                                width: '100%', 
-                                height: '100%', 
-                                position: 'absolute', 
-                                left: 0, 
-                                top: 0, 
-                                overflow: 'hidden' 
-                              }}
-                            />
-                          </div>
+                          <YouTubeClean videoId="4rUAH_l79Hs" title={video.title} />
                          <div className="absolute top-2 left-2 bg-pg-red text-white text-xs px-2 py-1 rounded">
                            {video.category}
                          </div>
