@@ -9,7 +9,6 @@ const Media = () => {
   const tabs = [
     { id: 'videos', label: 'Videos', icon: Video },
     { id: 'gallery', label: 'Brand Gallery', icon: Image },
-    { id: 'press', label: 'Press Releases', icon: FileText },
   ];
 
   const videos = [
@@ -86,36 +85,6 @@ const Media = () => {
     }
   ];
 
-  const pressReleases = [
-    {
-      id: 1,
-      title: 'Progressive Group Celebrates 70 Years of Excellence',
-      date: '2024-03-15',
-      excerpt: 'Progressive Group marks seven decades of serving Pakistan\'s industrial sector with innovation and integrity.',
-      category: 'Corporate News'
-    },
-    {
-      id: 2,
-      title: 'PowerPlus Launches New Product Line',
-      date: '2024-02-28',
-      excerpt: 'PowerPlus expands its FMCG portfolio with innovative consumer products designed for Pakistani families.',
-      category: 'Product Launch'
-    },
-    {
-      id: 3,
-      title: 'PakGhiza Receives Quality Certification',
-      date: '2024-01-20',
-      excerpt: 'PakGhiza division achieves international quality standards certification for food ingredients manufacturing.',
-      category: 'Achievement'
-    },
-    {
-      id: 4,
-      title: 'Sustainability Initiative Launch',
-      date: '2024-01-10',
-      excerpt: 'Progressive Group announces comprehensive sustainability program to reduce environmental impact.',
-      category: 'Sustainability'
-    }
-  ];
 
   return (
     <div className="mt-16">
@@ -344,54 +313,6 @@ const Media = () => {
             </div>
           )}
 
-          {/* Press Releases Tab */}
-          {activeTab === 'press' && (
-            <div className="space-y-12">
-              <div className="text-center mb-12 animate-fade-in">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Press Releases</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Latest news and announcements from Progressive Group
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {pressReleases.map((press, index) => (
-                  <article 
-                    key={press.id} 
-                    className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-fade-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="bg-pg-red/10 text-pg-red text-sm font-semibold px-3 py-1 rounded-full">
-                        {press.category}
-                      </span>
-                      <time className="text-gray-500 text-sm">
-                        {new Date(press.date).toLocaleDateString('en-US', { 
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
-                        })}
-                      </time>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4 hover:text-pg-red transition-colors duration-300 cursor-pointer">
-                      {press.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed mb-6">{press.excerpt}</p>
-                    <button className="inline-flex items-center text-pg-red hover:text-red-700 font-semibold transition-colors duration-300">
-                      Read Full Article
-                      <ExternalLink className="ml-2 w-4 h-4" />
-                    </button>
-                  </article>
-                ))}
-              </div>
-
-              <div className="text-center mt-12">
-                <button className="bg-gradient-to-r from-pg-red to-red-600 text-white px-8 py-4 rounded-full font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  View All Press Releases
-                </button>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
