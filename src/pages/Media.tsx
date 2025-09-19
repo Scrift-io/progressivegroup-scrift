@@ -143,7 +143,7 @@ const Media = () => {
                         <div className="relative">
                           <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
                             <iframe 
-                              src="https://www.youtube.com/embed/GX0DJ4egJqQ?si=QI6skXf_zredOy-X&modestbranding=1&showinfo=0&rel=0"
+                              src="https://www.youtube.com/embed/GX0DJ4egJqQ?si=QI6skXf_zredOy-X&modestbranding=1&showinfo=0&rel=0&title=0&controls=1&enablejsapi=0"
                               title="YouTube video player" 
                               frameBorder="0" 
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -170,7 +170,7 @@ const Media = () => {
                         <div className="relative">
                           <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
                             <iframe 
-                              src="https://www.youtube.com/embed/ajxrgbNEoeI?si=sfpYw7fpBNnx3ydw&modestbranding=1&showinfo=0&rel=0"
+                              src="https://www.youtube.com/embed/ajxrgbNEoeI?si=sfpYw7fpBNnx3ydw&modestbranding=1&showinfo=0&rel=0&title=0&controls=1&enablejsapi=0"
                               title="YouTube video player" 
                               frameBorder="0" 
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -197,7 +197,7 @@ const Media = () => {
                         <div className="relative">
                           <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
                             <iframe 
-                              src="https://www.youtube.com/embed/UTJDteTYNiM?si=mina_fpZZApgYmEo&modestbranding=1&showinfo=0&rel=0"
+                              src="https://www.youtube.com/embed/UTJDteTYNiM?si=mina_fpZZApgYmEo&modestbranding=1&showinfo=0&rel=0&title=0&controls=1&enablejsapi=0"
                               title="YouTube video player" 
                               frameBorder="0" 
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -224,7 +224,7 @@ const Media = () => {
                         <div className="relative">
                           <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.250%' }}>
                             <iframe 
-                              src="https://www.youtube.com/embed/4rUAH_l79Hs?si=xPKzqEOWSU6YrjEN&modestbranding=1&showinfo=0&rel=0"
+                              src="https://www.youtube.com/embed/4rUAH_l79Hs?si=xPKzqEOWSU6YrjEN&modestbranding=1&showinfo=0&rel=0&title=0&controls=1&enablejsapi=0"
                               title="YouTube video player" 
                               frameBorder="0" 
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
