@@ -30,7 +30,7 @@ const Careers = () => {
                 </p>
                 <div className="mt-8">
                   <a 
-                    href="https://www.linkedin.com/company/progressive-group" 
+                    href="https://www.linkedin.com/company/72101038/admin/dashboard/"
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="inline-flex items-center bg-pg-red text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
