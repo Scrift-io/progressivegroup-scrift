@@ -28,7 +28,7 @@ function CuratedGallery({ data }: CuratedGalleryProps) {
             <img
               src={item.image}
               alt={`Gallery item ${item.id}`}
-              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-gray-50"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               style={{
                 minHeight: index === 0 ? "400px" : "250px",
                 maxHeight: index === 0 ? "600px" : "350px"
