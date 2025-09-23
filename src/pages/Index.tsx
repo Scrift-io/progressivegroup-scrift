@@ -171,23 +171,23 @@ const Index = () => {
             <div className="w-16 sm:w-24 h-1 bg-pg-red mx-auto mt-4 sm:mt-6"></div>
           </div>
           
-          <div className="relative h-80 sm:h-96">
+          <div className="relative h-48 sm:h-56 lg:h-64">
             {foundationItems.map((item, index) => {
             const Icon = item.icon;
             return <div key={item.id} className={`absolute inset-0 transition-all duration-1000 ${index === currentFoundation ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-                  <div className={`max-w-4xl mx-auto bg-gradient-to-br ${item.color} backdrop-blur-sm rounded-3xl border p-6 sm:p-8 lg:p-12 text-center shadow-2xl`}>
-                    <div className={`w-16 h-16 sm:w-20 sm:h-20 ${item.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8 shadow-xl`}>
-                      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                  <div className={`max-w-2xl mx-auto bg-gradient-to-br ${item.color} backdrop-blur-sm rounded-2xl border p-4 sm:p-6 lg:p-8 text-center shadow-2xl`}>
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 ${item.iconBg} rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-5 shadow-xl`}>
+                      <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                     </div>
-                    <h3 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${item.titleColor} mb-6 sm:mb-8`}>
+                    <h3 className={`text-lg sm:text-xl lg:text-2xl font-bold ${item.titleColor} mb-4 sm:mb-5`}>
                       {item.title}
                     </h3>
-                    {Array.isArray(item.content) ? <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                        {item.content.map((value, idx) => <div key={idx} className="flex items-center text-gray-300 text-left">
-                            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-pg-red mr-2 sm:mr-3 flex-shrink-0" />
-                            <span className="text-sm sm:text-base lg:text-lg">{value}</span>
+                    {Array.isArray(item.content) ? <div className="grid grid-cols-2 gap-2 sm:gap-3 max-w-md mx-auto">
+                        {item.content.map((value, idx) => <div key={idx} className="flex items-center justify-center text-gray-300 bg-black/10 rounded-lg p-2 sm:p-3 backdrop-blur-sm">
+                            <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-pg-red mr-1 sm:mr-2 flex-shrink-0" />
+                            <span className="text-xs sm:text-sm lg:text-base font-medium">{value}</span>
                           </div>)}
-                      </div> : <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto px-4">
+                      </div> : <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto px-2">
                         {item.content}
                       </p>}
                   </div>
