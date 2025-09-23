@@ -15,35 +15,35 @@ const OurImpact = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Impact Categories */}
+          {/* CSR Impact Categories */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
-            {/* Individuals & Families */}
+            {/* Health Care & Education */}
             <div>
               <div className="flex items-center mb-8">
-                <Users className="w-12 h-12 text-pg-red mr-4" />
-                <h2 className="text-3xl font-bold text-gray-900">Individuals & Families</h2>
+                <Heart className="w-12 h-12 text-pg-red mr-4" />
+                <h2 className="text-3xl font-bold text-gray-900">Health Care & Education</h2>
               </div>
               
               <div className="space-y-6">
                 <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Employment Generation</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Health Care Initiatives</h3>
                   <p className="text-gray-600">
-                    Progressive Group provides direct employment to hundreds of families across Pakistan, contributing to economic stability and growth in local communities.
+                    We support hospitals and healthcare institutions that provide critical medical services to underserved and vulnerable communities, helping expand medical facilities and improve patient care services.
                   </p>
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Quality Products</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Education and Academic Support</h3>
                   <p className="text-gray-600">
-                    Our commitment to quality ensures that families across Pakistan have access to reliable, affordable products that improve their daily lives.
+                    Through scholarships, infrastructure development, and resource provisioning, we support universities, schools, and educational programs that promote academic excellence and equal access to learning opportunities.
                   </p>
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Skill Development</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Community Empowerment</h3>
                   <p className="text-gray-600">
-                    Through our training and development programs, we enhance the skills and capabilities of our workforce, creating opportunities for career advancement.
+                    Our initiatives focus on empowering the next generation of leaders and professionals while addressing critical needs in health and education sectors across Pakistan.
                   </p>
                 </div>
               </div>
@@ -57,32 +57,32 @@ const OurImpact = () => {
               </div>
             </div>
 
-            {/* For the Planet */}
+            {/* Social Welfare & Environmental Responsibility */}
             <div>
               <div className="flex items-center mb-8">
                 <Globe className="w-12 h-12 text-green-600 mr-4" />
-                <h2 className="text-3xl font-bold text-gray-900">For the Planet</h2>
+                <h2 className="text-3xl font-bold text-gray-900">Social Welfare & Environment</h2>
               </div>
               
               <div className="space-y-6">
                 <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Environmental Responsibility</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Social Welfare Engagements</h3>
                   <p className="text-gray-600">
-                    We are committed to sustainable business practices that minimize our environmental footprint and contribute to a cleaner, greener Pakistan.
+                    Our CSR commitments encompass partnerships with nonprofit organizations, support for community development programs, and assistance for marginalized groups addressing poverty, disability, and disaster relief.
                   </p>
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Sustainable Manufacturing</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Environmental Stewardship</h3>
                   <p className="text-gray-600">
-                    Our manufacturing processes are designed to be environmentally conscious, reducing waste and optimizing resource utilization.
+                    We are committed to sustainable business practices that minimize our environmental footprint, implementing environmentally conscious processes and green innovation initiatives.
                   </p>
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Green Innovation</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Corporate Citizenship</h3>
                   <p className="text-gray-600">
-                    We continuously invest in research and development to create more sustainable products and processes that benefit both consumers and the environment.
+                    Through meaningful corporate citizenship, we actively participate in efforts that uplift society and create lasting value for both our stakeholders and society at large.
                   </p>
                 </div>
               </div>
