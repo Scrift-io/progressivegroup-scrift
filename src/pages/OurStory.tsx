@@ -223,7 +223,7 @@ const OurStory = () => {
                   <h3 className="text-3xl font-bold text-gray-900 mb-6">Chairman Message</h3>
                   <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                     <p className="italic border-l-4 border-pg-red pl-6">
-                      "Assalamualaikum Warahmatullahi Wabarakatuh (In Urdu)<br/>
+                      "السلام عليكم ورحمة الله وبركاته<br/>
                       I wish you peace, blessings, and prosperity."
                     </p>
                     <p>
