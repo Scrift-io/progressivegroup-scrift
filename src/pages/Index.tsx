@@ -34,15 +34,12 @@ const Index = () => {
     subtitle: "Delivering Excellence Worldwide"
   }];
 
-  const foundationItems = [{
-    id: 'foundation',
-    title: 'FOUNDATION OF PGOC',
-    icon: Shield,
-    color: 'from-pg-red/20 to-red-900/20 border-pg-red/30',
-    iconBg: 'bg-pg-red',
-    titleColor: 'text-pg-red',
-    content: ['Faith', 'Knowledge', 'Unity', 'Discipline']
-  }];
+  const foundationItems = [
+    { id: 'faith', keyword: 'Faith' },
+    { id: 'knowledge', keyword: 'Knowledge' },
+    { id: 'unity', keyword: 'Unity' },
+    { id: 'discipline', keyword: 'Discipline' }
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -171,18 +168,14 @@ const Index = () => {
             <div className="w-16 sm:w-24 h-1 bg-pg-red mx-auto mt-4 sm:mt-6"></div>
           </div>
           
-          <div className="relative h-32 sm:h-36 lg:h-40">
+          <div className="relative h-24 sm:h-32 lg:h-36">
             {foundationItems.map((item, index) => {
             return <div key={item.id} className={`absolute inset-0 transition-all duration-1000 ${index === currentFoundation ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-                  <div className="max-w-lg mx-auto">
-                    {Array.isArray(item.content) ? <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                        {item.content.map((value, idx) => <div key={idx} className="flex items-center justify-center text-white rounded-lg p-3 sm:p-4">
-                            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-pg-red mr-2 sm:mr-3 flex-shrink-0" />
-                            <span className="text-sm sm:text-base lg:text-lg font-medium">{value}</span>
-                          </div>)}
-                      </div> : <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto px-2">
-                        {item.content}
-                      </p>}
+                  <div className="flex items-center justify-center h-full">
+                    <div className="flex items-center justify-center text-white">
+                      <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-pg-red mr-3 sm:mr-4 flex-shrink-0" />
+                      <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-wide">{item.keyword}</span>
+                    </div>
                   </div>
                 </div>;
           })}
