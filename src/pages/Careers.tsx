@@ -237,8 +237,211 @@ const Careers = () => {
             </div>
           </div>
 
-          {/* Training Programs */}
-          
+          {/* HR Approach and Job Application Form */}
+          <div className="mt-20 bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 lg:p-12">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Human Resources Approach</h3>
+              <div className="space-y-4 text-gray-600 text-lg max-w-4xl mx-auto">
+                <p>We want to be preferred by the most qualified manpower in the fields in which we operate.</p>
+                <p>We are together with people who constantly improve themselves and always want better.</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+              <div className="text-center mb-8">
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Join US at PGOC</h4>
+                <h5 className="text-xl font-semibold text-pg-red mb-4">Job Application Form</h5>
+                <p className="text-gray-600">(*) Required Fields</p>
+              </div>
+
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Position Applied For</label>
+                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">*Full Name</label>
+                    <input type="text" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">*E-mail address</label>
+                    <input type="email" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">*Mobile phone</label>
+                    <input type="tel" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">*Address</label>
+                  <textarea rows={3} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent"></textarea>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">*CNIC #</label>
+                    <input type="text" required placeholder="XXXXX-XXXXXXX-X" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">*Date of Birth</label>
+                    <input type="date" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Place of Birth</label>
+                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">*Religion</label>
+                    <select required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
+                      <option value="">Select Religion</option>
+                      <option value="Islam">Islam</option>
+                      <option value="Christianity">Christianity</option>
+                      <option value="Hinduism">Hinduism</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">*Education</label>
+                    <select required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
+                      <option value="">Select Education Level</option>
+                      <option value="Matriculation">Matriculation</option>
+                      <option value="Intermediate">Intermediate</option>
+                      <option value="Bachelor's">Bachelor's Degree</option>
+                      <option value="Master's">Master's Degree</option>
+                      <option value="PhD">PhD</option>
+                      <option value="Diploma">Diploma</option>
+                      <option value="Certificate">Certificate</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">*Institute Name</label>
+                    <select required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
+                      <option value="">Select Institute</option>
+                      <option value="University of Punjab">University of Punjab</option>
+                      <option value="LUMS">LUMS</option>
+                      <option value="UET Lahore">UET Lahore</option>
+                      <option value="Government College University">Government College University</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Gender</label>
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
+                      <option value="">Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Marital Status</label>
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
+                      <option value="">Select Status</option>
+                      <option value="Single">Single</option>
+                      <option value="Married">Married</option>
+                      <option value="Divorced">Divorced</option>
+                      <option value="Widowed">Widowed</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Number of Children (if married)</label>
+                    <input type="number" min="0" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Do you have a driving license?</label>
+                  <div className="flex gap-6">
+                    <label className="flex items-center">
+                      <input type="radio" name="driving_license" value="yes" className="mr-2 text-pg-red focus:ring-pg-red" />
+                      Yes
+                    </label>
+                    <label className="flex items-center">
+                      <input type="radio" name="driving_license" value="no" className="mr-2 text-pg-red focus:ring-pg-red" />
+                      No
+                    </label>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-4">Language Skills</label>
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                      <div>
+                        <label className="block text-xs font-medium text-gray-600 mb-1">Language Name</label>
+                        <input type="text" placeholder="e.g., English" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-medium text-gray-600 mb-1">Understanding</label>
+                        <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
+                          <option value="">Select Level</option>
+                          <option value="Basic">Basic</option>
+                          <option value="Intermediate">Intermediate</option>
+                          <option value="Advanced">Advanced</option>
+                          <option value="Native">Native</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-xs font-medium text-gray-600 mb-1">Speaking</label>
+                        <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
+                          <option value="">Select Level</option>
+                          <option value="Basic">Basic</option>
+                          <option value="Intermediate">Intermediate</option>
+                          <option value="Advanced">Advanced</option>
+                          <option value="Native">Native</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-xs font-medium text-gray-600 mb-1">Writing</label>
+                        <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
+                          <option value="">Select Level</option>
+                          <option value="Basic">Basic</option>
+                          <option value="Intermediate">Intermediate</option>
+                          <option value="Advanced">Advanced</option>
+                          <option value="Native">Native</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Computer Skills</label>
+                  <textarea rows={3} placeholder="Describe your computer skills, software proficiency, etc." className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent"></textarea>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Expected Salary</label>
+                    <input type="text" placeholder="e.g., 50,000 PKR" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Previous Workplace</label>
+                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                  </div>
+                </div>
+
+                <div className="text-center pt-6">
+                  <button type="submit" className="bg-pg-red text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Submit Application
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
 
