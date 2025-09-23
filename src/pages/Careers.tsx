@@ -258,161 +258,302 @@ const Careers = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Position Applied For</label>
-                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                    <input type="text" className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">*Full Name</label>
-                    <input type="text" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                    <input type="text" required className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">*E-mail address</label>
-                    <input type="email" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                    <input type="email" required className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">*Mobile phone</label>
-                    <input type="tel" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                    <input type="tel" required className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">*Address</label>
-                  <textarea rows={3} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent"></textarea>
+                  <textarea rows={3} required className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm resize-none"></textarea>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">*CNIC #</label>
-                    <input type="text" required placeholder="XXXXX-XXXXXXX-X" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                    <input type="text" required placeholder="XXXXX-XXXXXXX-X" className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm mb-3" />
+                    <div className="mt-2">
+                      <label className="block text-xs font-medium text-gray-600 mb-2">Upload CNIC Image</label>
+                      <input 
+                        type="file" 
+                        accept="image/*"
+                        className="w-full px-3 py-2 border-2 border-dashed border-gray-300 rounded-lg hover:border-pg-red transition-colors duration-200 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-pg-red file:text-white hover:file:bg-red-700 file:cursor-pointer cursor-pointer"
+                      />
+                    </div>
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">*Date of Birth</label>
-                    <input type="date" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                    <input type="date" required className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Place of Birth</label>
-                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                    <input type="text" className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">*Religion</label>
-                    <select required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
-                      <option value="">Select Religion</option>
-                      <option value="Islam">Islam</option>
-                      <option value="Christianity">Christianity</option>
-                      <option value="Hinduism">Hinduism</option>
-                      <option value="Other">Other</option>
-                    </select>
+                    <div className="relative">
+                      <select required className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm appearance-none cursor-pointer">
+                        <option value="">Select Religion</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Christianity">Christianity</option>
+                        <option value="Hinduism">Hinduism</option>
+                        <option value="Other">Other</option>
+                      </select>
+                      <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                        <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">*Education</label>
-                    <select required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
-                      <option value="">Select Education Level</option>
-                      <option value="Matriculation">Matriculation</option>
-                      <option value="Intermediate">Intermediate</option>
-                      <option value="Bachelor's">Bachelor's Degree</option>
-                      <option value="Master's">Master's Degree</option>
-                      <option value="PhD">PhD</option>
-                      <option value="Diploma">Diploma</option>
-                      <option value="Certificate">Certificate</option>
-                    </select>
+                    <div className="relative">
+                      <select required className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm appearance-none cursor-pointer">
+                        <option value="">Select Education Level</option>
+                        <option value="Matriculation">Matriculation</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Bachelor's">Bachelor's Degree</option>
+                        <option value="Master's">Master's Degree</option>
+                        <option value="PhD">PhD</option>
+                        <option value="Diploma">Diploma</option>
+                        <option value="Certificate">Certificate</option>
+                      </select>
+                      <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                        <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">*Institute Name</label>
-                    <select required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
-                      <option value="">Select Institute</option>
-                      <option value="University of Punjab">University of Punjab</option>
-                      <option value="LUMS">LUMS</option>
-                      <option value="UET Lahore">UET Lahore</option>
-                      <option value="Government College University">Government College University</option>
-                      <option value="Other">Other</option>
-                    </select>
+                    <input type="text" required placeholder="Enter your institute name" className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                   </div>
+                </div>
+
+                {/* Education/Certification Documents Upload */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Upload Education Documents</label>
+                  <p className="text-xs text-gray-500 mb-3">Upload your certificates, degrees, diplomas, or other educational documents</p>
+                  <input 
+                    type="file" 
+                    multiple
+                    accept="image/*,.pdf,.doc,.docx"
+                    className="w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-xl hover:border-pg-red transition-colors duration-200 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-pg-red file:text-white hover:file:bg-red-700 file:cursor-pointer cursor-pointer"
+                  />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Gender</label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
-                      <option value="">Select Gender</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                    </select>
+                    <div className="relative">
+                      <select className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm appearance-none cursor-pointer">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                      <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                        <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Marital Status</label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
-                      <option value="">Select Status</option>
-                      <option value="Single">Single</option>
-                      <option value="Married">Married</option>
-                      <option value="Divorced">Divorced</option>
-                      <option value="Widowed">Widowed</option>
-                    </select>
+                    <div className="relative">
+                      <select className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm appearance-none cursor-pointer">
+                        <option value="">Select Status</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Widowed">Widowed</option>
+                      </select>
+                      <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                        <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Number of Children (if married)</label>
-                    <input type="number" min="0" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                    <input type="number" min="0" className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Do you have a driving license?</label>
                   <div className="flex gap-6">
-                    <label className="flex items-center">
-                      <input type="radio" name="driving_license" value="yes" className="mr-2 text-pg-red focus:ring-pg-red" />
-                      Yes
+                    <label className="flex items-center cursor-pointer">
+                      <input type="radio" name="driving_license" value="yes" className="mr-2 text-pg-red focus:ring-pg-red w-4 h-4" />
+                      <span className="text-gray-700">Yes</span>
                     </label>
-                    <label className="flex items-center">
-                      <input type="radio" name="driving_license" value="no" className="mr-2 text-pg-red focus:ring-pg-red" />
-                      No
+                    <label className="flex items-center cursor-pointer">
+                      <input type="radio" name="driving_license" value="no" className="mr-2 text-pg-red focus:ring-pg-red w-4 h-4" />
+                      <span className="text-gray-700">No</span>
                     </label>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-4">Language Skills</label>
-                  <div className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <label className="block text-sm font-semibold text-gray-700">Language Skills</label>
+                    <button 
+                      type="button" 
+                      className="bg-pg-red text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-700 transition-colors duration-200"
+                      onClick={() => {
+                        const container = document.getElementById('language-skills-container');
+                        const newRow = document.createElement('div');
+                        newRow.className = 'grid grid-cols-1 md:grid-cols-5 gap-4 items-end';
+                        newRow.innerHTML = `
+                          <div>
+                            <label class="block text-xs font-medium text-gray-600 mb-1">Language Name</label>
+                            <input type="text" placeholder="e.g., English" class="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
+                          </div>
+                          <div>
+                            <label class="block text-xs font-medium text-gray-600 mb-1">Understanding</label>
+                            <div class="relative">
+                              <select class="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm appearance-none cursor-pointer">
+                                <option value="">Select Level</option>
+                                <option value="Basic">Basic</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                                <option value="Native">Native</option>
+                              </select>
+                              <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <label class="block text-xs font-medium text-gray-600 mb-1">Speaking</label>
+                            <div class="relative">
+                              <select class="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm appearance-none cursor-pointer">
+                                <option value="">Select Level</option>
+                                <option value="Basic">Basic</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                                <option value="Native">Native</option>
+                              </select>
+                              <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <label class="block text-xs font-medium text-gray-600 mb-1">Writing</label>
+                            <div class="relative">
+                              <select class="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm appearance-none cursor-pointer">
+                                <option value="">Select Level</option>
+                                <option value="Basic">Basic</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                                <option value="Native">Native</option>
+                              </select>
+                              <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flex justify-center">
+                            <button type="button" onclick="this.parentElement.parentElement.remove()" class="bg-red-100 text-red-600 px-3 py-2 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors duration-200">
+                              Remove
+                            </button>
+                          </div>
+                        `;
+                        container.appendChild(newRow);
+                      }}
+                    >
+                      Add Language
+                    </button>
+                  </div>
+                  <div id="language-skills-container" className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
                       <div>
                         <label className="block text-xs font-medium text-gray-600 mb-1">Language Name</label>
-                        <input type="text" placeholder="e.g., English" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                        <input type="text" placeholder="e.g., English" className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                       </div>
                       <div>
                         <label className="block text-xs font-medium text-gray-600 mb-1">Understanding</label>
-                        <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
-                          <option value="">Select Level</option>
-                          <option value="Basic">Basic</option>
-                          <option value="Intermediate">Intermediate</option>
-                          <option value="Advanced">Advanced</option>
-                          <option value="Native">Native</option>
-                        </select>
+                        <div className="relative">
+                          <select className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm appearance-none cursor-pointer">
+                            <option value="">Select Level</option>
+                            <option value="Basic">Basic</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Native">Native</option>
+                          </select>
+                          <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                       <div>
                         <label className="block text-xs font-medium text-gray-600 mb-1">Speaking</label>
-                        <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
-                          <option value="">Select Level</option>
-                          <option value="Basic">Basic</option>
-                          <option value="Intermediate">Intermediate</option>
-                          <option value="Advanced">Advanced</option>
-                          <option value="Native">Native</option>
-                        </select>
+                        <div className="relative">
+                          <select className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm appearance-none cursor-pointer">
+                            <option value="">Select Level</option>
+                            <option value="Basic">Basic</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Native">Native</option>
+                          </select>
+                          <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                       <div>
                         <label className="block text-xs font-medium text-gray-600 mb-1">Writing</label>
-                        <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent">
-                          <option value="">Select Level</option>
-                          <option value="Basic">Basic</option>
-                          <option value="Intermediate">Intermediate</option>
-                          <option value="Advanced">Advanced</option>
-                          <option value="Native">Native</option>
-                        </select>
+                        <div className="relative">
+                          <select className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm appearance-none cursor-pointer">
+                            <option value="">Select Level</option>
+                            <option value="Basic">Basic</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Native">Native</option>
+                          </select>
+                          <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex justify-center">
+                        <span className="text-xs text-gray-500 bg-gray-100 px-3 py-2 rounded-lg">Default Row</span>
                       </div>
                     </div>
                   </div>
@@ -420,17 +561,17 @@ const Careers = () => {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Computer Skills</label>
-                  <textarea rows={3} placeholder="Describe your computer skills, software proficiency, etc." className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent"></textarea>
+                  <textarea rows={3} placeholder="Describe your computer skills, software proficiency, etc." className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm resize-none"></textarea>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Expected Salary</label>
-                    <input type="text" placeholder="e.g., 50,000 PKR" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                    <input type="text" placeholder="e.g., 50,000 PKR" className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Previous Workplace</label>
-                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pg-red focus:border-transparent" />
+                    <input type="text" placeholder="Enter your previous workplace" className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                   </div>
                 </div>
 
