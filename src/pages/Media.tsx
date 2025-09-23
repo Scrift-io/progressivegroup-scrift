@@ -197,9 +197,6 @@ const Media = () => {
             <div className="space-y-12">
               <div className="text-center mb-12 animate-fade-in">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">Brand Gallery</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Visual showcase of our facilities, team, and brand presence
-                </p>
               </div>
 
               <div className="max-w-7xl mx-auto">
