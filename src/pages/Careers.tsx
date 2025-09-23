@@ -209,13 +209,10 @@ const Careers = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-8">Training & Development</h2>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p className="border-l-4 border-pg-red pl-6 italic text-xl">
-                  "We invest in our people because we believe that employee growth drives company success."
+                  "We invest in our companions so that they get all the required skills while performing their job."
                 </p>
                 <p>
-                  Progressive Group is committed to the continuous development of our employees through comprehensive training programs, skill enhancement workshops, and professional certification support.
-                </p>
-                <p>
-                  We partner with leading training institutions and industry experts to deliver world-class learning experiences to our team members.
+                  Our learning journey continues to grow and we have covered following skills via external and internal trainings:
                 </p>
                 
                 <div className="space-y-4 mt-8">
