@@ -15,6 +15,22 @@ const OurImpact = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
+          {/* Corporate Social Responsibility Introduction */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Corporate Social Responsibility (CSR)</h2>
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                At Progressive Group of Companies, we recognize that our success as a business is closely tied to the well-being of the communities in which we operate. Guided by a strong sense of responsibility and a commitment to sustainable development, our Corporate Social Responsibility (CSR) initiatives are an integral part of our corporate philosophy.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                We firmly believe that meaningful corporate citizenship extends beyond business performance—it involves active participation in efforts that uplift society and address critical needs in areas such as health, education, and social welfare. Over the years, Progressive Group of Companies has remained dedicated to supporting organizations and institutions that are making a tangible difference in these fields.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Through these efforts, Progressive Group of Companies reaffirms its pledge to contribute positively to the communities we serve. We are committed to continuing our journey as a responsible corporate citizen, dedicated to creating lasting value—not only for our stakeholders but for society at large.
+              </p>
+            </div>
+          </div>
+
           {/* CSR Impact Categories */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
@@ -29,21 +45,14 @@ const OurImpact = () => {
                 <div className="bg-white rounded-lg shadow-lg p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Health Care Initiatives</h3>
                   <p className="text-gray-600">
-                    We support hospitals and healthcare institutions that provide critical medical services to underserved and vulnerable communities, helping expand medical facilities and improve patient care services.
+                    We are proud to support hospitals and healthcare institutions that provide critical medical services to underserved and vulnerable communities. Our contributions help facilitate access to quality healthcare, the expansion of medical facilities, procurement of essential medical equipment, and the improvement of patient care services.
                   </p>
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-lg p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Education and Academic Support</h3>
                   <p className="text-gray-600">
-                    Through scholarships, infrastructure development, and resource provisioning, we support universities, schools, and educational programs that promote academic excellence and equal access to learning opportunities.
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Community Empowerment</h3>
-                  <p className="text-gray-600">
-                    Our initiatives focus on empowering the next generation of leaders and professionals while addressing critical needs in health and education sectors across Pakistan.
+                    Education is the cornerstone of a prosperous and progressive society. Progressive Group of Companies extends financial and institutional support to universities, schools, and educational programs that promote academic excellence, innovation, and equal access to learning opportunities. Through scholarships, infrastructure development, and resource provisioning, we aim to empower the next generation of leaders and professionals.
                   </p>
                 </div>
               </div>
@@ -68,7 +77,7 @@ const OurImpact = () => {
                 <div className="bg-white rounded-lg shadow-lg p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Social Welfare Engagements</h3>
                   <p className="text-gray-600">
-                    Our CSR commitments encompass partnerships with nonprofit organizations, support for community development programs, and assistance for marginalized groups addressing poverty, disability, and disaster relief.
+                    Our CSR commitments also encompass a broad range of social welfare initiatives. These include partnerships with nonprofit organizations, support for community development programs, and assistance for marginalized groups. By addressing issues such as poverty, disability, and disaster relief, we work to create meaningful impact in the communities we serve.
                   </p>
                 </div>
                 
