@@ -160,11 +160,21 @@ const Index = () => {
               Foundation of <span className="text-pg-red">PGOC</span>
             </h2>
             
-            <div className="mb-6 sm:mb-8">
-              <h3 className="text-xl sm:text-2xl font-semibold text-green-400 mb-2">Vision</h3>
-              <p className="text-lg sm:text-xl text-green-300 font-medium italic">
-                "Fair Friendly Benevolent Economic Pursuit"
-              </p>
+            <div className="mb-6 sm:mb-8 relative">
+              <div className="bg-gradient-to-br from-green-500/10 to-green-600/20 backdrop-blur-sm border border-green-400/30 rounded-2xl p-6 sm:p-8 mx-auto max-w-2xl shadow-2xl">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-gradient-to-br from-green-400 to-green-600 rounded-full p-3 shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-semibold text-green-400 mb-3 mt-2">Vision</h3>
+                <p className="text-lg sm:text-xl text-green-300 font-medium italic leading-relaxed">
+                  "Fair Friendly Benevolent Economic Pursuit"
+                </p>
+              </div>
             </div>
             
             <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
