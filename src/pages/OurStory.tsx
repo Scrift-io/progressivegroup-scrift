@@ -223,13 +223,17 @@ const OurStory = () => {
                   <h3 className="text-3xl font-bold text-gray-900 mb-6">Chairman Message</h3>
                   <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                     <p className="italic border-l-4 border-pg-red pl-6">
-                      "Within your person, blessings and prosperity. Welcome to the luminous perfumed gardens of the Progressive Group, a value-driven virtue-oriented far and friendly economic portal."
+                      "Assalamualaikum Warahmatullahi Wabarakatuh (In Urdu)<br/>
+                      I wish you peace, blessings, and prosperity."
                     </p>
                     <p>
-                      "It is a shariah compliant, law of the land abiding, environmentally conscious and socially responsible company."
+                      "Welcome to the luminous perfumed garden of the Progressive Group, a Value-Driven virtue-oriented fair and friendly economic pursuit."
                     </p>
                     <p>
-                      "Our Quality Policy is crystal clear: We aspire to build standards, beneficial with money, back assurance."
+                      "It is a shari'ah compliant, law of the land abiding environmentally conscious and socially responsible company."
+                    </p>
+                    <p>
+                      "Our Quality Policy is crystal clear: We aspire to Gold Standards supported with money-back assurance."
                     </p>
                   </div>
                   <div className="mt-8 p-6 bg-gray-50 rounded-xl">
