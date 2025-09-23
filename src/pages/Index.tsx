@@ -138,13 +138,13 @@ const Index = () => {
                 EST. 1954
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
-                Seven Decades of <span className="text-pg-red">Industrial Excellence</span>
+                Growth over the <span className="text-pg-red">Six Decades</span>
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
-                Progressive Traders was established in Karachi, Pakistan in 1954 as a partnership firm with a visionary purpose of sourcing advanced raw materials, cutting-edge equipment, and innovative technologies to modernize and accelerate the growth of Pakistan's industrial landscape.
+                Progressive Traders has substantially contributed to the improvement, growth and expansion of the safety match industry, through quality enhancement and strategic promotion for export, with the result that Pakistan is now a significant exporter of safety matches to the global market place.
               </p>
               <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-10 leading-relaxed">
-                Today, Progressive Group stands as a diversified industrial conglomerate with multiple specialized divisions and three subsidiary companies, serving diverse markets with unwavering commitment to quality and innovation.
+                With a versatile approach, they are engaged in their specialized pursuits of manufacturing, import, import substitution, trading, distribution and export of a diverse product range comprising industrial raw materials, food ingredients, building products and fast moving consumer goods.
               </p>
               <Link to="/our-story" className="group inline-flex items-center bg-gray-900 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-pg-red transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base">
                 Discover Our Journey
