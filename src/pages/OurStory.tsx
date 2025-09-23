@@ -633,34 +633,149 @@ const OurStory = () => {
           </div>
         )}
 
-          {activeTab === 'quality' && <div className="space-y-16">
-              <div className="text-center mb-12 animate-fade-in">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Quality & Safety</h2>
-                <p className="text-xl text-gray-600">Committed to excellence in all we do</p>
+          {activeTab === 'quality' && (
+          <div className="space-y-20">
+            {/* Header Section */}
+            <div className="text-center mb-16 animate-fade-in">
+              <h2 className="text-5xl font-bold text-gray-900 mb-6">Quality & Safety</h2>
+              <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                At PGOC we thrive to create value and to effectively and efficiently build trust
+              </p>
+            </div>
+
+            {/* Main Quality Statement */}
+            <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-pg-blue/5 to-pg-blue/15 border border-pg-blue/20">
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&h=600&fit=crop&crop=center')] bg-cover bg-center opacity-10"></div>
+              <div className="relative z-10 p-12 lg:p-16">
+                <div className="max-w-4xl mx-auto text-center">
+                  <div className="w-20 h-20 bg-pg-blue/20 rounded-full flex items-center justify-center mx-auto mb-8">
+                    <Award className="w-10 h-10 text-pg-blue" />
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Our Quality Foundation</h3>
+                  <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                    Delivering the best-in-class quality for our products and meeting ultimate quality expectations of our consumers is our priority.
+                  </p>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    Our company's foundation is Quality and we are fully embedded in our purpose and values. 
+                    We Strive for zero defects and no waste by constantly improving our process with an approach to deliver competitive advantage to our customers.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Our Commitment Section */}
+            <section>
+              <div className="text-center mb-16">
+                <h3 className="text-4xl font-bold text-gray-900 mb-6">Our Commitment</h3>
+                <div className="w-24 h-1 bg-pg-red mx-auto mb-8"></div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="grid lg:grid-cols-2 gap-16 items-start">
+                {/* Commitment Content */}
                 <div className="animate-fade-in">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-8">Our Commitment</h3>
-                  <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
-                    <p className="border-l-4 border-pg-red pl-6 italic">
-                      Our Quality Policy is crystal clear: We are committed to establishing excellence in standards, delivering measurable value, and ensuring unwavering reliability in all our operations.
-                    </p>
-                    <p>
-                      We maintain strict quality control standards across all our business divisions and offer money-back guarantees for our products.
-                    </p>
-                    <p>
-                      Safety is paramount in all our operations, ensuring the well-being of our employees, customers, and communities.
-                    </p>
+                  <div className="space-y-8">
+                    {[
+                      "Our company aims to achieve the ultimate customer satisfaction by offering products that can satisfy customer expectations 100%.",
+                      "We understand the different needs and expectations of our consumers and customers and strive to develop and deliver superior brands to ensure they're the preferred choice.",
+                      "To be quality conscious and customer oriented by continuously training and developing all employees.",
+                      "Working as a team with all internal and external stakeholders.",
+                      "To provide a perfect product and service to its customers by constantly following the innovations and developing technology in its field.",
+                      "To be an exemplary organization sensitive to society and the environment."
+                    ].map((commitment, index) => (
+                      <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-lg border-l-4 border-pg-red hover:shadow-xl transition-shadow duration-300">
+                        <div className="flex-shrink-0 w-8 h-8 bg-pg-red/10 rounded-full flex items-center justify-center mt-1">
+                          <CheckCircle className="w-5 h-5 text-pg-red" />
+                        </div>
+                        <p className="text-gray-700 text-lg leading-relaxed">{commitment}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <div className="animate-fade-in" style={{
-              animationDelay: '0.2s'
-            }}>
-                  <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop" alt="Quality Control" className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500" />
+
+                {/* Visual Content */}
+                <div className="animate-fade-in space-y-8" style={{ animationDelay: '0.2s' }}>
+                  {/* Quality Control Image */}
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop&crop=center" 
+                      alt="Quality Control Laboratory" 
+                      className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                      <div className="absolute bottom-4 left-4 text-white">
+                        <h4 className="text-xl font-bold">Quality Control</h4>
+                        <p className="text-sm opacity-90">Advanced testing facilities</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Safety Standards Image */}
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop&crop=center" 
+                      alt="Safety Standards" 
+                      className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                      <div className="absolute bottom-4 left-4 text-white">
+                        <h4 className="text-xl font-bold">Safety Standards</h4>
+                        <p className="text-sm opacity-90">Industry-leading protocols</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Statistics Cards */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl text-center border border-green-200">
+                      <div className="text-3xl font-bold text-green-700 mb-2">100%</div>
+                      <div className="text-sm font-medium text-green-600">Customer Satisfaction Goal</div>
+                    </div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl text-center border border-blue-200">
+                      <div className="text-3xl font-bold text-blue-700 mb-2">Zero</div>
+                      <div className="text-sm font-medium text-blue-600">Defects Target</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>}
+            </section>
+
+            {/* Quality Certifications */}
+            <section className="bg-gradient-to-br from-gray-50 to-gray-100 -mx-8 px-8 py-16 rounded-3xl">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Quality Certifications & Standards</h3>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  We maintain the highest industry standards through internationally recognized certifications and continuous improvement processes.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                  <div className="w-16 h-16 bg-pg-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Shield className="w-8 h-8 text-pg-blue" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">ISO Standards</h4>
+                  <p className="text-gray-600">Certified quality management systems ensuring consistent excellence</p>
+                </div>
+                
+                <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">PSQCA Certified</h4>
+                  <p className="text-gray-600">Pakistan Standards and Quality Control Authority compliance</p>
+                </div>
+                
+                <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Target className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">Continuous Improvement</h4>
+                  <p className="text-gray-600">Ongoing process optimization and quality enhancement initiatives</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        )}
 
         </div>
       </section>
