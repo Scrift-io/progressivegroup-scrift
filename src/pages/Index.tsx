@@ -159,6 +159,14 @@ const Index = () => {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
               Foundation of <span className="text-pg-red">PGOC</span>
             </h2>
+            
+            <div className="mb-6 sm:mb-8">
+              <h3 className="text-xl sm:text-2xl font-semibold text-green-400 mb-2">Vision</h3>
+              <p className="text-lg sm:text-xl text-green-300 font-medium italic">
+                "Fair Friendly Benevolent Economic Pursuit"
+              </p>
+            </div>
+            
             <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
               Progressive Group of Company's Constitution is based on Shari'ah, Law of land and industry best practices shall be the source of strength.
             </p>
