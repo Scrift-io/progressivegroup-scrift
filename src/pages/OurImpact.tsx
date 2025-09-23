@@ -24,59 +24,60 @@ const OurImpact = () => {
             </div>
           </div>
 
-          {/* CSR Impact Categories */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* CSR Impact Categories - Tiered Design */}
+          <div className="space-y-20">
             
-            {/* Health Care & Education */}
-            <div>
-              <div className="flex items-center mb-8">
-                <Heart className="w-12 h-12 text-pg-red mr-4" />
-                <h2 className="text-3xl font-bold text-gray-900">Health Care & Education</h2>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Health Care Initiatives</h3>
-                  <p className="text-gray-600">
+            {/* Health Care Initiatives - Text Left, Image Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="flex items-center mb-6">
+                  <Heart className="w-10 h-10 text-pg-red mr-4" />
+                  <h2 className="text-3xl font-bold text-gray-900">Health Care Initiatives</h2>
+                </div>
+                <div className="bg-white rounded-lg shadow-lg p-8">
+                  <p className="text-gray-700 leading-relaxed text-lg">
                     We are proud to support hospitals and healthcare institutions that provide critical medical services to underserved and vulnerable communities. Our contributions help facilitate access to quality healthcare, the expansion of medical facilities, procurement of essential medical equipment, and the improvement of patient care services.
                   </p>
                 </div>
-                
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Education and Academic Support</h3>
-                  <p className="text-gray-600">
+              </div>
+              <div className="order-1 lg:order-2">
+                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop" alt="Healthcare Impact" className="rounded-lg shadow-xl w-full h-80 object-cover" />
+              </div>
+            </div>
+
+            {/* Education and Academic Support - Text Right, Image Left */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&h=400&fit=crop" alt="Education Impact" className="rounded-lg shadow-xl w-full h-80 object-cover" />
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="flex items-center mb-6">
+                  <Users className="w-10 h-10 text-pg-blue mr-4" />
+                  <h2 className="text-3xl font-bold text-gray-900">Education and Academic Support</h2>
+                </div>
+                <div className="bg-white rounded-lg shadow-lg p-8">
+                  <p className="text-gray-700 leading-relaxed text-lg">
                     Education is the cornerstone of a prosperous and progressive society. Progressive Group of Companies extends financial and institutional support to universities, schools, and educational programs that promote academic excellence, innovation, and equal access to learning opportunities. Through scholarships, infrastructure development, and resource provisioning, we aim to empower the next generation of leaders and professionals.
                   </p>
                 </div>
               </div>
-              
-              <div className="mt-8">
-                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop" alt="Community Impact" className="rounded-lg shadow-lg w-full" />
-              </div>
             </div>
 
-            {/* Social Welfare & Environmental Responsibility */}
-            <div>
-              <div className="flex items-center mb-8">
-                <Globe className="w-12 h-12 text-green-600 mr-4" />
-                <h2 className="text-3xl font-bold text-gray-900">Social Welfare & Environment</h2>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Social Welfare Engagements</h3>
-                  <p className="text-gray-600">
+            {/* Social Welfare Engagements - Text Left, Image Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="flex items-center mb-6">
+                  <Globe className="w-10 h-10 text-green-600 mr-4" />
+                  <h2 className="text-3xl font-bold text-gray-900">Social Welfare Engagements</h2>
+                </div>
+                <div className="bg-white rounded-lg shadow-lg p-8">
+                  <p className="text-gray-700 leading-relaxed text-lg">
                     Our CSR commitments also encompass a broad range of social welfare initiatives. These include partnerships with nonprofit organizations, support for community development programs, and assistance for marginalized groups. By addressing issues such as poverty, disability, and disaster relief, we work to create meaningful impact in the communities we serve.
                   </p>
                 </div>
-                
-                
-                
-                
               </div>
-              
-              <div className="mt-8">
-                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&h=400&fit=crop" alt="Environmental Impact" className="rounded-lg shadow-lg w-full" />
+              <div className="order-1 lg:order-2">
+                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&h=400&fit=crop" alt="Social Welfare Impact" className="rounded-lg shadow-xl w-full h-80 object-cover" />
               </div>
             </div>
           </div>
