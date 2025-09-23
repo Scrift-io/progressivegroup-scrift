@@ -51,53 +51,38 @@ const Media = () => {
   const brandGallery = [
     {
       id: 1,
-      image: '/lovable-uploads/progressive-group-corporate-buildings.png',
+      image: '/lovable-uploads/award-ceremony-1.jpg',
       height: 400
     },
     {
       id: 2,
-      image: '/lovable-uploads/b71c0b2f-9cf5-4b86-87cc-ff6efbdd3b67.png',
-      height: 300
-    },
-    {
-      id: 3,
-      image: 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=600&h=400&fit=crop',
-      height: 350
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop',
-      height: 280
-    },
-    {
-      id: 5,
-      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop',
+      image: '/lovable-uploads/sports-team-trophy.jpg',
       height: 320
     },
     {
-      id: 6,
-      image: '/lovable-uploads/careers-office-environment.jpg',
+      id: 3,
+      image: '/lovable-uploads/award-ceremony-2.jpg',
       height: 380
     },
     {
-      id: 7,
-      image: '/lovable-uploads/progressive-group-corporate.png',
+      id: 4,
+      image: '/lovable-uploads/brand-of-the-year-award.jpg',
       height: 300
     },
     {
-      id: 8,
-      image: '/lovable-uploads/careers-conference-room.jpg',
-      height: 250
+      id: 5,
+      image: '/lovable-uploads/business-meeting.jpg',
+      height: 350
     },
     {
-      id: 9,
-      image: '/lovable-uploads/careers-training-room.jpg',
+      id: 6,
+      image: '/lovable-uploads/annual-meeting-2024.jpg',
+      height: 280
+    },
+    {
+      id: 7,
+      image: '/lovable-uploads/team-meeting.jpg',
       height: 340
-    },
-    {
-      id: 10,
-      image: '/lovable-uploads/careers-workspace.jpg',
-      height: 290
     }
   ];
 
