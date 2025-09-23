@@ -41,7 +41,7 @@ const Careers = () => {
             <div className="animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
-              <img src="/lovable-uploads/careers-office-environment.jpg" alt="Progressive Group Office Environment" className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500" />
+              <img src="/lovable-uploads/progressive-group-careers-hero.png" alt="Progressive Group Office Environment" className="rounded-2xl shadow-2xl w-full object-contain transform hover:scale-105 transition-transform duration-500" />
             </div>
           </div>
         </div>
