@@ -4,9 +4,21 @@ import PageHeader from '../components/PageHeader';
 
 const OurStory = () => {
   const [activeTab, setActiveTab] = useState('who-we-are');
+  const [currentAward, setCurrentAward] = useState(0);
   const [showLeftIndicator, setShowLeftIndicator] = useState(false);
   const [showRightIndicator, setShowRightIndicator] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const awards = [
+    {
+      title: "Brand of the Year 2025",
+      category: "Excellence Award"
+    },
+    {
+      title: "Best Brand Activation Program Award 2024", 
+      category: "Marketing Excellence"
+    }
+  ];
 
   const checkScrollIndicators = () => {
     const container = scrollContainerRef.current;
@@ -147,11 +159,54 @@ const OurStory = () => {
             animationDelay: '0.2s'
           }}>
                 <img alt="Progressive Group Corporate Buildings" className="rounded-2xl shadow-2xl w-full mb-8 transform hover:scale-105 transition-transform duration-500" src="/lovable-uploads/progressive-group-corporate-buildings.png" />
-                <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Growth Over Six Decades</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Initially, Progressive Traders has substantially contributed to the improvement, growth and expansion of the energy sector industry, through diversified supply of chemicals, machinery and equipment.
-                  </p>
+                {/* Awards Carousel */}
+                <div className="relative bg-gradient-to-br from-pg-red/10 to-pg-red/5 p-8 rounded-2xl shadow-lg">
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-900">Awards and Recognitions</h3>
+                    <div className="w-16 h-1 bg-pg-red mx-auto"></div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden">
+                    <div className="transition-all duration-500 ease-in-out">
+                      <div className="text-center">
+                        <div className="inline-block bg-pg-red/20 text-pg-red px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                          {awards[currentAward].category}
+                        </div>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4 leading-relaxed">
+                          {awards[currentAward].title}
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Navigation */}
+                  <div className="flex justify-between items-center mt-6">
+                    <button
+                      onClick={() => setCurrentAward(prev => (prev - 1 + awards.length) % awards.length)}
+                      className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:bg-pg-red hover:text-white"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    
+                    <div className="flex space-x-2">
+                      {awards.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentAward(index)}
+                          className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                            index === currentAward ? 'bg-pg-red scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    
+                    <button
+                      onClick={() => setCurrentAward(prev => (prev + 1) % awards.length)}
+                      className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:bg-pg-red hover:text-white"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>}
