@@ -3,7 +3,7 @@ import { Play, ExternalLink, Image, Video, FileText } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import mediaCenterBg from '../assets/media-center-bg.jpg';
 import YouTubeClean from '../components/YouTubeClean';
-import { Component as Masonry } from '@/components/ui/masonry';
+import { CuratedGallery } from '@/components/ui/curated-gallery';
 
 const Media = () => {
   const [activeTab, setActiveTab] = useState('videos');
@@ -51,38 +51,31 @@ const Media = () => {
   const brandGallery = [
     {
       id: 1,
-      image: '/lovable-uploads/award-ceremony-1.jpg',
-      height: 400
+      image: '/lovable-uploads/award-ceremony-1.jpg'
     },
     {
       id: 2,
-      image: '/lovable-uploads/sports-team-trophy.jpg',
-      height: 320
+      image: '/lovable-uploads/sports-team-trophy.jpg'
     },
     {
       id: 3,
-      image: '/lovable-uploads/award-ceremony-2.jpg',
-      height: 380
+      image: '/lovable-uploads/award-ceremony-2.jpg'
     },
     {
       id: 4,
-      image: '/lovable-uploads/brand-of-the-year-award.jpg',
-      height: 300
+      image: '/lovable-uploads/brand-of-the-year-award.jpg'
     },
     {
       id: 5,
-      image: '/lovable-uploads/business-meeting.jpg',
-      height: 350
+      image: '/lovable-uploads/business-meeting.jpg'
     },
     {
       id: 6,
-      image: '/lovable-uploads/annual-meeting-2024.jpg',
-      height: 280
+      image: '/lovable-uploads/annual-meeting-2024.jpg'
     },
     {
       id: 7,
-      image: '/lovable-uploads/team-meeting.jpg',
-      height: 340
+      image: '/lovable-uploads/team-meeting.jpg'
     }
   ];
 
@@ -209,8 +202,8 @@ const Media = () => {
                 </p>
               </div>
 
-              <div className="w-full max-w-screen-xl mx-auto h-[80vh] overflow-auto border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg bg-white dark:bg-gray-900 p-4">
-                <Masonry data={brandGallery} />
+              <div className="max-w-7xl mx-auto">
+                <CuratedGallery data={brandGallery} />
               </div>
             </div>
           )}
