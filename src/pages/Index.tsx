@@ -138,7 +138,7 @@ const Index = () => {
                 EST. 1954
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
-                Growth over the <span className="text-pg-red">Six Decades</span>
+                Growth over <span className="text-pg-red">Six Decades</span>
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                 Progressive Traders has substantially contributed to the improvement, growth and expansion of the safety match industry, through quality enhancement and strategic promotion for export, with the result that Pakistan is now a significant exporter of safety matches to the global market place.
