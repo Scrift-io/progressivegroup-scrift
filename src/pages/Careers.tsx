@@ -47,6 +47,151 @@ const Careers = () => {
         </div>
       </section>
 
+      {/* Job Alert Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Sign up for Job Alerts</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                For job opportunities just leave a few details below to stay up to date with jobs that suit you and your skills.
+              </p>
+            </div>
+
+            <form className="space-y-6">
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address*</label>
+                <input 
+                  type="email" 
+                  required 
+                  placeholder="Enter your email address"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" 
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Job Category*</label>
+                  <Select>
+                    <SelectTrigger className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white shadow-sm">
+                      <SelectValue placeholder="Select a job category" />
+                    </SelectTrigger>
+                    <SelectContent className="z-50 bg-white shadow-lg border">
+                      <SelectItem value="engineering">Engineering</SelectItem>
+                      <SelectItem value="manufacturing">Manufacturing</SelectItem>
+                      <SelectItem value="sales-marketing">Sales & Marketing</SelectItem>
+                      <SelectItem value="finance-accounting">Finance & Accounting</SelectItem>
+                      <SelectItem value="human-resources">Human Resources</SelectItem>
+                      <SelectItem value="operations">Operations</SelectItem>
+                      <SelectItem value="quality-assurance">Quality Assurance</SelectItem>
+                      <SelectItem value="research-development">Research & Development</SelectItem>
+                      <SelectItem value="information-technology">Information Technology</SelectItem>
+                      <SelectItem value="supply-chain">Supply Chain</SelectItem>
+                      <SelectItem value="management">Management</SelectItem>
+                      <SelectItem value="internship">Internship</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Location*</label>
+                  <Select>
+                    <SelectTrigger className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-white shadow-sm">
+                      <SelectValue placeholder="Select a location (city)" />
+                    </SelectTrigger>
+                    <SelectContent className="z-50 bg-white shadow-lg border max-h-60 overflow-y-auto">
+                      <SelectItem value="karachi">Karachi</SelectItem>
+                      <SelectItem value="lahore">Lahore</SelectItem>
+                      <SelectItem value="islamabad">Islamabad</SelectItem>
+                      <SelectItem value="rawalpindi">Rawalpindi</SelectItem>
+                      <SelectItem value="faisalabad">Faisalabad</SelectItem>
+                      <SelectItem value="multan">Multan</SelectItem>
+                      <SelectItem value="peshawar">Peshawar</SelectItem>
+                      <SelectItem value="quetta">Quetta</SelectItem>
+                      <SelectItem value="sialkot">Sialkot</SelectItem>
+                      <SelectItem value="gujranwala">Gujranwala</SelectItem>
+                      <SelectItem value="hyderabad">Hyderabad</SelectItem>
+                      <SelectItem value="bahawalpur">Bahawalpur</SelectItem>
+                      <SelectItem value="sargodha">Sargodha</SelectItem>
+                      <SelectItem value="sukkur">Sukkur</SelectItem>
+                      <SelectItem value="larkana">Larkana</SelectItem>
+                      <SelectItem value="sheikhupura">Sheikhupura</SelectItem>
+                      <SelectItem value="gujrat">Gujrat</SelectItem>
+                      <SelectItem value="kasur">Kasur</SelectItem>
+                      <SelectItem value="rahim-yar-khan">Rahim Yar Khan</SelectItem>
+                      <SelectItem value="sahiwal">Sahiwal</SelectItem>
+                      <SelectItem value="okara">Okara</SelectItem>
+                      <SelectItem value="wah-cantonment">Wah Cantonment</SelectItem>
+                      <SelectItem value="dera-ghazi-khan">Dera Ghazi Khan</SelectItem>
+                      <SelectItem value="mirpur-khas">Mirpur Khas</SelectItem>
+                      <SelectItem value="nawabshah">Nawabshah</SelectItem>
+                      <SelectItem value="mingora">Mingora</SelectItem>
+                      <SelectItem value="chiniot">Chiniot</SelectItem>
+                      <SelectItem value="kamoke">Kamoke</SelectItem>
+                      <SelectItem value="mandi-bahauddin">Mandi Bahauddin</SelectItem>
+                      <SelectItem value="jhelum">Jhelum</SelectItem>
+                      <SelectItem value="sadiqabad">Sadiqabad</SelectItem>
+                      <SelectItem value="jacobabad">Jacobabad</SelectItem>
+                      <SelectItem value="shikarpur">Shikarpur</SelectItem>
+                      <SelectItem value="khanewal">Khanewal</SelectItem>
+                      <SelectItem value="hafizabad">Hafizabad</SelectItem>
+                      <SelectItem value="kohat">Kohat</SelectItem>
+                      <SelectItem value="muzaffargarh">Muzaffargarh</SelectItem>
+                      <SelectItem value="khanpur">Khanpur</SelectItem>
+                      <SelectItem value="gojra">Gojra</SelectItem>
+                      <SelectItem value="mianwali">Mianwali</SelectItem>
+                      <SelectItem value="pakpattan">Pakpattan</SelectItem>
+                      <SelectItem value="abbottabad">Abbottabad</SelectItem>
+                      <SelectItem value="tando-adam">Tando Adam</SelectItem>
+                      <SelectItem value="jaranwala">Jaranwala</SelectItem>
+                      <SelectItem value="khairpur">Khairpur</SelectItem>
+                      <SelectItem value="chishtian">Chishtian</SelectItem>
+                      <SelectItem value="daska">Daska</SelectItem>
+                      <SelectItem value="dadu">Dadu</SelectItem>
+                      <SelectItem value="mandi-burewala">Mandi Burewala</SelectItem>
+                      <SelectItem value="tando-allahyar">Tando Allahyar</SelectItem>
+                      <SelectItem value="toba-tek-singh">Toba Tek Singh</SelectItem>
+                      <SelectItem value="ahmadpur-east">Ahmadpur East</SelectItem>
+                      <SelectItem value="kamalia">Kamalia</SelectItem>
+                      <SelectItem value="mailsi">Mailsi</SelectItem>
+                      <SelectItem value="pattoki">Pattoki</SelectItem>
+                      <SelectItem value="vehari">Vehari</SelectItem>
+                      <SelectItem value="hasilpur">Hasilpur</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <button 
+                  type="button"
+                  className="bg-pg-red text-white px-8 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg mr-4"
+                >
+                  Add Alert
+                </button>
+              </div>
+
+              <div className="border-t border-gray-200 pt-6 mt-8">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <button 
+                    type="button"
+                    className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300"
+                  >
+                    Confirm Email
+                  </button>
+                  <button 
+                    type="submit"
+                    className="bg-green-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-700 transition-all duration-300"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
