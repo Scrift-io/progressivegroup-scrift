@@ -1,16 +1,9 @@
-
 import { Users, Globe, Leaf, Heart } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
-
 const OurImpact = () => {
-  return (
-    <div className="mt-16">
+  return <div className="mt-16">
       {/* Header */}
-      <PageHeader 
-        title="Our Impact"
-        subtitle="Making a difference in communities and the environment"
-        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=600&fit=crop"
-      />
+      <PageHeader title="Our Impact" subtitle="Making a difference in communities and the environment" backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=600&fit=crop" />
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,11 +51,7 @@ const OurImpact = () => {
               </div>
               
               <div className="mt-8">
-                <img
-                  src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop"
-                  alt="Community Impact"
-                  className="rounded-lg shadow-lg w-full"
-                />
+                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop" alt="Community Impact" className="rounded-lg shadow-lg w-full" />
               </div>
             </div>
 
@@ -81,27 +70,13 @@ const OurImpact = () => {
                   </p>
                 </div>
                 
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Environmental Stewardship</h3>
-                  <p className="text-gray-600">
-                    We are committed to sustainable business practices that minimize our environmental footprint, implementing environmentally conscious processes and green innovation initiatives.
-                  </p>
-                </div>
                 
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Corporate Citizenship</h3>
-                  <p className="text-gray-600">
-                    Through meaningful corporate citizenship, we actively participate in efforts that uplift society and create lasting value for both our stakeholders and society at large.
-                  </p>
-                </div>
+                
+                
               </div>
               
               <div className="mt-8">
-                <img
-                  src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&h=400&fit=crop"
-                  alt="Environmental Impact"
-                  className="rounded-lg shadow-lg w-full"
-                />
+                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&h=400&fit=crop" alt="Environmental Impact" className="rounded-lg shadow-lg w-full" />
               </div>
             </div>
           </div>
@@ -158,8 +133,6 @@ const OurImpact = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default OurImpact;
