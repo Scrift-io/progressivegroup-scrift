@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, Users, Globe, Leaf, CheckCircle, BookOpen, Shield, Zap } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, Users, Globe, Leaf, CheckCircle, BookOpen, Shield, Zap, Star, GraduationCap, Link2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '@/components/ContactForm';
 
@@ -35,10 +35,10 @@ const Index = () => {
   }];
 
   const foundationItems = [
-    { id: 'faith', keyword: 'Faith' },
-    { id: 'knowledge', keyword: 'Knowledge' },
-    { id: 'unity', keyword: 'Unity' },
-    { id: 'discipline', keyword: 'Discipline' }
+    { id: 'faith', keyword: 'Faith', icon: Heart },
+    { id: 'knowledge', keyword: 'Knowledge', icon: GraduationCap },
+    { id: 'unity', keyword: 'Unity', icon: Users },
+    { id: 'discipline', keyword: 'Discipline', icon: Shield }
   ];
 
   useEffect(() => {
@@ -168,13 +168,16 @@ const Index = () => {
             <div className="w-16 sm:w-24 h-1 bg-pg-red mx-auto mt-4 sm:mt-6"></div>
           </div>
           
-          <div className="relative h-24 sm:h-32 lg:h-36">
+          <div className="relative h-32 sm:h-40 lg:h-48">
             {foundationItems.map((item, index) => {
+            const Icon = item.icon;
             return <div key={item.id} className={`absolute inset-0 transition-all duration-1000 ${index === currentFoundation ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                   <div className="flex items-center justify-center h-full">
-                    <div className="flex items-center justify-center text-white">
-                      <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-pg-red mr-3 sm:mr-4 flex-shrink-0" />
-                      <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-wide">{item.keyword}</span>
+                    <div className="bg-gradient-to-r from-pg-red/20 to-red-900/20 backdrop-blur-sm border border-pg-red/30 rounded-2xl px-8 sm:px-12 lg:px-16 py-6 sm:py-8 lg:py-10 shadow-2xl">
+                      <div className="flex items-center justify-center text-white">
+                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-pg-red mr-4 sm:mr-6 flex-shrink-0" />
+                        <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-wide">{item.keyword}</span>
+                      </div>
                     </div>
                   </div>
                 </div>;
