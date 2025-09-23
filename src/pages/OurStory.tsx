@@ -256,18 +256,21 @@ const OurStory = () => {
                 <div className="animate-fade-in" style={{
               animationDelay: '0.2s'
             }}>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-6">Vice Chairman Message</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-6">Co-Chairman Message</h3>
                   <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                     <p className="italic border-l-4 border-pg-red pl-6">
-                      "Welcome to the Progressive Group. We are a company that is driven by our values. We offer you progressive products and we are working with an organization that cares about its people and the world around us."
+                      "السلام عليكم ورحمة الله وبركاته"
                     </p>
                     <p>
-                      "We have a strict quality control standards that is why we offer a money-back guarantee for our products."
+                      "Welcome to the Progressive Group. We're a company that is driven by our values. We offer you peace of mind, you are working with an organization that cares about its people and the world around us."
+                    </p>
+                    <p>
+                      "We have strict quality control standards that is why we offer a money-back guarantee for our products."
                     </p>
                   </div>
                   <div className="mt-8 p-6 bg-gray-50 rounded-xl">
                     <p className="font-bold text-xl text-gray-900">Mr. Muhammad Ashraf</p>
-                    <p className="text-pg-red font-semibold">Vice Chairman</p>
+                    <p className="text-pg-red font-semibold">Co-Chairman</p>
                   </div>
                 </div>
               </div>
