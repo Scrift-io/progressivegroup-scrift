@@ -71,7 +71,7 @@ const Footer = () => {
               <a href="#" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:bg-pg-red hover:text-white transition-all duration-300">
                 <Facebook size={16} />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:bg-pg-red hover:text-white transition-all duration-300">
+              <a href="https://www.linkedin.com/company/72101038/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:bg-pg-red hover:text-white transition-all duration-300">
                 <Linkedin size={16} />
               </a>
               <a href="#" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:bg-pg-red hover:text-white transition-all duration-300">
