@@ -356,7 +356,7 @@ const Careers = () => {
           </p>
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <a
-              href="https://www.linkedin.com/company/progressive-group"
+              href="https://www.linkedin.com/company/72101038/admin/dashboard/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-white text-pg-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
