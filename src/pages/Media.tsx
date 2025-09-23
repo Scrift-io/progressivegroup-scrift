@@ -3,6 +3,7 @@ import { Play, ExternalLink, Image, Video, FileText } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import mediaCenterBg from '../assets/media-center-bg.jpg';
 import YouTubeClean from '../components/YouTubeClean';
+import { Component as Masonry } from '@/components/ui/masonry';
 
 const Media = () => {
   const [activeTab, setActiveTab] = useState('videos');
@@ -50,39 +51,53 @@ const Media = () => {
   const brandGallery = [
     {
       id: 1,
-      title: 'Progressive Group Headquarters',
       image: '/lovable-uploads/progressive-group-corporate-buildings.png',
-      description: 'Our main corporate office showcasing Progressive Group, PowerPlus, and PakGhiza brands'
+      height: 400
     },
     {
       id: 2,
-      title: 'Leadership Team',
       image: '/lovable-uploads/b71c0b2f-9cf5-4b86-87cc-ff6efbdd3b67.png',
-      description: 'Our visionary leadership guiding the company forward'
+      height: 300
     },
     {
       id: 3,
-      title: 'Manufacturing Facility',
       image: 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=600&h=400&fit=crop',
-      description: 'State-of-the-art manufacturing facilities maintaining international standards'
+      height: 350
     },
     {
       id: 4,
-      title: 'Product Innovation',
       image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop',
-      description: 'Our commitment to innovation and product development'
+      height: 280
     },
     {
       id: 5,
-      title: 'Quality Control',
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop',
-      description: 'Rigorous quality control processes ensuring excellence'
+      height: 320
     },
     {
       id: 6,
-      title: 'Team Excellence',
       image: '/lovable-uploads/careers-office-environment.jpg',
-      description: 'Our dedicated team working towards shared goals'
+      height: 380
+    },
+    {
+      id: 7,
+      image: '/lovable-uploads/progressive-group-corporate.png',
+      height: 300
+    },
+    {
+      id: 8,
+      image: '/lovable-uploads/careers-conference-room.jpg',
+      height: 250
+    },
+    {
+      id: 9,
+      image: '/lovable-uploads/careers-training-room.jpg',
+      height: 340
+    },
+    {
+      id: 10,
+      image: '/lovable-uploads/careers-workspace.jpg',
+      height: 290
     }
   ];
 
@@ -209,27 +224,8 @@ const Media = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {brandGallery.map((item, index) => (
-                  <div 
-                    key={item.id} 
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in group"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
+              <div className="w-full max-w-screen-xl mx-auto h-[80vh] overflow-auto border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg bg-white dark:bg-gray-900 p-4">
+                <Masonry data={brandGallery} />
               </div>
             </div>
           )}
