@@ -163,7 +163,7 @@ const Index = () => {
             </h2>
             
             <div className="mb-6 sm:mb-8 relative">
-              <div className="bg-gradient-to-br from-green-500/10 to-green-600/20 backdrop-blur-sm border border-green-400/30 rounded-2xl p-6 sm:p-8 mx-auto max-w-2xl shadow-2xl">
+              <div className="bg-gradient-to-br from-green-500/10 to-green-600/20 backdrop-blur-sm border border-green-400/30 rounded-2xl p-4 sm:p-6 mx-auto max-w-xl shadow-2xl">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   
                 </div>
