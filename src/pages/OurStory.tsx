@@ -114,7 +114,7 @@ const OurStory = () => {
 
             <div 
               ref={scrollContainerRef}
-              className="flex overflow-x-auto scrollbar-hide scroll-smooth"
+              className="flex overflow-x-auto scrollbar-hide scroll-smooth lg:justify-center"
               onScroll={checkScrollIndicators}
             >
               {tabs.map(tab => 
