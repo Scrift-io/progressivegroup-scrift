@@ -172,20 +172,6 @@ const Careers = () => {
               </div>
 
               <div className="border-t border-gray-200 pt-6 mt-8">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <button 
-                    type="button"
-                    className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300"
-                  >
-                    Confirm Email
-                  </button>
-                  <button 
-                    type="submit"
-                    className="bg-green-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-700 transition-all duration-300"
-                  >
-                    Sign Up
-                  </button>
-                </div>
               </div>
             </form>
           </div>
