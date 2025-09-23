@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, Users, Globe, Leaf, CheckCircle, BookOpen, Shield, Zap, Star, GraduationCap, Link2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, Users, Globe, Leaf, CheckCircle, BookOpen, Shield, Zap, Star, GraduationCap, Link2, Cross, HandHeart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '@/components/ContactForm';
 
@@ -186,118 +186,103 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Our Impact Section */}
-      <section className="py-16 sm:py-20 bg-white">
+      {/* Corporate Social Responsibility Section */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Impact Header */}
+          {/* CSR Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="text-pg-red">Impact</span>
+              Corporate Social <span className="text-pg-red">Responsibility</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Making a difference in communities and the environment through seven decades of excellence
-            </p>
-            <div className="w-24 h-1 bg-pg-red mx-auto mt-6"></div>
+            <div className="max-w-5xl mx-auto space-y-6">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                At Progressive Group of Companies, we recognize that our success as a business is closely tied to the well-being of the communities in which we operate. Guided by a strong sense of responsibility and a commitment to sustainable development, our Corporate Social Responsibility (CSR) initiatives are an integral part of our corporate philosophy.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We firmly believe that meaningful corporate citizenship extends beyond business performance—it involves active participation in efforts that uplift society and address critical needs in areas such as health, education, and social welfare.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Through these efforts, Progressive Group of Companies reaffirms its pledge to contribute positively to the communities we serve. We are committed to continuing our journey as a responsible corporate citizen, dedicated to creating lasting value—not only for our stakeholders but for society at large.
+              </p>
+            </div>
+            <div className="w-24 h-1 bg-pg-red mx-auto mt-8"></div>
           </div>
 
-          {/* Impact Statistics */}
-          <div className="bg-gradient-to-r from-pg-red to-red-700 text-white rounded-2xl p-8 mb-16">
-            <h3 className="text-3xl font-bold text-center mb-12">Our Impact in Numbers</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">70+</div>
-                <div className="text-lg opacity-90">Years of Service</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">500+</div>
-                <div className="text-lg opacity-90">Employees</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">130+</div>
-                <div className="text-lg opacity-90">Products</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">3</div>
-                <div className="text-lg opacity-90">Business Divisions</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Impact Areas */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            {/* Individuals & Families */}
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-pg-red rounded-xl flex items-center justify-center mr-4">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Individuals & Families</h3>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Employment Generation</h4>
-                  <p className="text-gray-600 text-sm">Providing direct employment to hundreds of families across Pakistan, contributing to economic stability and growth.</p>
+          {/* CSR Initiatives */}
+          <div className="space-y-12">
+            {/* Health Care Initiatives */}
+            <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gray-100">
+              <div className="flex items-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-pg-red to-red-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+                  <Heart className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Quality Products</h4>
-                  <p className="text-gray-600 text-sm">Ensuring families have access to reliable, affordable products that improve their daily lives.</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Skill Development</h4>
-                  <p className="text-gray-600 text-sm">Enhancing workforce capabilities through comprehensive training and development programs.</p>
+                  <h3 className="text-3xl font-bold text-gray-900">Health Care Initiatives</h3>
+                  <div className="w-20 h-1 bg-pg-red mt-2"></div>
                 </div>
               </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We are proud to support hospitals and healthcare institutions that provide critical medical services to underserved and vulnerable communities. Our contributions help facilitate access to quality healthcare, the expansion of medical facilities, procurement of essential medical equipment, and the improvement of patient care services.
+              </p>
             </div>
 
-            {/* For the Planet */}
-            <div className="bg-green-50 rounded-2xl p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mr-4">
-                  <Globe className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">For the Planet</h3>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Environmental Responsibility</h4>
-                  <p className="text-gray-600 text-sm">Committed to sustainable business practices that minimize our environmental footprint.</p>
+            {/* Education and Academic Support */}
+            <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gray-100">
+              <div className="flex items-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+                  <GraduationCap className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Sustainable Manufacturing</h4>
-                  <p className="text-gray-600 text-sm">Environmentally conscious processes that reduce waste and optimize resource utilization.</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Green Innovation</h4>
-                  <p className="text-gray-600 text-sm">Continuous investment in R&D for sustainable products and processes.</p>
+                  <h3 className="text-3xl font-bold text-gray-900">Education and Academic Support</h3>
+                  <div className="w-20 h-1 bg-blue-500 mt-2"></div>
                 </div>
               </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Education is the cornerstone of a prosperous and progressive society. Progressive Group of Companies extends financial and institutional support to universities, schools, and educational programs that promote academic excellence, innovation, and equal access to learning opportunities. Through scholarships, infrastructure development, and resource provisioning, we aim to empower the next generation of leaders and professionals.
+              </p>
+            </div>
+
+            {/* Social Welfare Engagements */}
+            <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gray-100">
+              <div className="flex items-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+                  <HandHeart className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-gray-900">Social Welfare Engagements</h3>
+                  <div className="w-20 h-1 bg-green-500 mt-2"></div>
+                </div>
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Our CSR commitments also encompass a broad range of social welfare initiatives. These include partnerships with nonprofit organizations, support for community development programs, and assistance for marginalized groups. By addressing issues such as poverty, disability, and disaster relief, we strive to create meaningful change in the lives of those who need it most.
+              </p>
             </div>
           </div>
 
           {/* Our Commitment */}
-          <div className="text-center">
+          <div className="text-center mt-20">
             <h3 className="text-3xl font-bold text-gray-900 mb-12">Our Commitment to Society</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-6">
+              <div className="bg-red-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
                 <div className="w-16 h-16 bg-pg-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Heart className="w-8 h-8 text-pg-red" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Social Responsibility</h4>
-                <p className="text-gray-600">Giving back to communities through social initiatives and charitable activities.</p>
+                <p className="text-gray-600">Giving back to communities through social initiatives and charitable activities that create lasting positive impact.</p>
               </div>
-              <div className="p-6">
+              <div className="bg-green-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
                 <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Leaf className="w-8 h-8 text-green-600" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Environmental Stewardship</h4>
-                <p className="text-gray-600">Operations guided by environmental protection and sustainable development principles.</p>
+                <p className="text-gray-600">Operations guided by environmental protection and sustainable development principles for future generations.</p>
               </div>
-              <div className="p-6">
-                <div className="w-16 h-16 bg-pg-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-pg-red" />
+              <div className="bg-blue-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-8 h-8 text-blue-600" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Community Development</h4>
-                <p className="text-gray-600">Active participation in community programs that create lasting positive impact.</p>
+                <p className="text-gray-600">Active participation in community programs that uplift society and address critical social needs.</p>
               </div>
             </div>
           </div>
