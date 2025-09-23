@@ -127,16 +127,19 @@ const OurStory = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {activeTab === 'who-we-are' && <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="animate-fade-in">
-                <h2 className="text-4xl font-bold text-gray-900 mb-8">Progressive Group History</h2>
+                <h2 className="text-4xl font-bold text-gray-900 mb-8">Who Are We?</h2>
                 <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                   <p>
-                    Progressive Traders was established in Karachi, Pakistan in 1954 as a partnership firm with a modest purpose of sourcing raw materials, equipment and technologies which would contribute to modernization and growth of the leather tanning industry in Pakistan.
+                    Progressive Traders (Pvt.) Ltd was established in 1954 in Karachi, Pakistan as a partnership firm with a modest purpose of sourcing raw materials, equipment and technologies which would contribute to modernization and growth of the leather tanning industry in Pakistan.
                   </p>
                   <p>
-                    Progressive Traders has now grown into a responsible group with several departments within the main entity and three satellite companies.
+                    The group has grown in stature and now has an umbrella of companies with several divisions actively engaged in their specialized area of pursuit and with a versatile approach, we are making inroads in the field of manufacture, import distribution and trading.
                   </p>
                   <p>
-                    With a versatile approach, they are engaged in final manufactured products of manufacturing, import, export, distribution, trading, distribution and export of a diverse range of food products, specialty retail importers, Instant Dry Yeast, preservatives, beverage ingredients, textiles, consumer goods, and real estate.
+                    Our 3 satellite companies are Progressive Traders (Pvt) Ltd; Power Plus (Pvt.) Ltd and Pak Ghiza (Pvt.) Ltd.
+                  </p>
+                  <p>
+                    Each company operates in a distinct sector, and our target audience includes B2B clients, consumers, partners, and industry stakeholders.
                   </p>
                 </div>
               </div>
