@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, Users, Globe, Leaf, CheckCircle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, Users, Globe, Leaf, CheckCircle, BookOpen, Shield, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '@/components/ContactForm';
 
@@ -35,29 +35,13 @@ const Index = () => {
   }];
 
   const foundationItems = [{
-    id: 'vision',
-    title: 'VISION',
-    icon: Target,
+    id: 'foundation',
+    title: 'FOUNDATION OF PGOC',
+    icon: Shield,
     color: 'from-pg-red/20 to-red-900/20 border-pg-red/30',
     iconBg: 'bg-pg-red',
     titleColor: 'text-pg-red',
-    content: 'To be a globally renowned institution of invaluable value creation for profitable growth.'
-  }, {
-    id: 'mission',
-    title: 'MISSION',
-    icon: Eye,
-    color: 'from-gray-800/20 to-gray-900/20 border-gray-600/30',
-    iconBg: 'bg-gray-800',
-    titleColor: 'text-gray-200',
-    content: 'Passion to promote trade & production of intrinsically beneficial products & services, meeting or exceeding industry norms of quality and deliver right value for money through professional excellence.'
-  }, {
-    id: 'values',
-    title: 'VALUES',
-    icon: Heart,
-    color: 'from-gray-700/20 to-gray-800/20 border-gray-500/30',
-    iconBg: 'bg-gray-700',
-    titleColor: 'text-gray-300',
-    content: ['Speak the Truth', 'Keep Promises', 'Respect Others', 'Avoid Back Biting', 'Do Justice & Deliverance', 'Uphold Morality & Professionalism']
+    content: ['Faith', 'Knowledge', 'Unity', 'Discipline']
   }];
 
   useEffect(() => {
@@ -176,10 +160,13 @@ const Index = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
-              Foundation of <span className="text-pg-red">Progressive Group</span>
+              Foundation of <span className="text-pg-red">PGOC</span>
             </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-              Our core principles guide every decision and drive our commitment to excellence
+            <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
+              Progressive Group of Company's Constitution is based on Shari'ah, Law of land and industry best practices shall be the source of strength.
+            </p>
+            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto px-4 mt-4 leading-relaxed">
+              Following values shall serve as the guiding principles for all the contextualized operations. Upholding these values in every business matter shall be considered equivalent to actualizing the Divine Mandate in the light of Quran and Sunnah:
             </p>
             <div className="w-16 sm:w-24 h-1 bg-pg-red mx-auto mt-4 sm:mt-6"></div>
           </div>
@@ -206,11 +193,6 @@ const Index = () => {
                   </div>
                 </div>;
           })}
-          </div>
-          
-          {/* Foundation Navigation */}
-          <div className="flex justify-center mt-8 sm:mt-12 space-x-3 sm:space-x-4">
-            {foundationItems.map((_, index) => <button key={index} onClick={() => setCurrentFoundation(index)} className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 ${index === currentFoundation ? 'bg-pg-red scale-125 shadow-lg' : 'bg-white/30 hover:bg-white/50'}`} />)}
           </div>
         </div>
       </section>
