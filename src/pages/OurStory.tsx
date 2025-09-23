@@ -509,65 +509,73 @@ const OurStory = () => {
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                  <div className="flex items-center mb-6">
-                    <div className="w-14 h-14 bg-pg-red/10 rounded-full flex items-center justify-center mr-4">
-                      <Target className="w-7 h-7 text-pg-red" />
+              <div className="max-w-7xl mx-auto">
+                {/* Top 3 Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                  <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <div className="flex items-center mb-6">
+                      <div className="w-14 h-14 bg-pg-red/10 rounded-full flex items-center justify-center mr-4">
+                        <Target className="w-7 h-7 text-pg-red" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900">Contextual Relevance</h3>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Contextual Relevance</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      Stay focused on objectives and guard against distractions to maintain strategic clarity and purpose.
+                    </p>
                   </div>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Stay focused on objectives and guard against distractions to maintain strategic clarity and purpose.
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                  <div className="flex items-center mb-6">
-                    <div className="w-14 h-14 bg-pg-blue/10 rounded-full flex items-center justify-center mr-4">
-                      <Award className="w-7 h-7 text-pg-blue" />
+                  
+                  <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <div className="flex items-center mb-6">
+                      <div className="w-14 h-14 bg-pg-blue/10 rounded-full flex items-center justify-center mr-4">
+                        <Award className="w-7 h-7 text-pg-blue" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900">Quality</h3>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Quality</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      Ensure top-of-the-line world-class prime standards in every product, service, and process we deliver.
+                    </p>
                   </div>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Ensure top-of-the-line world-class prime standards in every product, service, and process we deliver.
-                  </p>
+
+                  <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <div className="flex items-center mb-6">
+                      <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                        <Zap className="w-7 h-7 text-green-600" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900">Speed</h3>
+                    </div>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      From concept to implementation in conformity with agreed deliverables and established timelines.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                  <div className="flex items-center mb-6">
-                    <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                      <Zap className="w-7 h-7 text-green-600" />
+                {/* Bottom 2 Cards Centered */}
+                <div className="flex justify-center">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+                    <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                      <div className="flex items-center mb-6">
+                        <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                          <DollarSign className="w-7 h-7 text-orange-600" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-900">Cost-Effectiveness</h3>
+                      </div>
+                      <p className="text-gray-600 text-lg leading-relaxed">
+                        Ensure realization of objectives within available and budgeted resources for optimal efficiency.
+                      </p>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Speed</h3>
-                  </div>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    From concept to implementation in conformity with agreed deliverables and established timelines.
-                  </p>
-                </div>
 
-                <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105 md:col-span-1 lg:col-start-2">
-                  <div className="flex items-center mb-6">
-                    <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                      <DollarSign className="w-7 h-7 text-orange-600" />
+                    <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                      <div className="flex items-center mb-6">
+                        <div className="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mr-4">
+                          <Mountain className="w-7 h-7 text-teal-600" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-900">Perseverance</h3>
+                      </div>
+                      <p className="text-gray-600 text-lg leading-relaxed">
+                        Ensure realization of purpose despite odds and temporary reversals through unwavering commitment.
+                      </p>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Cost-Effectiveness</h3>
                   </div>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Ensure realization of objectives within available and budgeted resources for optimal efficiency.
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105 md:col-span-1">
-                  <div className="flex items-center mb-6">
-                    <div className="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                      <Mountain className="w-7 h-7 text-teal-600" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Perseverance</h3>
-                  </div>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Ensure realization of purpose despite odds and temporary reversals through unwavering commitment.
-                  </p>
                 </div>
               </div>
             </section>
@@ -580,45 +588,45 @@ const OurStory = () => {
                 committed to excellence and integrity.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                <div className="bg-gradient-to-br from-pg-red/10 to-pg-red/20 rounded-2xl p-8 text-center border-2 border-pg-red/30 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <div className="w-16 h-16 bg-pg-red/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="w-8 h-8 text-pg-red" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
+                <div className="bg-gradient-to-br from-pg-red/10 to-pg-red/20 rounded-2xl p-6 lg:p-8 text-center border-2 border-pg-red/30 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-pg-red/20 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6">
+                    <CheckCircle className="w-6 h-6 lg:w-8 lg:h-8 text-pg-red" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Truth</h3>
-                  <p className="text-gray-600">Honesty and transparency in all our dealings</p>
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">Truth</h3>
+                  <p className="text-sm lg:text-base text-gray-600 leading-relaxed">Honesty and transparency in all our dealings</p>
                 </div>
                 
-                <div className="bg-gradient-to-br from-pg-blue/10 to-pg-blue/20 rounded-2xl p-8 text-center border-2 border-pg-blue/30 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <div className="w-16 h-16 bg-pg-blue/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Heart className="w-8 h-8 text-pg-blue" />
+                <div className="bg-gradient-to-br from-pg-blue/10 to-pg-blue/20 rounded-2xl p-6 lg:p-8 text-center border-2 border-pg-blue/30 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-pg-blue/20 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6">
+                    <Heart className="w-6 h-6 lg:w-8 lg:h-8 text-pg-blue" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Benevolence</h3>
-                  <p className="text-gray-600">Acting with kindness and goodwill toward others</p>
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">Benevolence</h3>
+                  <p className="text-sm lg:text-base text-gray-600 leading-relaxed">Acting with kindness and goodwill toward others</p>
                 </div>
                 
-                <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-8 text-center border-2 border-green-300 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <div className="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Users className="w-8 h-8 text-green-700" />
+                <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-6 lg:p-8 text-center border-2 border-green-300 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6">
+                    <Users className="w-6 h-6 lg:w-8 lg:h-8 text-green-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Empathy</h3>
-                  <p className="text-gray-600">Understanding and sharing the feelings of others</p>
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">Empathy</h3>
+                  <p className="text-sm lg:text-base text-gray-600 leading-relaxed">Understanding and sharing the feelings of others</p>
                 </div>
                 
-                <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-8 text-center border-2 border-purple-300 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <div className="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Lightbulb className="w-8 h-8 text-purple-700" />
+                <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-6 lg:p-8 text-center border-2 border-purple-300 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6">
+                    <Lightbulb className="w-6 h-6 lg:w-8 lg:h-8 text-purple-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Innovation</h3>
-                  <p className="text-gray-600">Continuously improving and finding new solutions</p>
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">Innovation</h3>
+                  <p className="text-sm lg:text-base text-gray-600 leading-relaxed">Continuously improving and finding new solutions</p>
                 </div>
                 
-                <div className="bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl p-8 text-center border-2 border-orange-300 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <div className="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Scale className="w-8 h-8 text-orange-700" />
+                <div className="bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl p-6 lg:p-8 text-center border-2 border-orange-300 hover:shadow-xl transition-all duration-300 hover:scale-105 sm:col-span-2 lg:col-span-1 sm:max-w-sm sm:mx-auto lg:max-w-none">
+                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-orange-200 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6">
+                    <Scale className="w-6 h-6 lg:w-8 lg:h-8 text-orange-700" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Accountability</h3>
-                  <p className="text-gray-600">Taking responsibility for our actions and results</p>
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">Accountability</h3>
+                  <p className="text-sm lg:text-base text-gray-600 leading-relaxed">Taking responsibility for our actions and results</p>
                 </div>
               </div>
             </section>
