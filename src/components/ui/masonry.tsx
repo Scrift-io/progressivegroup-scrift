@@ -65,7 +65,7 @@ function Masonry({ data }: MasonryProps) {
       );
 
       const itemCalculatedWidth = containerWidth / columns;
-      const itemCalculatedHeight = item.height / 2;
+      const itemCalculatedHeight = item.height * 1.2;
 
       const x = itemCalculatedWidth * targetColumnIndex;
       const y = currentColumnHeights[targetColumnIndex];
