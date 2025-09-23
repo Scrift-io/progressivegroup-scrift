@@ -41,15 +41,19 @@ const Index = () => {
     color: 'from-pg-red/20 to-red-900/20 border-pg-red/30',
     iconBg: 'bg-pg-red',
     titleColor: 'text-pg-red',
-    content: 'To be a globally renowned institution of invaluable value creation for profitable growth.'
+    content: '"Fair Friendly Benevolent Economic Pursuit"'
   }, {
     id: 'mission',
-    title: 'MISSION',
+    title: 'MISSION STATEMENT',
     icon: Eye,
     color: 'from-gray-800/20 to-gray-900/20 border-gray-600/30',
     iconBg: 'bg-gray-800',
     titleColor: 'text-gray-200',
-    content: 'Passion to promote trade & production of intrinsically beneficial products & services, meeting or exceeding industry norms of quality and deliver right value for money through professional excellence.'
+    content: [
+      'Produce and trade intrinsically beneficial products and services. To be the preferred choice of all around stake holders across value chain.',
+      'Be an effective catalyst as contributor to economic stability and growth of Pakistan. Additionally, establish a trust worthy reputation through innovation, continuous improvement, fairness in care and wellbeing and growth to employees as well as to partners across value chain and proactive responsibility towards society and environment.',
+      'Be Shariah compliant and law of the land abiding.'
+    ]
   }, {
     id: 'values',
     title: 'VALUES',
