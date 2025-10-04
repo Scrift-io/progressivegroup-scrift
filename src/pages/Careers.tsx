@@ -84,9 +84,12 @@ const Careers = () => {
                       <SelectItem value="human-resources">Human Resources</SelectItem>
                       <SelectItem value="operations">Operations</SelectItem>
                       <SelectItem value="quality-assurance">Quality Assurance</SelectItem>
+                      <SelectItem value="quality-control">Quality Control</SelectItem>
                       <SelectItem value="research-development">Research & Development</SelectItem>
                       <SelectItem value="information-technology">Information Technology</SelectItem>
+                      <SelectItem value="procurement">Procurement</SelectItem>
                       <SelectItem value="supply-chain">Supply Chain</SelectItem>
+                      <SelectItem value="warehousing">Warehousing</SelectItem>
                       <SelectItem value="management">Management</SelectItem>
                       <SelectItem value="internship">Internship</SelectItem>
                     </SelectContent>
