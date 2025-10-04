@@ -422,23 +422,9 @@ const Careers = () => {
                   <textarea rows={3} required className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm resize-none"></textarea>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">*CNIC #</label>
-                    <input type="text" required placeholder="XXXXX-XXXXXXX-X" className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm mb-3" />
-                    <div className="mt-2">
-                      <label className="block text-xs font-medium text-gray-600 mb-2">Upload CNIC Image</label>
-                      <input 
-                        type="file" 
-                        accept="image/*"
-                        className="w-full px-3 py-2 border-2 border-dashed border-gray-300 rounded-lg hover:border-pg-red transition-colors duration-200 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-pg-red file:text-white hover:file:bg-red-700 file:cursor-pointer cursor-pointer"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">*Date of Birth</label>
-                    <input type="date" required className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
-                  </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">*Date of Birth</label>
+                  <input type="date" required className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-pg-red focus:border-pg-red transition-all duration-200 bg-white shadow-sm" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -486,14 +472,14 @@ const Careers = () => {
                   </div>
                 </div>
 
-                {/* Education/Certification Documents Upload */}
+                {/* Resume Upload */}
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Upload Education Documents</label>
-                  <p className="text-xs text-gray-500 mb-3">Upload your certificates, degrees, diplomas, or other educational documents</p>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">*Resume/CV Attachment</label>
+                  <p className="text-xs text-gray-500 mb-3">Upload your resume or curriculum vitae (PDF, DOC, or DOCX)</p>
                   <input 
                     type="file" 
-                    multiple
-                    accept="image/*,.pdf,.doc,.docx"
+                    required
+                    accept=".pdf,.doc,.docx"
                     className="w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-xl hover:border-pg-red transition-colors duration-200 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-pg-red file:text-white hover:file:bg-red-700 file:cursor-pointer cursor-pointer"
                   />
                 </div>
