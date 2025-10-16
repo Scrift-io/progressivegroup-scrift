@@ -92,19 +92,19 @@ const Media = () => {
 
       {/* Tab Navigation */}
       <section className="bg-white shadow-md sticky top-16 z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto scrollbar-hide">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="flex justify-center items-center overflow-x-auto scrollbar-hide">
             {tabs.map(tab => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center px-6 py-4 font-semibold whitespace-nowrap border-b-2 transition-all duration-300 ${
+                className={`flex items-center px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-semibold whitespace-nowrap border-b-2 transition-all duration-300 ${
                   activeTab === tab.id
                     ? 'border-pg-red text-pg-red bg-red-50'
                     : 'border-transparent text-gray-600 hover:text-pg-red hover:bg-gray-50'
                 }`}
               >
-                <tab.icon className="w-5 h-5 mr-2" />
+                <tab.icon className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
                 {tab.label}
               </button>
             ))}
