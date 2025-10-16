@@ -9,7 +9,7 @@ const BuildingMaterials = () => {
     description: "Durable architectural glass blocks that combine aesthetics with functionality, perfect for modern interior and exterior applications.",
     icon: Boxes,
     features: ["Light transmission", "Sound insulation", "Fire resistance", "Low maintenance"],
-    image: glassBlocksBlue
+    image: null
   }, {
     title: "UPVC Roofing Sheets",
     description: "High-quality, weather-resistant roofing solutions offering superior durability and thermal insulation for residential and commercial buildings.",
