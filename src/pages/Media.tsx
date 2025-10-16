@@ -9,7 +9,7 @@ const Media = () => {
   const [activeTab, setActiveTab] = useState('videos');
 
   const tabs = [
-    { id: 'videos', label: 'Videos', icon: Video },
+    { id: 'videos', label: 'TVC', icon: Video },
     { id: 'gallery', label: 'Corporate Events', icon: Image },
   ];
 
