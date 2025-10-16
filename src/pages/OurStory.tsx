@@ -7,7 +7,7 @@ import {
   Users, 
   Shield, 
   Target, 
-  Award, 
+  Award,
   Zap, 
   DollarSign, 
   Mountain, 
@@ -16,6 +16,7 @@ import {
   Scale 
 } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
+import safetyStandardsImage from '@/assets/safety-standards-male-worker.jpg';
 
 const OurStory = () => {
   const [activeTab, setActiveTab] = useState('who-we-are');
@@ -712,8 +713,8 @@ const OurStory = () => {
                   {/* Safety Standards Image */}
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                     <img 
-                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop&crop=center" 
-                      alt="Safety Standards" 
+                      src={safetyStandardsImage} 
+                      alt="Safety Standards - Male worker in safety gear" 
                       className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
