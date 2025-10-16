@@ -239,35 +239,6 @@ const Media = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Follow our social media channels for the latest updates, behind-the-scenes content, and company news
-          </p>
-          <div className="flex justify-center space-x-6">
-            <a
-              href="#"
-              className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="#"
-              className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Facebook
-            </a>
-            <a
-              href="#"
-              className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Instagram
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
