@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import safetyStandardsImage from '@/assets/safety-standards-male-worker.jpg';
+import qualityControlImage from '@/assets/quality-control-lab.jpg';
 
 const OurStory = () => {
   const [activeTab, setActiveTab] = useState('who-we-are');
@@ -698,8 +699,8 @@ const OurStory = () => {
                   {/* Quality Control Image */}
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                     <img 
-                      src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop&crop=center" 
-                      alt="Quality Control Laboratory" 
+                      src={qualityControlImage} 
+                      alt="Quality Control Laboratory - Male inspector" 
                       className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
