@@ -100,10 +100,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-6 border-t border-gray-700">
           {/* Karachi Head Office */}
           <a 
-            href="https://www.google.com/maps/search/?api=1&query=LC-40+Landhi+Industrial+Area+Karachi+Pakistan+71500" 
+            href="https://www.google.com/maps/search/?api=1&query=LC-40%2C+Landhi+Industrial+Area%2C+Near+Opal+Laboratory%2C+Karachi%2C+Pakistan+71500" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group"
+            className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer"
           >
             <h4 className="text-white font-semibold text-sm mb-2 flex items-center justify-center group-hover:text-pg-red transition-colors">
               <MapPin size={14} className="mr-1 text-pg-red" />
@@ -115,14 +115,17 @@ const Footer = () => {
             <p className="text-gray-300 text-xs">
               Tel: 021-35026618-20, 35026622, 021-35026602
             </p>
+            <p className="text-pg-red text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              Click to view on map →
+            </p>
           </a>
 
           {/* Lahore Regional Office */}
           <a 
-            href="https://www.google.com/maps/search/?api=1&query=60+Mall+Road+Shahrah-e-Quaid-e-Azam+Lahore+Pakistan" 
+            href="https://www.google.com/maps/search/?api=1&query=60+Mall+Road%2C+Shahrah-e-Quaid-e-Azam%2C+Lahore%2C+Pakistan" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group"
+            className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer"
           >
             <h4 className="text-white font-semibold text-sm mb-2 flex items-center justify-center group-hover:text-pg-red transition-colors">
               <MapPin size={14} className="mr-1 text-pg-red" />
@@ -134,14 +137,17 @@ const Footer = () => {
             <p className="text-gray-300 text-xs">
               Tel: 042-36361067-9
             </p>
+            <p className="text-pg-red text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              Click to view on map →
+            </p>
           </a>
 
           {/* Rawalpindi Regional Office */}
           <a 
-            href="https://www.google.com/maps/search/?api=1&query=House+51+Street+5+Khan+Avenue+Chaklala+Scheme+III+Rawalpindi" 
+            href="https://www.google.com/maps/search/?api=1&query=House+No.+51%2C+Street+5%2C+Khan+Avenue%2C+Chaklala+Scheme+III%2C+Rawalpindi%2C+Pakistan" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group"
+            className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer"
           >
             <h4 className="text-white font-semibold text-sm mb-2 flex items-center justify-center group-hover:text-pg-red transition-colors">
               <MapPin size={14} className="mr-1 text-pg-red" />
@@ -152,6 +158,9 @@ const Footer = () => {
             </p>
             <p className="text-gray-300 text-xs">
               Tel: 051-5145024
+            </p>
+            <p className="text-pg-red text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              Click to view on map →
             </p>
           </a>
         </div>
