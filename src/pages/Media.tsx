@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Play, ExternalLink, Image, Video, FileText, Handshake } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
-import mediaCenterBg from '../assets/media-center-bg.jpg';
+import mediaCenterBg from '../assets/media-center-hero.jpg';
 import YouTubeClean from '../components/YouTubeClean';
 import { CuratedGallery } from '@/components/ui/curated-gallery';
 
