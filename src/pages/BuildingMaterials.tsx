@@ -33,7 +33,7 @@ const BuildingMaterials = () => {
     description: "Stylish mosaic tiles and patterns that add artistic flair and sophisticated design elements to walls and floors.",
     icon: Sparkles,
     features: ["Designer patterns", "Color variety", "Water resistant", "Premium quality"],
-    image: glassBlocksMosaic
+    image: null
   }];
   const benefits = [{
     icon: Shield,
