@@ -216,22 +216,35 @@ const Media = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[1, 2, 3, 4, 5, 6].map((item, index) => (
-                  <div 
-                    key={item}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-fade-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="p-8 text-center">
-                      <div className="w-20 h-20 bg-pg-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Handshake className="w-10 h-10 text-pg-red" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Partnership {item}</h3>
-                      <p className="text-gray-600">Strategic collaboration driving mutual growth and innovation</p>
-                    </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div 
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 animate-fade-in"
+                >
+                  <img 
+                    src="/lovable-uploads/powerplus-deal-collaboration.jpg" 
+                    alt="PowerPlus collaboration with Deal بيज - Strategic partnership signing ceremony"
+                    className="w-full h-80 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">PowerPlus × Deal بيज</h3>
+                    <p className="text-gray-600">Strategic partnership expanding market reach and customer value</p>
                   </div>
-                ))}
+                </div>
+
+                <div 
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: '0.1s' }}
+                >
+                  <img 
+                    src="/lovable-uploads/powerplus-krave-collaboration.jpg" 
+                    alt="PowerPlus collaboration with Krave Mart - Partnership announcement and team collaboration"
+                    className="w-full h-80 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">PowerPlus × Krave Mart</h3>
+                    <p className="text-gray-600">Innovative collaboration bringing quality products to more customers</p>
+                  </div>
+                </div>
               </div>
             </div>
           )}
