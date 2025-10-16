@@ -73,12 +73,12 @@ const Contact = () => {
 
               <div className="space-y-6">
                 <div className="flex items-start group">
-                  <div className="w-12 h-12 bg-pg-red rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 transition-colors duration-300">
-                    <MapPin size={20} className="text-white" />
+                  <div className="w-16 h-16 bg-pg-red rounded-xl flex items-center justify-center mr-5 flex-shrink-0 group-hover:bg-red-600 transition-colors duration-300">
+                    <MapPin size={28} className="text-white" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Our Offices</h3>
-                    <div className="text-gray-600 space-y-2">
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-3 text-lg">Our Offices</h3>
+                    <div className="text-gray-600 space-y-4">
                       <div>
                         <strong>Karachi Head office</strong><br />
                         LC-40, Landhi Indstrial  Area, Near Opal Laboratory, Karachi, Pakistan Post Code 71500<br />
