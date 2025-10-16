@@ -93,29 +93,22 @@ const Media = () => {
       {/* Tab Navigation */}
       <section className="bg-white shadow-md sticky top-16 z-40">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="relative">
-            <div className="flex justify-center items-center overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-              {tabs.map(tab => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-semibold whitespace-nowrap border-b-2 transition-all duration-300 snap-center ${
-                    activeTab === tab.id
-                      ? 'border-pg-red text-pg-red bg-red-50'
-                      : 'border-transparent text-gray-600 hover:text-pg-red hover:bg-gray-50'
-                  }`}
-                >
-                  <tab.icon className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-            {/* Mobile swipe gradients */}
-            <div className="pointer-events-none sm:hidden absolute left-0 top-0 h-full w-6 bg-gradient-to-r from-white to-transparent" />
-            <div className="pointer-events-none sm:hidden absolute right-0 top-0 h-full w-6 bg-gradient-to-l from-white to-transparent" />
+          <div className="flex justify-center items-center gap-1 sm:gap-0">
+            {tabs.map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center justify-center px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-semibold border-b-2 transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? 'border-pg-red text-pg-red bg-red-50'
+                    : 'border-transparent text-gray-600 hover:text-pg-red hover:bg-gray-50'
+                }`}
+              >
+                <tab.icon className="w-5 h-5 sm:w-5 sm:h-5 sm:mr-2" />
+                <span className="hidden sm:inline">{tab.label}</span>
+              </button>
+            ))}
           </div>
-          {/* Subtle mobile hint */}
-          <p className="sm:hidden text-xs text-gray-500 text-center mt-2">Swipe to see more</p>
         </div>
       </section>
 
