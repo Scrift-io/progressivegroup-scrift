@@ -222,11 +222,11 @@ const Media = () => {
                 >
                   <img 
                     src="/lovable-uploads/powerplus-deal-collaboration.jpg" 
-                    alt="PowerPlus collaboration with Deal بيज - Strategic partnership signing ceremony"
+                    alt="PowerPlus collaboration with Deal بيج - Strategic partnership signing ceremony"
                     className="w-full h-80 object-cover"
                   />
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">PowerPlus × Deal بيज</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">PowerPlus x DealCart</h3>
                     <p className="text-gray-600">Strategic partnership expanding market reach and customer value</p>
                   </div>
                 </div>
