@@ -120,7 +120,7 @@ const Media = () => {
           {activeTab === 'videos' && (
             <div className="space-y-12">
               <div className="text-center mb-12 animate-fade-in">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Brand Videos</h2>
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">Tele-Vision Commercials</h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                   Watch our story unfold through engaging videos showcasing our journey, products, and impact
                 </p>
