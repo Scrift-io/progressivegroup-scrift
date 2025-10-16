@@ -28,6 +28,7 @@ const HeroNavigation = () => {
   ];
 
   const businessItems: NavItem[] = [
+    { name: 'Building Materials', path: '/building-materials' },
     { name: 'PowerPlus', path: 'https://preview--powerplus-scrift.lovable.app/', isExternal: true },
     { name: 'PakGhiza', path: 'https://preview--pakghiza-scrift.lovable.app/', isExternal: true },
   ];
@@ -88,15 +89,25 @@ const HeroNavigation = () => {
                       {item.name}
                     </div>
                     {businessItems.map((subItem) => (
-                      <a
-                        key={subItem.name}
-                        href={subItem.path}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-5 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all duration-300 font-medium"
-                      >
-                        {subItem.name}
-                      </a>
+                      subItem.isExternal ? (
+                        <a
+                          key={subItem.name}
+                          href={subItem.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-5 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all duration-300 font-medium"
+                        >
+                          {subItem.name}
+                        </a>
+                      ) : (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.path}
+                          className="block px-5 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all duration-300 font-medium"
+                        >
+                          {subItem.name}
+                        </Link>
+                      )
                     ))}
                   </div>
                 </div>

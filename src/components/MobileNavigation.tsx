@@ -34,6 +34,9 @@ const MobileNavigation = ({
     path: '/media'
   }];
   const businessItems: NavItem[] = [{
+    name: 'Building Materials',
+    path: '/building-materials'
+  }, {
     name: 'PowerPlus',
     path: 'https://preview--powerplus-scrift.lovable.app/',
     isExternal: true
@@ -82,9 +85,29 @@ const MobileNavigation = ({
                   </CollapsibleTrigger>
                   <CollapsibleContent>
                     <div className="mt-3 space-y-2">
-                      {businessItems.map(item => <a key={item.name} href={item.path} target="_blank" rel="noopener noreferrer" className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-gray-800" onClick={handleMobileNavClick}>
-                          {item.name}
-                        </a>)}
+                      {businessItems.map(item => 
+                        item.isExternal ? (
+                          <a 
+                            key={item.name} 
+                            href={item.path} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-gray-800" 
+                            onClick={handleMobileNavClick}
+                          >
+                            {item.name}
+                          </a>
+                        ) : (
+                          <Link 
+                            key={item.name} 
+                            to={item.path} 
+                            className="block px-8 py-3 text-base text-gray-200 hover:text-red-500 hover:bg-white/10 transition-all duration-300 rounded-lg mx-2 text-center border border-white/10 hover:border-white/30 min-h-[48px] flex items-center justify-center touch-manipulation bg-gray-800" 
+                            onClick={handleMobileNavClick}
+                          >
+                            {item.name}
+                          </Link>
+                        )
+                      )}
                     </div>
                   </CollapsibleContent>
                 </Collapsible>

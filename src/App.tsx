@@ -15,6 +15,7 @@ import Media from "./pages/Media";
 import OurImpact from "./pages/OurImpact";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
+import BuildingMaterials from "./pages/BuildingMaterials";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ const App = () => {
                 <Route path="/our-impact" element={<OurImpact />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/building-materials" element={<BuildingMaterials />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
