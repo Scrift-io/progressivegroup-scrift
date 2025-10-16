@@ -72,14 +72,11 @@ const Media = () => {
     },
     {
       id: 6,
-      image: '/lovable-uploads/team-meeting.jpg'
-    }
-  ];
-
-  const collaborationsGallery = [
-    {
-      id: 1,
       image: '/lovable-uploads/annual-meeting-2024.jpg'
+    },
+    {
+      id: 7,
+      image: '/lovable-uploads/team-meeting.jpg'
     }
   ];
 
@@ -219,8 +216,22 @@ const Media = () => {
                 </p>
               </div>
 
-              <div className="max-w-7xl mx-auto">
-                <CuratedGallery data={collaborationsGallery} />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[1, 2, 3, 4, 5, 6].map((item, index) => (
+                  <div 
+                    key={item}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="p-8 text-center">
+                      <div className="w-20 h-20 bg-pg-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Handshake className="w-10 h-10 text-pg-red" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Partnership {item}</h3>
+                      <p className="text-gray-600">Strategic collaboration driving mutual growth and innovation</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           )}
