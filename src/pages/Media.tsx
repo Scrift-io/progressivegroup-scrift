@@ -10,7 +10,7 @@ const Media = () => {
 
   const tabs = [
     { id: 'videos', label: 'Videos', icon: Video },
-    { id: 'gallery', label: 'Brand Gallery', icon: Image },
+    { id: 'gallery', label: 'Corporate Events', icon: Image },
   ];
 
   const videos = [
@@ -196,7 +196,7 @@ const Media = () => {
           {activeTab === 'gallery' && (
             <div className="space-y-12">
               <div className="text-center mb-12 animate-fade-in">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Brand Gallery</h2>
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">Corporate Events</h2>
               </div>
 
               <div className="max-w-7xl mx-auto">
