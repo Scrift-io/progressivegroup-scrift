@@ -100,7 +100,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-6 border-t border-gray-700">
           {/* Karachi Head Office */}
           <a 
-            href="https://www.google.com/maps/search/?api=1&query=LC-40%2C+Landhi+Industrial+Area%2C+Near+Opal+Laboratory%2C+Karachi%2C+Pakistan+71500" 
+            href="https://www.openstreetmap.org/search?query=LC-40%2C%20Landhi%20Industrial%20Area%2C%20Karachi%2C%20Pakistan%2071500" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer"
@@ -122,7 +122,7 @@ const Footer = () => {
 
           {/* Lahore Regional Office */}
           <a 
-            href="https://www.google.com/maps/search/?api=1&query=60+Mall+Road%2C+Shahrah-e-Quaid-e-Azam%2C+Lahore%2C+Pakistan" 
+            href="https://www.openstreetmap.org/search?query=60%20Mall%20Road%2C%20Shahrah-e-Quaid-e-Azam%2C%20Lahore%2C%20Pakistan" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer"
@@ -144,7 +144,7 @@ const Footer = () => {
 
           {/* Rawalpindi Regional Office */}
           <a 
-            href="https://www.google.com/maps/search/?api=1&query=House+No.+51%2C+Street+5%2C+Khan+Avenue%2C+Chaklala+Scheme+III%2C+Rawalpindi%2C+Pakistan" 
+            href="https://www.openstreetmap.org/search?query=House%20No.%2051%2C%20Street%205%2C%20Khan%20Avenue%2C%20Chaklala%20Scheme%20III%2C%20Rawalpindi%2C%20Pakistan" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer"
