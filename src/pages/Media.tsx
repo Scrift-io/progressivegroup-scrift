@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Play, ExternalLink, Image, Video, FileText } from 'lucide-react';
+import { Play, ExternalLink, Image, Video, FileText, Handshake } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import mediaCenterBg from '../assets/media-center-bg.jpg';
 import YouTubeClean from '../components/YouTubeClean';
@@ -11,6 +11,7 @@ const Media = () => {
   const tabs = [
     { id: 'videos', label: 'TVC', icon: Video },
     { id: 'gallery', label: 'Corporate Events', icon: Image },
+    { id: 'collaborations', label: 'Brand & Collaborations', icon: Handshake },
   ];
 
   const videos = [
@@ -201,6 +202,36 @@ const Media = () => {
 
               <div className="max-w-7xl mx-auto">
                 <CuratedGallery data={brandGallery} />
+              </div>
+            </div>
+          )}
+
+          {/* Brand & Collaborations Tab */}
+          {activeTab === 'collaborations' && (
+            <div className="space-y-12">
+              <div className="text-center mb-12 animate-fade-in">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">Brand & Collaborations</h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Our strategic partnerships and collaborations that drive innovation and excellence
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[1, 2, 3, 4, 5, 6].map((item, index) => (
+                  <div 
+                    key={item}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="p-8 text-center">
+                      <div className="w-20 h-20 bg-pg-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Handshake className="w-10 h-10 text-pg-red" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Partnership {item}</h3>
+                      <p className="text-gray-600">Strategic collaboration driving mutual growth and innovation</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           )}
