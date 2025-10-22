@@ -30,7 +30,8 @@ const Contact = () => {
     }
   
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzBD8iz77guSihBh90YIUaD3sghp2fQhwaEIupf6LD16LCnwfh5KKKtHYz7sWARQRU9/exec', {
+      // Call your Next.js API route (proxy)
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -49,6 +50,8 @@ const Contact = () => {
       toast.error(err.message || 'Something went wrong');
     }
   };
+  
+  
   
 
   return (
