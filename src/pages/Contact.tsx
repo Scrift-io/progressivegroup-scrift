@@ -30,13 +30,19 @@ const Contact = () => {
     }
   
     try {
-      // Call your Next.js API route (proxy)
-      const response = await fetch('/api/contact', {
+      // Use a different approach - send data as URL parameters
+      const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx1f7Ok4muVewn4QdZdzjkLCuygDx3EAqH8eSdh_SSbHHs-uiMaqkBpDuWiwHwLXJZ3/exec';
+      
+      // Create form data for URL encoding
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('subject', formData.subject);
+      formDataToSend.append('message', formData.message);
+      
+      const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: formDataToSend,
       });
   
       if (!response.ok) {
@@ -45,9 +51,10 @@ const Contact = () => {
   
       toast.success('Message sent successfully!');
       setFormData({ name: '', email: '', subject: '', message: '' });
+      
     } catch (err: any) {
       console.error(err);
-      toast.error(err.message || 'Something went wrong');
+      toast.error('Something went wrong. Please try again.');
     }
   };
   
