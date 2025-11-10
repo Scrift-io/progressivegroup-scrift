@@ -107,26 +107,14 @@ const ContactForm = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
-          {/* Contact Information */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={containerVariants}
-            className="space-y-6 sm:space-y-8"
-          >
-
-          </motion.div>
-
-          {/* Enhanced Contact Form */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={containerVariants}
-            className="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 border border-gray-100"
-          >
+        {/* Enhanced Contact Form */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 border border-gray-100"
+        >
             <motion.div variants={itemVariants} className="mb-6 sm:mb-8">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Send us a Message</h3>
               <p className="text-sm sm:text-base text-gray-600">Fill out the form below and we'll get back to you shortly</p>
@@ -299,8 +287,7 @@ const ContactForm = () => {
                 </Button>
               </motion.div>
             </form>
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
