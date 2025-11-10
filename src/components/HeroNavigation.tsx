@@ -29,8 +29,8 @@ const HeroNavigation = () => {
 
   const businessItems: NavItem[] = [
     { name: 'Building Materials', path: '/building-materials' },
-    { name: 'PowerPlus', path: 'https://preview--powerplus-scrift.lovable.app/', isExternal: true },
-    { name: 'PakGhiza', path: 'https://preview--pakghiza-scrift.lovable.app/', isExternal: true },
+    { name: 'PowerPlus', path: 'https://www.powerplus.com.pk/', isExternal: true },
+    { name: 'PakGhiza', path: 'https://www.pakghiza.com/', isExternal: true },
   ];
 
 

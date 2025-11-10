@@ -38,11 +38,11 @@ const MobileNavigation = ({
     path: '/building-materials'
   }, {
     name: 'PowerPlus',
-    path: 'https://preview--powerplus-scrift.lovable.app/',
+    path: 'https://www.powerplus.com.pk/',
     isExternal: true
   }, {
     name: 'PakGhiza',
-    path: 'https://preview--pakghiza-scrift.lovable.app/',
+    path: 'https://www.pakghiza.com/',
     isExternal: true
   }];
   const handleMobileNavClick = () => {
