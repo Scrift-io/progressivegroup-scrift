@@ -1,9 +1,7 @@
 import { Facebook, Linkedin, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-white relative overflow-hidden">
+  return <footer className="bg-gray-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-pg-red/10 to-transparent"></div>
@@ -15,11 +13,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-white rounded-lg p-2 shadow-lg mr-3">
-                <img 
-                  src="/lovable-uploads/1c5a00cb-213c-4eec-b315-6945b015ad5c.png" 
-                  alt="Progressive Group" 
-                  className="w-full h-full object-contain"
-                />
+                <img src="/lovable-uploads/1c5a00cb-213c-4eec-b315-6945b015ad5c.png" alt="Progressive Group" className="w-full h-full object-contain" />
               </div>
               <span className="text-lg font-bold">Progressive Group</span>
             </div>
@@ -33,7 +27,8 @@ const Footer = () => {
                 <div className="w-6 h-6 bg-pg-red rounded flex items-center justify-center mr-2 flex-shrink-0">
                   <Mail size={12} className="text-white" />
                 </div>
-                <span className="text-sm text-gray-300">info@pgtraders.com</span>
+                <span className="text-sm text-gray-300">info@progressive
+.com</span>
               </div>
               <div className="flex items-center">
                 <div className="w-6 h-6 bg-pg-red rounded flex items-center justify-center mr-2 flex-shrink-0">
@@ -84,11 +79,7 @@ const Footer = () => {
               <span className="text-gray-300 text-xs font-medium mr-2">Powered by</span>
               <div className="flex items-center">
                 <div className="w-3 h-3 mr-1.5 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/efe7484f-5766-4526-83eb-d58ed6aa2d1e.png" 
-                    alt="Scrift" 
-                    className="w-full h-full object-contain"
-                  />
+                  <img src="/lovable-uploads/efe7484f-5766-4526-83eb-d58ed6aa2d1e.png" alt="Scrift" className="w-full h-full object-contain" />
                 </div>
                 <span className="text-white text-xs font-semibold">Scrift</span>
               </div>
@@ -99,12 +90,7 @@ const Footer = () => {
         {/* Office Locations - Horizontal Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-6 border-t border-gray-700">
           {/* Karachi Head Office */}
-          <a 
-            href="https://www.openstreetmap.org/search?query=LC-40%2C%20Landhi%20Industrial%20Area%2C%20Karachi%2C%20Pakistan%2071500" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer"
-          >
+          <a href="https://www.openstreetmap.org/search?query=LC-40%2C%20Landhi%20Industrial%20Area%2C%20Karachi%2C%20Pakistan%2071500" target="_blank" rel="noopener noreferrer" className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer">
             <h4 className="text-white font-semibold text-sm mb-2 flex items-center justify-center group-hover:text-pg-red transition-colors">
               <MapPin size={14} className="mr-1 text-pg-red" />
               Karachi Head Office
@@ -121,12 +107,7 @@ const Footer = () => {
           </a>
 
           {/* Lahore Regional Office */}
-          <a 
-            href="https://www.openstreetmap.org/search?query=60%20Mall%20Road%2C%20Shahrah-e-Quaid-e-Azam%2C%20Lahore%2C%20Pakistan" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer"
-          >
+          <a href="https://www.openstreetmap.org/search?query=60%20Mall%20Road%2C%20Shahrah-e-Quaid-e-Azam%2C%20Lahore%2C%20Pakistan" target="_blank" rel="noopener noreferrer" className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer">
             <h4 className="text-white font-semibold text-sm mb-2 flex items-center justify-center group-hover:text-pg-red transition-colors">
               <MapPin size={14} className="mr-1 text-pg-red" />
               Lahore Regional Office
@@ -143,12 +124,7 @@ const Footer = () => {
           </a>
 
           {/* Rawalpindi Regional Office */}
-          <a 
-            href="https://www.openstreetmap.org/search?query=House%20No.%2051%2C%20Street%205%2C%20Khan%20Avenue%2C%20Chaklala%20Scheme%20III%2C%20Rawalpindi%2C%20Pakistan" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer"
-          >
+          <a href="https://www.openstreetmap.org/search?query=House%20No.%2051%2C%20Street%205%2C%20Khan%20Avenue%2C%20Chaklala%20Scheme%20III%2C%20Rawalpindi%2C%20Pakistan" target="_blank" rel="noopener noreferrer" className="text-center hover:bg-gray-800/50 p-4 rounded-lg transition-colors duration-300 group cursor-pointer">
             <h4 className="text-white font-semibold text-sm mb-2 flex items-center justify-center group-hover:text-pg-red transition-colors">
               <MapPin size={14} className="mr-1 text-pg-red" />
               Rawalpindi Regional Office
@@ -179,8 +155,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
