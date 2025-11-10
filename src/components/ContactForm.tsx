@@ -125,47 +125,6 @@ const ContactForm = () => {
               </p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-4 sm:space-y-6">
-              <div className="flex items-start group cursor-pointer">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-pg-red to-red-600 rounded-xl flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <MapPin size={20} className="text-white sm:w-6 sm:h-6" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1 text-base sm:text-lg">Visit Our Offices</h4>
-                  <p className="text-sm sm:text-base text-gray-600">
-                    <strong>Karachi Head office:</strong> LC-40, Landhi Indstrial  Area, Near Opal Laboratory, Karachi, Pakistan Post Code 71500 — Tel 021-35026618-20 , 35026622, 021-35026602<br />
-                    <strong>Lahore Regional Office:</strong> Lahore”60th Mall Road. Shahrah-e-Quaid-e-Azam, Lahore Pakistan — Tel: 042-36361067-9<br />
-                    <strong>Rawalpindi Regional Office:</strong> Rawalpindi House No. 51,Street #5, Khan Avenue Behind Shell filling Station, Chaklala scheme III. — Tel: 051-5145024
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start group cursor-pointer">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Phone size={20} className="text-white sm:w-6 sm:h-6" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1 text-base sm:text-lg">Call Us</h4>
-                  <p className="text-sm sm:text-base text-gray-600">
-                    Karachi: 021-35026618-20 , 35026622, 021-35026602<br />
-                    Lahore: 042-36361067-9<br />
-                    Rawalpindi: 051-5145024
-                  </p>
-                  <p className="text-xs sm:text-sm text-gray-500">Mon - Fri: 9:00 AM - 6:00 PM</p>
-                </div>
-              </div>
-
-              <div className="flex items-start group cursor-pointer">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Mail size={20} className="text-white sm:w-6 sm:h-6" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1 text-base sm:text-lg">Email Us</h4>
-                  <p className="text-sm sm:text-base text-gray-600">info@pgtraders.com</p>
-                  <p className="text-xs sm:text-sm text-gray-500">We respond within 24 hours</p>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Enhanced Contact Form */}
