@@ -116,14 +116,6 @@ const ContactForm = () => {
             variants={containerVariants}
             className="space-y-6 sm:space-y-8"
           >
-            <motion.div variants={itemVariants}>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                Let's Build Something Great Together
-              </h3>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
-                Whether you need industrial chemicals, building materials, or custom solutions, our team of experts is ready to help you achieve your project goals.
-              </p>
-            </motion.div>
 
           </motion.div>
 
