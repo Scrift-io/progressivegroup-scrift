@@ -28,7 +28,7 @@ const Careers = () => {
                   Whether you're a fresh graduate or an experienced professional, we provide a platform for growth, learning, and making a meaningful impact in the industry.
                 </p>
                 <div className="mt-8">
-                  <a href="https://www.linkedin.com/company/72101038/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-pg-red text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <a href="https://www.linkedin.com/company/progressive-group-pakistan/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-pg-red text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                     <Linkedin className="mr-3 w-6 h-6" />
                     View Open Positions on LinkedIn
                     <svg className="ml-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -645,7 +645,7 @@ const Careers = () => {
           <div className="animate-fade-in" style={{
           animationDelay: '0.2s'
         }}>
-            <a href="https://www.linkedin.com/company/72101038/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-white text-pg-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <a href="https://www.linkedin.com/company/progressive-group-pakistan/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-white text-pg-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
               <Linkedin className="w-6 h-6 mr-3" />
               Explore Career Opportunities
               <svg className="ml-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
