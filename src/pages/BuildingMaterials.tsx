@@ -71,23 +71,9 @@ const BuildingMaterials = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-12">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
               <img src={glassBlocksBlue} alt="Premium Glass Blocks - Blue tinted architectural glass" className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <div className="absolute bottom-6 left-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Steve Johnson
-
-                </h3>
-                  <p className="text-sm opacity-90">Modern architectural solutions</p>
-                </div>
-              </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
               <img src={glassBlocksMosaic} alt="Mosaic Glass Blocks - Premium mosaic tile patterns" className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <div className="absolute bottom-6 left-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Facundo Kostelak</h3>
-                  <p className="text-sm opacity-90">Artistic design elements</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
