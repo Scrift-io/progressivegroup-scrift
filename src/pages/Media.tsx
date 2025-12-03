@@ -70,8 +70,13 @@ const Media = () => {
     { id: 4, image: '/lovable-uploads/14-august-colleagues.jpg' },
   ];
 
-  // Free Eye Camp gallery - awaiting images
-  const eyeCampGallery: { id: number; image: string }[] = [];
+  // Free Eye Camp gallery
+  const eyeCampGallery = [
+    { id: 1, image: '/lovable-uploads/eye-camp-checkup.jpg' },
+    { id: 2, image: '/lovable-uploads/eye-camp-team-1.jpg' },
+    { id: 3, image: '/lovable-uploads/eye-camp-team-2.jpg' },
+    { id: 4, image: '/lovable-uploads/eye-camp-waiting.jpg' },
+  ];
 
   // Industrial Visit gallery - awaiting images
   const industrialGallery: { id: number; image: string }[] = [];
