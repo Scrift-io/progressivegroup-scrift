@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Play, ExternalLink, Image, Video, FileText, Handshake } from 'lucide-react';
+import { Play, ExternalLink, Image, Video, FileText, Handshake, Flag, Eye, Factory } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import mediaCenterBg from '../assets/media-center-hero.jpg';
 import YouTubeClean from '../components/YouTubeClean';
@@ -12,6 +12,9 @@ const Media = () => {
     { id: 'videos', label: 'TVC', icon: Video },
     { id: 'gallery', label: 'Corporate Events', icon: Image },
     { id: 'collaborations', label: 'Brand & Collaborations', icon: Handshake },
+    { id: 'independence', label: '14th August', icon: Flag },
+    { id: 'eyecamp', label: 'Free Eye Camp', icon: Eye },
+    { id: 'industrial', label: 'Industrial Visit', icon: Factory },
   ];
 
   const videos = [
@@ -50,35 +53,23 @@ const Media = () => {
   ];
 
   const brandGallery = [
-    {
-      id: 1,
-      image: '/lovable-uploads/award-ceremony-1.jpg'
-    },
-    {
-      id: 2,
-      image: '/lovable-uploads/sports-team-trophy.jpg'
-    },
-    {
-      id: 3,
-      image: '/lovable-uploads/award-ceremony-2.jpg'
-    },
-    {
-      id: 4,
-      image: '/lovable-uploads/brand-of-the-year-award.jpg'
-    },
-    {
-      id: 5,
-      image: '/lovable-uploads/business-meeting.jpg'
-    },
-    {
-      id: 6,
-      image: '/lovable-uploads/annual-meeting-2024.jpg'
-    },
-    {
-      id: 7,
-      image: '/lovable-uploads/team-meeting.jpg'
-    }
+    { id: 1, image: '/lovable-uploads/award-ceremony-1.jpg' },
+    { id: 2, image: '/lovable-uploads/sports-team-trophy.jpg' },
+    { id: 3, image: '/lovable-uploads/award-ceremony-2.jpg' },
+    { id: 4, image: '/lovable-uploads/brand-of-the-year-award.jpg' },
+    { id: 5, image: '/lovable-uploads/business-meeting.jpg' },
+    { id: 6, image: '/lovable-uploads/annual-meeting-2024.jpg' },
+    { id: 7, image: '/lovable-uploads/team-meeting.jpg' }
   ];
+
+  // 14th August Independence Day gallery - awaiting images
+  const independenceGallery: { id: number; image: string }[] = [];
+
+  // Free Eye Camp gallery - awaiting images
+  const eyeCampGallery: { id: number; image: string }[] = [];
+
+  // Industrial Visit gallery - awaiting images
+  const industrialGallery: { id: number; image: string }[] = [];
 
 
   return (
@@ -246,6 +237,75 @@ const Media = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* 14th August Independence Day Tab */}
+          {activeTab === 'independence' && (
+            <div className="space-y-12">
+              <div className="text-center mb-12 animate-fade-in">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">14th August - Independence Day</h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Celebrating Pakistan's Independence Day with pride and patriotism
+                </p>
+              </div>
+
+              {independenceGallery.length > 0 ? (
+                <div className="max-w-7xl mx-auto">
+                  <CuratedGallery data={independenceGallery} />
+                </div>
+              ) : (
+                <div className="text-center py-16 text-gray-500">
+                  <Flag className="w-16 h-16 mx-auto mb-4 opacity-30" />
+                  <p>Images coming soon</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Free Eye Camp Tab */}
+          {activeTab === 'eyecamp' && (
+            <div className="space-y-12">
+              <div className="text-center mb-12 animate-fade-in">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">Free Eye Camp</h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Our community health initiatives providing free eye care services
+                </p>
+              </div>
+
+              {eyeCampGallery.length > 0 ? (
+                <div className="max-w-7xl mx-auto">
+                  <CuratedGallery data={eyeCampGallery} />
+                </div>
+              ) : (
+                <div className="text-center py-16 text-gray-500">
+                  <Eye className="w-16 h-16 mx-auto mb-4 opacity-30" />
+                  <p>Images coming soon</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Industrial Visit Tab */}
+          {activeTab === 'industrial' && (
+            <div className="space-y-12">
+              <div className="text-center mb-12 animate-fade-in">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">Industrial Visit</h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Facility tours showcasing our manufacturing excellence and operations
+                </p>
+              </div>
+
+              {industrialGallery.length > 0 ? (
+                <div className="max-w-7xl mx-auto">
+                  <CuratedGallery data={industrialGallery} />
+                </div>
+              ) : (
+                <div className="text-center py-16 text-gray-500">
+                  <Factory className="w-16 h-16 mx-auto mb-4 opacity-30" />
+                  <p>Images coming soon</p>
+                </div>
+              )}
             </div>
           )}
 
