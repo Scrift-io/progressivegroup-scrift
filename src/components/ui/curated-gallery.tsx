@@ -17,22 +17,21 @@ function CuratedGallery({ data }: CuratedGalleryProps) {
         <div
           key={item.id}
           className={cn(
-            "relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white",
+            "relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group",
             // Create varied sizes for visual interest
             index === 0 && "md:col-span-2 md:row-span-2",
             index === 3 && "lg:col-span-2",
             index === 5 && "md:col-span-2"
           )}
         >
-          <div className="relative group">
+          <div className="relative w-full h-full overflow-hidden">
             <img
               src={item.image}
               alt={`Gallery item ${item.id}`}
-              className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
-              style={{
-                minHeight: index === 0 ? "400px" : "250px",
-                maxHeight: index === 0 ? "600px" : "350px"
-              }}
+              className={cn(
+                "w-full object-cover object-center transition-transform duration-500 group-hover:scale-110",
+                index === 0 ? "h-[400px] md:h-[500px]" : "h-[250px] md:h-[300px]"
+              )}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
