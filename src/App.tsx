@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 import LoadingScreen from "./components/LoadingScreen";
 import HeroNavigation from "./components/HeroNavigation";
 import Footer from "./components/Footer";
-import Chatbot from "./components/Chatbot";
 import Index from "./pages/Index";
 import OurStory from "./pages/OurStory";
 import Media from "./pages/Media";
@@ -67,7 +66,6 @@ const App = () => {
               </Routes>
             </main>
             <Footer />
-            <Chatbot />
           </div>
         </BrowserRouter>
       </TooltipProvider>
