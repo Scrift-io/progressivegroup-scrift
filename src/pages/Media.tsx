@@ -59,7 +59,11 @@ const Media = () => {
     { id: 4, image: '/lovable-uploads/brand-of-the-year-award.jpg' },
     { id: 5, image: '/lovable-uploads/business-meeting.jpg' },
     { id: 6, image: '/lovable-uploads/annual-meeting-2024.jpg' },
-    { id: 7, image: '/lovable-uploads/team-meeting.jpg' }
+    { id: 7, image: '/lovable-uploads/team-meeting.jpg' },
+    { id: 8, image: '/lovable-uploads/corporate-event-fruit-salad.jpg' },
+    { id: 9, image: '/lovable-uploads/corporate-event-cakes.jpg' },
+    { id: 10, image: '/lovable-uploads/corporate-event-desserts.jpg' },
+    { id: 11, image: '/lovable-uploads/corporate-event-mango-day.jpg' },
   ];
 
   // 14th August Independence Day gallery
