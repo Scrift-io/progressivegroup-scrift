@@ -12,7 +12,7 @@ interface CuratedGalleryProps {
 
 function CuratedGallery({ data }: CuratedGalleryProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:grid-rows-[238px] md:auto-rows-[238px]">
       {data.map((item, index) => (
         <div
           key={item.id}
@@ -22,7 +22,7 @@ function CuratedGallery({ data }: CuratedGalleryProps) {
             index === 0 && "md:col-span-2 md:row-span-2",
             index === 3 && "lg:col-span-2",
             index === 5 && "md:col-span-2",
-            index === 0 ? "h-[400px] md:h-[500px]" : "h-[250px] md:h-[300px]"
+            "h-[250px] md:h-auto"
           )}
         >
           <img
