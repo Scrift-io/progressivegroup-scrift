@@ -1,4 +1,4 @@
-import { Facebook, Linkedin, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Linkedin, Instagram, MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const Footer = () => {
   return <footer className="bg-gray-900 text-white relative overflow-hidden">
@@ -63,6 +63,9 @@ const Footer = () => {
               Follow Us
             </h3>
             <div className="flex space-x-3 mb-4">
+              <a href="https://wa.me/923148039940" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:bg-green-600 hover:text-white transition-all duration-300">
+                <MessageCircle size={16} />
+              </a>
               <a href="https://www.facebook.com/PowerPlusPakistan" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:bg-pg-red hover:text-white transition-all duration-300">
                 <Facebook size={16} />
               </a>
