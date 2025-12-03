@@ -17,24 +17,20 @@ function CuratedGallery({ data }: CuratedGalleryProps) {
         <div
           key={item.id}
           className={cn(
-            "relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group",
+            "relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group bg-gray-900",
             // Create varied sizes for visual interest
             index === 0 && "md:col-span-2 md:row-span-2",
             index === 3 && "lg:col-span-2",
-            index === 5 && "md:col-span-2"
+            index === 5 && "md:col-span-2",
+            index === 0 ? "h-[400px] md:h-[500px]" : "h-[250px] md:h-[300px]"
           )}
         >
-          <div className="relative w-full h-full overflow-hidden">
-            <img
-              src={item.image}
-              alt={`Gallery item ${item.id}`}
-              className={cn(
-                "w-full object-cover object-center transition-transform duration-500 group-hover:scale-110",
-                index === 0 ? "h-[400px] md:h-[500px]" : "h-[250px] md:h-[300px]"
-              )}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
+          <img
+            src={item.image}
+            alt={`Gallery item ${item.id}`}
+            className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
       ))}
     </div>
