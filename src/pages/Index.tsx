@@ -2,10 +2,21 @@ import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Target, Eye, Heart, ArrowRight, Users, Globe, Leaf, CheckCircle, BookOpen, Shield, Zap, Star, GraduationCap, Link2, Cross, HandHeart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '@/components/ContactForm';
+import corporateSkylineHero from '@/assets/corporate-skyline-hero.jpg';
+import industrialFacilityHero from '@/assets/industrial-facility-hero.jpg';
+
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentFoundation, setCurrentFoundation] = useState(0);
   const slides = [{
+    image: corporateSkylineHero,
+    title: "Corporate Excellence",
+    subtitle: "Building a Legacy of Trust & Innovation"
+  }, {
+    image: industrialFacilityHero,
+    title: "Industrial Strength",
+    subtitle: "Powering Pakistan's Manufacturing Future"
+  }, {
     image: "/lovable-uploads/143b80d2-6d93-4587-9f30-5c72e09315fc.png",
     title: "Building Tomorrow",
     subtitle: "Progressive Group - 70 Years of Excellence"
