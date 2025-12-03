@@ -53,9 +53,9 @@ const Media = () => {
   ];
 
   const brandGallery = [
-    { id: 1, image: '/lovable-uploads/award-ceremony-1.jpg' },
+    { id: 1, image: '/lovable-uploads/award-ceremony-1.jpg', position: 'center' as const },
     { id: 2, image: '/lovable-uploads/sports-team-trophy.jpg' },
-    { id: 3, image: '/lovable-uploads/award-ceremony-2.jpg' },
+    { id: 3, image: '/lovable-uploads/award-ceremony-2.jpg', position: 'center' as const },
     { id: 4, image: '/lovable-uploads/brand-of-the-year-award.jpg' },
     { id: 5, image: '/lovable-uploads/business-meeting.jpg' },
     { id: 6, image: '/lovable-uploads/annual-meeting-2024.jpg' },
