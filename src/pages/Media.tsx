@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Play, ExternalLink, Image, Video, FileText, Handshake, Flag, Eye, Factory } from 'lucide-react';
+import { Play, Image, Video, Handshake, Flag, Eye, Factory } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import mediaCenterBg from '../assets/media-center-hero.jpg';
 import YouTubeClean from '../components/YouTubeClean';
@@ -7,11 +7,16 @@ import { CuratedGallery } from '@/components/ui/curated-gallery';
 
 const Media = () => {
   const [activeTab, setActiveTab] = useState('videos');
+  const [activeSubTab, setActiveSubTab] = useState('general');
 
   const tabs = [
     { id: 'videos', label: 'TVC', icon: Video },
     { id: 'gallery', label: 'Corporate Events', icon: Image },
     { id: 'collaborations', label: 'Brand & Collaborations', icon: Handshake },
+  ];
+
+  const corporateEventSubTabs = [
+    { id: 'general', label: 'General Events', icon: Image },
     { id: 'independence', label: '14th August', icon: Flag },
     { id: 'eyecamp', label: 'Free Eye Camp', icon: Eye },
     { id: 'industrial', label: 'Industrial Visit', icon: Factory },
@@ -66,7 +71,6 @@ const Media = () => {
     { id: 11, image: '/lovable-uploads/corporate-event-mango-day.jpg' },
   ];
 
-  // 14th August Independence Day gallery
   const independenceGallery = [
     { id: 1, image: '/lovable-uploads/14-august-celebration-1.jpg' },
     { id: 2, image: '/lovable-uploads/14-august-cake.jpg' },
@@ -74,7 +78,6 @@ const Media = () => {
     { id: 4, image: '/lovable-uploads/14-august-colleagues.jpg' },
   ];
 
-  // Free Eye Camp gallery
   const eyeCampGallery = [
     { id: 1, image: '/lovable-uploads/eye-camp-checkup.jpg' },
     { id: 2, image: '/lovable-uploads/eye-camp-team-1.jpg' },
@@ -82,12 +85,10 @@ const Media = () => {
     { id: 4, image: '/lovable-uploads/eye-camp-waiting.jpg' },
   ];
 
-  // Industrial Visit gallery
   const industrialGallery = [
     { id: 1, image: '/lovable-uploads/industrial-visit-presentation.jpg' },
     { id: 2, image: '/lovable-uploads/industrial-visit-group.jpg' },
   ];
-
 
   return (
     <div className="mt-16">
@@ -105,7 +106,12 @@ const Media = () => {
             {tabs.map(tab => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => {
+                  setActiveTab(tab.id);
+                  if (tab.id === 'gallery') {
+                    setActiveSubTab('general');
+                  }
+                }}
                 className={`flex items-center justify-center px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-semibold border-b-2 transition-all duration-300 ${
                   activeTab === tab.id
                     ? 'border-pg-red text-pg-red bg-red-50'
@@ -141,7 +147,6 @@ const Media = () => {
                     className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    {/* First and second videos with embedded iframes */}
                     {index === 0 ? (
                         <div className="relative">
                           <YouTubeClean videoId="GX0DJ4egJqQ" title={video.title} />
@@ -171,7 +176,6 @@ const Media = () => {
                          </div>
                        </div>
                      ) : (
-                      /* Other videos with thumbnail and play button */
                       <div className="relative group">
                         <img
                           src={video.thumbnail}
@@ -201,15 +205,37 @@ const Media = () => {
             </div>
           )}
 
-          {/* Brand Gallery Tab */}
+          {/* Corporate Events Tab with Sub-Tabs */}
           {activeTab === 'gallery' && (
-            <div className="space-y-12">
-              <div className="text-center mb-12 animate-fade-in">
+            <div className="space-y-8">
+              <div className="text-center mb-8 animate-fade-in">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">Corporate Events</h2>
               </div>
+              
+              {/* Sub-Tab Navigation */}
+              <div className="flex justify-center flex-wrap gap-2 mb-8">
+                {corporateEventSubTabs.map(subTab => (
+                  <button
+                    key={subTab.id}
+                    onClick={() => setActiveSubTab(subTab.id)}
+                    className={`flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                      activeSubTab === subTab.id
+                        ? 'bg-pg-red text-white'
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
+                  >
+                    <subTab.icon className="w-4 h-4 mr-2" />
+                    {subTab.label}
+                  </button>
+                ))}
+              </div>
 
+              {/* Sub-Tab Content */}
               <div className="max-w-7xl mx-auto">
-                <CuratedGallery data={brandGallery} />
+                {activeSubTab === 'general' && <CuratedGallery data={brandGallery} />}
+                {activeSubTab === 'independence' && <CuratedGallery data={independenceGallery} />}
+                {activeSubTab === 'eyecamp' && <CuratedGallery data={eyeCampGallery} />}
+                {activeSubTab === 'industrial' && <CuratedGallery data={industrialGallery} />}
               </div>
             </div>
           )}
@@ -254,75 +280,6 @@ const Media = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          )}
-
-          {/* 14th August Independence Day Tab */}
-          {activeTab === 'independence' && (
-            <div className="space-y-12">
-              <div className="text-center mb-12 animate-fade-in">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">14th August - Independence Day</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Celebrating Pakistan's Independence Day with pride and patriotism
-                </p>
-              </div>
-
-              {independenceGallery.length > 0 ? (
-                <div className="max-w-7xl mx-auto">
-                  <CuratedGallery data={independenceGallery} />
-                </div>
-              ) : (
-                <div className="text-center py-16 text-gray-500">
-                  <Flag className="w-16 h-16 mx-auto mb-4 opacity-30" />
-                  <p>Images coming soon</p>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Free Eye Camp Tab */}
-          {activeTab === 'eyecamp' && (
-            <div className="space-y-12">
-              <div className="text-center mb-12 animate-fade-in">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Free Eye Camp</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Our community health initiatives providing free eye care services
-                </p>
-              </div>
-
-              {eyeCampGallery.length > 0 ? (
-                <div className="max-w-7xl mx-auto">
-                  <CuratedGallery data={eyeCampGallery} />
-                </div>
-              ) : (
-                <div className="text-center py-16 text-gray-500">
-                  <Eye className="w-16 h-16 mx-auto mb-4 opacity-30" />
-                  <p>Images coming soon</p>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Industrial Visit Tab */}
-          {activeTab === 'industrial' && (
-            <div className="space-y-12">
-              <div className="text-center mb-12 animate-fade-in">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Industrial Visit</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Facility tours showcasing our manufacturing excellence and operations
-                </p>
-              </div>
-
-              {industrialGallery.length > 0 ? (
-                <div className="max-w-7xl mx-auto">
-                  <CuratedGallery data={industrialGallery} />
-                </div>
-              ) : (
-                <div className="text-center py-16 text-gray-500">
-                  <Factory className="w-16 h-16 mx-auto mb-4 opacity-30" />
-                  <p>Images coming soon</p>
-                </div>
-              )}
             </div>
           )}
 
