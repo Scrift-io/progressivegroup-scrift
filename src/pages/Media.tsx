@@ -62,8 +62,13 @@ const Media = () => {
     { id: 7, image: '/lovable-uploads/team-meeting.jpg' }
   ];
 
-  // 14th August Independence Day gallery - awaiting images
-  const independenceGallery: { id: number; image: string }[] = [];
+  // 14th August Independence Day gallery
+  const independenceGallery = [
+    { id: 1, image: '/lovable-uploads/14-august-celebration-1.jpg' },
+    { id: 2, image: '/lovable-uploads/14-august-cake.jpg' },
+    { id: 3, image: '/lovable-uploads/14-august-team.jpg' },
+    { id: 4, image: '/lovable-uploads/14-august-colleagues.jpg' },
+  ];
 
   // Free Eye Camp gallery - awaiting images
   const eyeCampGallery: { id: number; image: string }[] = [];
