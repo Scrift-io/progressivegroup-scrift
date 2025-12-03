@@ -82,8 +82,11 @@ const Media = () => {
     { id: 4, image: '/lovable-uploads/eye-camp-waiting.jpg' },
   ];
 
-  // Industrial Visit gallery - awaiting images
-  const industrialGallery: { id: number; image: string }[] = [];
+  // Industrial Visit gallery
+  const industrialGallery = [
+    { id: 1, image: '/lovable-uploads/industrial-visit-presentation.jpg' },
+    { id: 2, image: '/lovable-uploads/industrial-visit-group.jpg' },
+  ];
 
 
   return (
