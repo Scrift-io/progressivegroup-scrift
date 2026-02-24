@@ -97,15 +97,12 @@ const Index = () => {
             }}>
                 {slides[currentSlide].subtitle}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4" style={{
+              <div className="flex justify-center px-4" style={{
               animationDelay: '1s'
             }}>
                 <Link to="/our-story" className="group inline-flex items-center justify-center bg-pg-red text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">
                   Discover Our Story
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-                <Link to="/our-businesses" className="inline-flex items-center justify-center border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
-                  Our Businesses
                 </Link>
               </div>
             </div>
